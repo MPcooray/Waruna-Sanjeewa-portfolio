@@ -19,7 +19,7 @@ export function Recognition() {
         <div className="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, index) => (
             <Reveal key={stat.value} delay={index * 0.06}>
-              <p className="font-display text-6xl tracking-tight text-deep md:text-7xl">
+              <p className="font-display text-5xl tracking-tight text-deep md:text-7xl">
                 {stat.value}
               </p>
               <p className="mt-4 max-w-[14rem] text-sm leading-6 text-brown">

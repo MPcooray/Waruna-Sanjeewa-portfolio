@@ -66,7 +66,7 @@ export function PhotoArchive() {
         {open !== null && (
           <motion.button
             type="button"
-            className="fixed inset-0 z-[90] flex items-center justify-center bg-ink/90 p-6"
+            className="fixed inset-0 z-[110] flex items-center justify-center bg-ink/90 p-4 sm:p-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

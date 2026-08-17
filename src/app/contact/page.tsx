@@ -5,7 +5,7 @@ import { Training } from "@/components/home/Training";
 
 export default function ContactPage() {
   return (
-    <div className="pt-16">
+    <div className="pt-20">
       <ContactPreview />
       <Training />
     </div>

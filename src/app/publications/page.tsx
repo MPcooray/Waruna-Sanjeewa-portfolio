@@ -21,7 +21,7 @@ export default function PublicationsPage() {
               alt={page.sinhalaTitle}
               width={470}
               height={700}
-              className="mx-auto w-full max-w-sm rotate-[3deg] shadow-[0_30px_80px_rgba(0,0,0,0.45)]"
+              className="mx-auto w-full max-w-[16rem] rotate-[3deg] shadow-[0_30px_80px_rgba(0,0,0,0.45)] sm:max-w-sm"
               priority
             />
           </div>

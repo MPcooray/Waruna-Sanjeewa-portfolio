@@ -48,10 +48,10 @@ export function CareerStatement() {
         <h2 className="font-display mt-5 text-4xl tracking-tight text-deep md:text-6xl">
           {t.career.years}
         </h2>
-        <div className="career-track mt-14 flex w-max flex-col items-start gap-4 md:mt-20 md:flex-row md:items-baseline md:gap-10">
+        <div className="career-track mt-10 flex w-full flex-col items-start gap-3 md:mt-20 md:w-max md:flex-row md:items-baseline md:gap-10">
           {careerPath.map((item, index) => (
-            <span key={item.en} className="flex items-baseline gap-6 md:gap-10">
-              <span className="font-display text-4xl text-deep md:text-7xl lg:text-8xl">
+            <span key={item.en} className="flex max-w-full items-baseline gap-3 md:gap-10">
+              <span className="font-display text-3xl leading-tight text-deep sm:text-4xl md:text-7xl lg:text-8xl">
                 {item[locale]}
               </span>
               {index < careerPath.length - 1 && (

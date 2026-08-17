@@ -12,7 +12,7 @@ export function ContactPreview() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker>{t.contact.kicker}</Kicker>
-          <h2 className="font-display mt-5 max-w-3xl text-4xl tracking-tight text-deep md:text-7xl">
+          <h2 className="font-display mt-5 max-w-3xl text-4xl tracking-tight text-deep md:text-6xl lg:text-7xl">
             {t.contact.title}
           </h2>
           <p className="mt-8 max-w-xl text-lg leading-8 text-ink/80">{t.contact.body}</p>
@@ -20,7 +20,7 @@ export function ContactPreview() {
         <Reveal className="mt-14 grid gap-8 md:grid-cols-3" delay={0.08}>
           <a href={`mailto:${links.email}`} className="group block border-t border-sand pt-6">
             <p className="kicker">{t.contact.email}</p>
-            <p className="mt-3 text-lg text-deep group-hover:opacity-60">{links.email}</p>
+            <p className="mt-3 break-all text-base text-deep group-hover:opacity-60 sm:text-lg">{links.email}</p>
           </a>
           <a
             href={links.linkedin}

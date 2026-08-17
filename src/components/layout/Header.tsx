@@ -35,6 +35,13 @@ export function Header() {
   }, []);
 
   useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  useEffect(() => {
     if (pathname !== "/") return;
 
     const hero = document.getElementById("hero");
@@ -70,17 +77,17 @@ export function Header() {
             : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-5 md:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 pt-[max(1rem,env(safe-area-inset-top))] sm:px-5 md:px-8">
         <Link
           href="/"
-          className={`font-display text-[1.2rem] tracking-tight ${
+          className={`font-display min-w-0 truncate text-[1.05rem] tracking-tight sm:text-[1.2rem] ${
             light ? "text-ivory" : "text-ink"
           }`}
         >
           {t.brand}
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:gap-7 md:flex">
+        <nav className="hidden items-center gap-5 lg:flex lg:gap-7">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -95,32 +102,35 @@ export function Header() {
           <LanguageSwitch light={light} locale={locale} setLocale={setLocale} />
         </nav>
 
-        <button
-          type="button"
-          className={`md:hidden text-[0.72rem] font-medium tracking-[0.22em] uppercase ${
-            light ? "text-ivory" : "text-ink"
-          }`}
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Menu"
-        >
-          {open ? "Close" : "Menu"}
-        </button>
+        <div className="flex shrink-0 items-center gap-3 lg:hidden">
+          <LanguageSwitch light={light} locale={locale} setLocale={setLocale} />
+          <button
+            type="button"
+            className={`min-h-11 px-1 text-[0.72rem] font-medium tracking-[0.2em] uppercase ${
+              light ? "text-ivory" : "text-ink"
+            }`}
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            aria-label="Menu"
+          >
+            {open ? "Close" : "Menu"}
+          </button>
+        </div>
       </div>
 
       {open && (
-        <div className="border-t border-sand/60 bg-ivory px-5 py-8 md:hidden">
-          <div className="flex flex-col gap-5">
+        <div className="fixed inset-x-0 bottom-0 top-[3.75rem] overflow-y-auto border-t border-sand/60 bg-ivory px-5 py-8 pb-[max(2rem,env(safe-area-inset-bottom))] lg:hidden">
+          <div className="flex flex-col gap-2">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-display text-3xl text-deep"
+                className="font-display py-3 text-3xl text-deep sm:text-4xl"
                 onClick={() => setOpen(false)}
               >
                 {t.nav[link.key]}
               </Link>
             ))}
-            <LanguageSwitch light={false} locale={locale} setLocale={setLocale} />
           </div>
         </div>
       )}
@@ -139,10 +149,10 @@ function LanguageSwitch({
 }) {
   const cls = light ? "text-ivory" : "text-ink";
   return (
-    <div className={`ml-1 flex items-center gap-2 text-[0.72rem] font-medium tracking-[0.18em] ${cls}`}>
+    <div className={`flex items-center gap-1.5 text-[0.68rem] font-medium tracking-[0.16em] sm:text-[0.72rem] sm:tracking-[0.18em] ${cls}`}>
       <button
         type="button"
-        className={`px-1.5 py-0.5 ${
+        className={`min-h-11 px-1.5 ${
           locale === "en"
             ? "rounded-full ring-1 ring-current"
             : "opacity-55 hover:opacity-90"
@@ -154,7 +164,7 @@ function LanguageSwitch({
       <span className="opacity-40">|</span>
       <button
         type="button"
-        className={`px-1.5 py-0.5 ${
+        className={`min-h-11 px-1.5 ${
           locale === "si"
             ? "rounded-full ring-1 ring-current"
             : "opacity-55 hover:opacity-90"

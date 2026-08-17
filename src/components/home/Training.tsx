@@ -25,7 +25,7 @@ export function Training() {
             {trainingTopics.map((topic) => (
               <li
                 key={topic.en}
-                className="font-display py-6 text-3xl text-deep md:text-4xl"
+                className="font-display py-5 text-2xl text-deep sm:py-6 sm:text-3xl md:text-4xl"
               >
                 {topic[locale]}
               </li>

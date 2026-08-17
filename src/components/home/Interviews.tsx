@@ -57,7 +57,7 @@ export function Interviews({
               />
               <div className="absolute inset-0 bg-ink/20 transition-colors group-hover:bg-ink/35" />
             </div>
-            <div className="flex flex-col justify-between p-7 md:col-span-2 md:p-10">
+            <div className="flex flex-col justify-between p-5 sm:p-7 md:col-span-2 md:p-10">
               <div>
                 <p className="kicker">{t.interviews.featured}</p>
                 <h3 className="font-display mt-5 text-3xl text-deep md:text-4xl">
@@ -78,7 +78,7 @@ export function Interviews({
               key={item}
               type="button"
               onClick={() => setFilter(item)}
-              className={`text-[0.7rem] tracking-[0.2em] uppercase ${
+              className={`min-h-11 py-1 text-[0.68rem] tracking-[0.16em] uppercase sm:text-[0.7rem] sm:tracking-[0.2em] ${
                 filter === item ? "text-deep" : "text-brown/60 hover:text-brown"
               }`}
             >
@@ -103,7 +103,7 @@ export function Interviews({
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(min-width: 1024px) 30vw, 50vw"
                 />
-                <div className="absolute right-4 bottom-4 flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase text-ivory opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                <div className="absolute right-4 bottom-4 flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase text-ivory md:opacity-0 md:transition-opacity md:duration-300 md:group-hover:opacity-100">
                   <span className="h-2 w-2 rounded-full bg-accent" />
                   {t.interviews.watchShort}
                 </div>

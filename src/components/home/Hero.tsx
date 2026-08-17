@@ -44,15 +44,15 @@ export function Hero() {
             alt="Waruna Sanjeewa Liyanage"
             fill
             priority
-            className="portrait-filter object-cover object-[62%_18%]"
+            className="portrait-filter object-cover object-[48%_12%] sm:object-[62%_18%]"
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-deep via-deep/78 to-deep/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-deep/85 via-transparent to-deep/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-deep via-deep/55 to-deep/35 md:bg-gradient-to-r md:from-deep md:via-deep/78 md:to-deep/25" />
+        <div className="absolute inset-0 hidden bg-gradient-to-t from-deep/85 via-transparent to-deep/40 md:block" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-20">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-4 pb-[max(4rem,env(safe-area-inset-bottom))] pt-28 sm:px-5 md:px-8 md:pb-20">
         <motion.p
           className="kicker text-sand"
           initial={{ opacity: 0, y: 10 }}
@@ -61,7 +61,7 @@ export function Hero() {
         >
           {t.hero.kicker}
         </motion.p>
-        <h1 className="font-display mt-6 text-[16vw] leading-[0.86] tracking-[-0.03em] sm:text-[12vw] lg:text-[8.4rem]">
+        <h1 className="font-display mt-5 text-[clamp(2.6rem,11vw,8.4rem)] leading-[0.9] tracking-[-0.03em] sm:mt-6 sm:leading-[0.86]">
           {t.hero.lines.map((line, lineIndex) => (
             <span key={line} className="block overflow-hidden">
               {locale === "en" ? (

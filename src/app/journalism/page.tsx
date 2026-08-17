@@ -5,7 +5,7 @@ import { Training } from "@/components/home/Training";
 
 export default function JournalismPage() {
   return (
-    <div className="pt-16">
+    <div className="pt-20">
       <Investigations />
       <Training />
     </div>
