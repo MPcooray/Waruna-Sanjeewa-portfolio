@@ -295,6 +295,10 @@ export const stats = [
   },
 ];
 
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "https://waruna-sanjeewa-portfolio.vercel.app";
+
 export const links = {
   email: "warunasliyanage@gmail.com",
   linkedin: "https://www.linkedin.com/in/waruna-liyanage",

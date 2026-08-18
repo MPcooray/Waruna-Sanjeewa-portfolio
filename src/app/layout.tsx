@@ -10,6 +10,8 @@ import "./globals.css";
 import { Providers } from "@/components/Providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { siteUrl } from "@/data/site";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -46,19 +48,56 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Waruna Sanjeewa Liyanage — Digital Journalism Archive",
-    template: "%s — Waruna Sanjeewa Liyanage",
+    default: "Waruna Sanjeewa Liyanage | Journalist, Author & Media Trainer",
+    template: "%s | Waruna Sanjeewa Liyanage",
   },
   description:
-    "The editorial archive of Waruna Sanjeewa Liyanage — journalist, author, and media trainer. More than two decades in print, television, and investigative journalism.",
-  authors: [{ name: "Waruna Sanjeewa Liyanage" }],
+    "Official portfolio of Waruna Sanjeewa Liyanage (වරුණ සංජීව ලියනගේ) — Sri Lankan journalist, author of Investigative Journalism, and media trainer. More than two decades in print, television, and investigative reporting.",
+  keywords: [
+    "Waruna Sanjeewa Liyanage",
+    "Waruna S. Liyanage",
+    "වරුණ සංජීව ලියනගේ",
+    "Sri Lankan journalist",
+    "investigative journalism",
+    "Derana news manager",
+    "Sooriya Publishers",
+  ],
+  authors: [{ name: "Waruna Sanjeewa Liyanage", url: siteUrl }],
+  creator: "Waruna Sanjeewa Liyanage",
+  publisher: "Waruna Sanjeewa Liyanage",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
   openGraph: {
-    title: "Waruna Sanjeewa Liyanage — Digital Journalism Archive",
+    title: "Waruna Sanjeewa Liyanage | Journalist, Author & Media Trainer",
     description:
-      "Journalist, author, and media trainer. An editorial archive of more than two decades in Sri Lankan and international journalism.",
-    type: "website",
+      "Official portfolio of Waruna Sanjeewa Liyanage — journalist, author, and media trainer. An archive of more than two decades in Sri Lankan and international journalism.",
+    type: "profile",
+    url: siteUrl,
+    siteName: "Waruna Sanjeewa Liyanage",
     locale: "en_LK",
+    images: [
+      {
+        url: "/images/portrait.jpg",
+        width: 1200,
+        height: 1600,
+        alt: "Waruna Sanjeewa Liyanage",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Waruna Sanjeewa Liyanage | Journalist, Author & Media Trainer",
+    description:
+      "Official portfolio — journalist, author of Investigative Journalism, and media trainer.",
+    images: ["/images/portrait.jpg"],
   },
 };
 
@@ -71,6 +110,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${cormorant.variable} ${dmSans.variable} ${notoSansSinhala.variable} ${notoSerifSinhala.variable} h-full antialiased`}
     >
       <body suppressHydrationWarning className="min-h-full bg-ivory font-sans text-ink">
+        <JsonLd />
         <Providers>
           <div className="grain" aria-hidden />
           <Header />
