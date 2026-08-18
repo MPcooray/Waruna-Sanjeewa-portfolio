@@ -48,7 +48,7 @@ export function TextLink({
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
-      className={`group inline-flex items-center gap-3 text-[0.72rem] font-medium tracking-[0.22em] uppercase ${
+      className={`group inline-flex items-center gap-3 text-[0.875rem] font-medium tracking-[0.22em] uppercase ${
         light ? "text-ivory" : "text-deep"
       }`}
     >

@@ -18,24 +18,39 @@ const links = [
 export function Header() {
   const { t, locale, setLocale } = useLanguage();
   const pathname = usePathname();
-  const [scrolled, setScrolled] = useState(false);
+  const [overHero, setOverHero] = useState(pathname === "/");
   const [open, setOpen] = useState(false);
-  const [heroDark, setHeroDark] = useState(true);
   const [lastPath, setLastPath] = useState(pathname);
 
   if (pathname !== lastPath) {
     setLastPath(pathname);
     setOpen(false);
+    setOverHero(pathname === "/");
   }
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    if (pathname !== "/") {
+      setOverHero(false);
+      return;
+    }
 
-  // Lock body scroll when mobile menu is open
+    const hero = document.getElementById("hero");
+    if (!hero) {
+      setOverHero(false);
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        setOverHero(entry.boundingClientRect.bottom > 88);
+      },
+      { threshold: [0, 0.05, 0.15, 0.4] },
+    );
+
+    io.observe(hero);
+    return () => io.disconnect();
+  }, [pathname]);
+
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -43,64 +58,28 @@ export function Header() {
     };
   }, [open]);
 
-  // Close mobile menu when resizing to desktop
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 768) setOpen(false);
+      if (window.innerWidth >= 1024) setOpen(false);
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [open]);
-
-  useEffect(() => {
-    if (pathname !== "/") return;
-
-    const hero = document.getElementById("hero");
-    const book = document.getElementById("book");
-    if (!hero) return;
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((e) => e.isIntersecting);
-        const dark = visible.some(
-          (e) => e.target.id === "hero" || e.target.id === "book",
-        );
-        setHeroDark(dark || window.scrollY < 80);
-      },
-      { threshold: 0.28 },
-    );
-
-    io.observe(hero);
-    if (book) io.observe(book);
-    return () => io.disconnect();
-  }, [pathname]);
-
-  const light = pathname === "/" && heroDark && !open;
-  const solid = scrolled || open || pathname !== "/";
+  const light = overHero && !open;
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-[90] transition-colors duration-500 ${
+      className={`fixed inset-x-0 top-0 z-[90] border-b transition-[background-color,border-color,color,backdrop-filter] duration-500 ${
         light
-          ? "bg-gradient-to-b from-deep/80 via-deep/45 to-transparent"
-          : solid
-            ? "bg-ivory/92 backdrop-blur-md"
-            : "bg-transparent"
+          ? "border-transparent bg-transparent text-[#F3EADF]"
+          : "border-[rgba(59,42,32,0.08)] bg-[rgba(248,244,237,0.92)] text-[#3B2A20] backdrop-blur-[12px]"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 pt-[max(1rem,env(safe-area-inset-top))] sm:px-5 md:px-8">
         <Link
           href="/"
-          className={`font-display min-w-0 truncate text-[1.05rem] tracking-tight sm:text-[1.2rem] ${
-            light ? "text-ivory" : "text-ink"
-          }`}
+          className="font-display min-w-0 truncate text-[1.05rem] tracking-tight sm:text-[1.2rem]"
         >
           {t.brand}
         </Link>
@@ -110,23 +89,21 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-[0.72rem] font-medium tracking-[0.18em] uppercase transition-opacity hover:opacity-70 ${
-                light ? "text-ivory drop-shadow-[0_1px_8px_rgba(33,28,24,0.55)]" : "text-ink"
-              } ${pathname === link.href ? "opacity-70" : "opacity-100"}`}
+              className={`text-[0.875rem] font-semibold tracking-[0.18em] uppercase transition-opacity hover:opacity-70 ${
+                pathname === link.href ? "opacity-70" : "opacity-100"
+              }`}
             >
               {t.nav[link.key]}
             </Link>
           ))}
-          <LanguageSwitch light={light} locale={locale} setLocale={setLocale} />
+          <LanguageSwitch locale={locale} setLocale={setLocale} />
         </nav>
 
         <div className="flex shrink-0 items-center gap-3 lg:hidden">
-          <LanguageSwitch light={light} locale={locale} setLocale={setLocale} />
+          <LanguageSwitch locale={locale} setLocale={setLocale} />
           <button
             type="button"
-            className={`min-h-11 px-1 text-[0.72rem] font-medium tracking-[0.2em] uppercase ${
-              light ? "text-ivory" : "text-ink"
-            }`}
+            className="min-h-11 px-1 text-[0.875rem] font-semibold tracking-[0.2em] uppercase"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label="Menu"
@@ -139,7 +116,7 @@ export function Header() {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[80] flex flex-col justify-end bg-ivory px-5 pb-10 pt-28 lg:hidden"
+            className="fixed inset-0 z-[80] flex flex-col justify-end bg-[#F8F4ED] px-5 pb-10 pt-28 lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -172,35 +149,28 @@ export function Header() {
 }
 
 function LanguageSwitch({
-  light,
   locale,
   setLocale,
 }: {
-  light: boolean;
   locale: "en" | "si";
   setLocale: (locale: "en" | "si") => void;
 }) {
-  const cls = light ? "text-ivory" : "text-ink";
   return (
-    <div className={`flex items-center gap-1.5 text-[0.68rem] font-medium tracking-[0.16em] sm:text-[0.72rem] sm:tracking-[0.18em] ${cls}`}>
+    <div className="flex items-center gap-1.5 text-[0.8125rem] font-semibold tracking-[0.16em] sm:text-[0.875rem] sm:tracking-[0.18em]">
       <button
         type="button"
         className={`min-h-11 px-1.5 ${
-          locale === "en"
-            ? "rounded-full ring-1 ring-current"
-            : "opacity-55 hover:opacity-90"
+          locale === "en" ? "rounded-full ring-1 ring-current" : "opacity-70 hover:opacity-100"
         }`}
         onClick={() => setLocale("en")}
       >
         EN
       </button>
-      <span className="opacity-40">|</span>
+      <span className="opacity-50">|</span>
       <button
         type="button"
         className={`min-h-11 px-1.5 ${
-          locale === "si"
-            ? "rounded-full ring-1 ring-current"
-            : "opacity-55 hover:opacity-90"
+          locale === "si" ? "rounded-full ring-1 ring-current" : "opacity-70 hover:opacity-100"
         }`}
         onClick={() => setLocale("si")}
       >

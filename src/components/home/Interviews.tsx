@@ -68,7 +68,7 @@ export function Interviews({
                 </h3>
                 <p className="mt-4 leading-7 text-ink/75">{featured.subtitle[locale]}</p>
               </div>
-              <p className="mt-10 text-[0.72rem] tracking-[0.22em] uppercase text-deep">
+              <p className="mt-10 text-[0.875rem] tracking-[0.22em] uppercase text-deep">
                 ▶ {t.interviews.watch}
               </p>
             </div>
@@ -81,7 +81,7 @@ export function Interviews({
               key={item}
               type="button"
               onClick={() => setFilter(item)}
-              className={`min-h-11 py-1 text-[0.68rem] tracking-[0.16em] uppercase sm:text-[0.7rem] sm:tracking-[0.2em] ${
+              className={`min-h-11 py-1 text-[0.8125rem] tracking-[0.16em] uppercase sm:text-[0.875rem] sm:tracking-[0.2em] ${
                 filter === item ? "text-deep" : "text-brown/60 hover:text-brown"
               }`}
             >
@@ -106,7 +106,7 @@ export function Interviews({
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                   sizes="(min-width: 1024px) 30vw, 50vw"
                 />
-                <div className="absolute right-4 bottom-4 flex items-center gap-3 text-[0.65rem] tracking-[0.2em] uppercase text-ivory md:opacity-0 md:transition-opacity md:duration-300 md:group-hover:opacity-100">
+                <div className="absolute right-4 bottom-4 flex items-center gap-3 text-[0.8125rem] tracking-[0.2em] uppercase text-ivory md:opacity-0 md:transition-opacity md:duration-300 md:group-hover:opacity-100">
                   <span className="h-2 w-2 rounded-full bg-accent" />
                   {t.interviews.watchShort}
                 </div>

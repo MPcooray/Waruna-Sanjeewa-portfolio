@@ -164,7 +164,7 @@ export function International() {
                 })}
               </svg>
             </div>
-            <p className="px-5 pb-4 text-[0.68rem] tracking-[0.18em] uppercase text-brown">
+            <p className="px-5 pb-4 text-[0.8125rem] tracking-[0.18em] uppercase text-brown">
               {t.international.mapCaption}
             </p>
           </Reveal>
@@ -177,7 +177,7 @@ export function International() {
                   type="button"
                   onClick={() => setActive(index)}
                   onMouseEnter={() => setActive(index)}
-                  className={`min-h-12 flex-1 border-t pt-3 text-left text-[0.72rem] tracking-[0.18em] ${
+                  className={`min-h-12 flex-1 border-t pt-3 text-left text-[0.875rem] tracking-[0.18em] ${
                     active === index
                       ? "border-deep text-deep"
                       : "border-sand text-brown/60 hover:text-brown"

@@ -30,7 +30,7 @@ export function Footer() {
         </h2>
         <div className="editorial-rule mt-12 bg-brown/50" />
         <div className="mt-10 grid gap-10 md:grid-cols-3">
-          <div className="flex flex-col gap-3 text-[0.72rem] tracking-[0.18em] uppercase text-beige">
+          <div className="flex flex-col gap-3 text-[0.875rem] tracking-[0.18em] uppercase text-beige">
             {nav.map((item) => (
               <Link key={item.href} href={item.href} className="hover:text-ivory">
                 {t.nav[item.key]}

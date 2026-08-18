@@ -67,7 +67,7 @@ export function PressArchive() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/10 to-transparent opacity-80 md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-100" />
                 <div className="absolute inset-x-0 bottom-0 p-4 text-ivory md:translate-y-2 md:opacity-0 md:transition md:duration-500 md:group-hover:translate-y-0 md:group-hover:opacity-100">
-                  <p className="text-[0.62rem] tracking-[0.2em] uppercase text-sand">
+                  <p className="text-[0.8125rem] tracking-[0.2em] uppercase text-sand">
                     {clipping.kicker[locale]}
                   </p>
                   <p className="font-display mt-1 text-lg leading-tight">{clipping.caption[locale]}</p>
@@ -105,12 +105,12 @@ export function PressArchive() {
               </div>
               <figcaption className="mt-4 flex items-end justify-between gap-4 text-ivory">
                 <div>
-                  <p className="text-[0.62rem] tracking-[0.2em] uppercase text-sand">
+                  <p className="text-[0.8125rem] tracking-[0.2em] uppercase text-sand">
                     {active.kicker[locale]}
                   </p>
                   <p className="font-display mt-1 text-xl">{active.caption[locale]}</p>
                 </div>
-                <div className="flex shrink-0 items-center gap-4 text-[0.7rem] tracking-[0.18em] uppercase">
+                <div className="flex shrink-0 items-center gap-4 text-[0.8125rem] tracking-[0.18em] uppercase">
                   <button type="button" onClick={() => setOpen((open + count - 1) % count)}>
                     {t.press.prev}
                   </button>

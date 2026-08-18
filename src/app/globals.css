@@ -74,17 +74,17 @@ img {
 }
 
 .kicker {
-  font-size: 0.62rem;
+  font-size: 0.8125rem;
   font-weight: 500;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brown);
 }
 
 @media (min-width: 768px) {
   .kicker {
-    font-size: 0.68rem;
-    letter-spacing: 0.28em;
+    font-size: 0.875rem;
+    letter-spacing: 0.18em;
   }
 }
 

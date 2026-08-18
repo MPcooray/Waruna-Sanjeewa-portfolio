@@ -40,7 +40,7 @@ export function ArchiveFold({
           <span className="flex h-11 w-11 items-center justify-center rounded-full border border-sand bg-ivory text-xl leading-none shadow-[0_8px_24px_rgba(33,28,24,0.08)]">
             {expanded ? "↑" : "↓"}
           </span>
-          <span className="text-[0.62rem] tracking-[0.18em] uppercase text-brown">
+          <span className="text-[0.8125rem] tracking-[0.18em] uppercase text-brown">
             {expanded ? less : more}
           </span>
         </button>

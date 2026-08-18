@@ -8,7 +8,7 @@ export default function NotFound() {
         <h1 className="font-display mt-5 text-5xl text-deep md:text-7xl">This page is not in the archive.</h1>
         <Link
           href="/"
-          className="mt-10 inline-flex text-[0.72rem] tracking-[0.22em] uppercase text-deep"
+          className="mt-10 inline-flex text-[0.875rem] tracking-[0.22em] uppercase text-deep"
         >
           Return home →
         </Link>

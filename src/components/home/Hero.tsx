@@ -120,7 +120,7 @@ export function Hero() {
           </motion.p>
           <motion.a
             href="#career"
-            className="group flex items-center gap-4 text-[0.7rem] tracking-[0.24em] uppercase text-ivory"
+            className="group flex items-center gap-4 text-[0.8125rem] tracking-[0.24em] uppercase text-ivory"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
