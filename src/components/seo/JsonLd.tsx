@@ -22,7 +22,13 @@ export function JsonLd() {
         description:
           "Sri Lankan journalist, author, and media trainer. News Manager at Derana, with more than two decades in print, television, and investigative journalism.",
         url: siteUrl,
-        image: `${siteUrl}/images/portrait.jpg`,
+        image: {
+          "@type": "ImageObject",
+          url: `${siteUrl}/images/profile.jpg`,
+          width: 1200,
+          height: 1200,
+          caption: "Waruna Sanjeewa Liyanage",
+        },
         email: `mailto:${links.email}`,
         nationality: "LK",
         sameAs: [links.linkedin, links.book, links.gijc],

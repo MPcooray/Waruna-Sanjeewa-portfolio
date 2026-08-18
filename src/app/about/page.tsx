@@ -6,8 +6,10 @@ import { useLanguage } from "@/context/LanguageContext";
 import { TextLink } from "@/components/ui/Editorial";
 
 export default function AboutPage() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const page = t.aboutPage;
+  const bodyClass =
+    locale === "si" ? "text-lg leading-[2.1] text-ink/90" : "text-lg leading-8 text-ink/90";
 
   return (
     <>
@@ -27,10 +29,10 @@ export default function AboutPage() {
             </div>
           </div>
           <article className="md:col-span-7 md:col-start-6">
-            <p className="text-lg leading-8 text-ink/90">{page.p1}</p>
-            <p className="mt-8 text-lg leading-8 text-ink/90">{page.p2}</p>
-            <p className="mt-8 text-lg leading-8 text-ink/90">{page.p3}</p>
-            <p className="mt-8 text-lg leading-8 text-ink/90">{page.p4}</p>
+            <p className={bodyClass}>{page.p1}</p>
+            <p className={`mt-8 ${bodyClass}`}>{page.p2}</p>
+            <p className={`mt-8 ${bodyClass}`}>{page.p3}</p>
+            <p className={`mt-8 ${bodyClass}`}>{page.p4}</p>
             <div className="mt-12 flex flex-wrap gap-8">
               <TextLink href="/journalism">{t.nav.journalism}</TextLink>
               <TextLink href="/archive">{t.nav.archive}</TextLink>

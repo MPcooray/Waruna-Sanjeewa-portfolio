@@ -70,6 +70,13 @@ export const metadata: Metadata = {
   verification: {
     google: "1ly95rImm4IMsioRWsUQA8uGFEjAwCAwcQHMSnQZsx4",
   },
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+      { url: "/images/profile.jpg", sizes: "1200x1200", type: "image/jpeg" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180" }],
+  },
   alternates: {
     canonical: "/",
   },
@@ -88,9 +95,9 @@ export const metadata: Metadata = {
     locale: "en_LK",
     images: [
       {
-        url: "/images/portrait.jpg",
+        url: "/images/profile.jpg",
         width: 1200,
-        height: 1600,
+        height: 1200,
         alt: "Waruna Sanjeewa Liyanage",
       },
     ],
@@ -100,7 +107,7 @@ export const metadata: Metadata = {
     title: "Waruna Sanjeewa Liyanage | Journalist, Author & Media Trainer",
     description:
       "Official portfolio — journalist, author of Investigative Journalism, and media trainer.",
-    images: ["/images/portrait.jpg"],
+    images: ["/images/profile.jpg"],
   },
 };
 
