@@ -2,6 +2,7 @@
 
 import { PageIntro } from "@/components/layout/PageIntro";
 import { Timeline } from "@/components/home/Timeline";
+import { PressArchive } from "@/components/home/PressArchive";
 import { PhotoArchive } from "@/components/home/PhotoArchive";
 import { Recognition } from "@/components/home/Recognition";
 import { International } from "@/components/home/International";
@@ -19,6 +20,7 @@ export default function ArchivePage() {
       />
       <Timeline />
       <International />
+      <PressArchive />
       <PhotoArchive />
       <Recognition />
     </>

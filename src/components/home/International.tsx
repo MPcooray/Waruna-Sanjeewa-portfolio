@@ -148,6 +148,8 @@ export function International() {
                           stroke="#3B2A20"
                           strokeWidth="2"
                           opacity="0.4"
+                          className="map-pin-pulse origin-center"
+                          style={{ transformOrigin: `${pin.pin.x}px ${pin.pin.y}px` }}
                         />
                       )}
                       <circle
@@ -182,6 +184,9 @@ export function International() {
                   }`}
                 >
                   {pin.year}
+                  <span className="mt-1 block font-display text-[0.95rem] leading-tight tracking-normal text-deep lg:hidden">
+                    {pin.city[locale]}
+                  </span>
                 </button>
               ))}
             </div>

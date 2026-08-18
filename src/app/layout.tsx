@@ -67,9 +67,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       data-locale="en"
+      suppressHydrationWarning
       className={`${cormorant.variable} ${dmSans.variable} ${notoSansSinhala.variable} ${notoSerifSinhala.variable} h-full antialiased`}
     >
-      <body className="min-h-full bg-ivory font-sans text-ink">
+      <body suppressHydrationWarning className="min-h-full bg-ivory font-sans text-ink">
         <Providers>
           <div className="grain" aria-hidden />
           <Header />

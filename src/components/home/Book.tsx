@@ -12,14 +12,21 @@ export function Book() {
     <section id="book" className="overflow-x-hidden bg-deep py-20 text-ivory md:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 sm:px-5 md:grid-cols-12 md:gap-14 md:px-8">
         <Reveal className="md:col-span-5">
-          <div className="relative mx-auto w-[min(100%,18rem)] sm:max-w-sm">
+          <div className="relative mx-auto flex w-full max-w-md items-end justify-center gap-3 sm:max-w-lg">
             <div className="absolute -inset-8 bg-ink/40 blur-2xl" />
             <Image
               src="/images/book-cover.png"
-              alt={t.book.english}
-              width={470}
-              height={700}
-              className="relative w-full rotate-[3deg] shadow-[0_30px_80px_rgba(0,0,0,0.45)] transition-transform duration-700 hover:rotate-[1deg] md:rotate-[4deg]"
+              alt={t.book.coverFront}
+              width={752}
+              height={1024}
+              className="relative w-[48%] -rotate-[5deg] shadow-[0_24px_60px_rgba(0,0,0,0.5)] transition-transform duration-700 hover:-rotate-[2deg]"
+            />
+            <Image
+              src="/images/book-back.png"
+              alt={t.book.coverBack}
+              width={769}
+              height={1024}
+              className="relative w-[48%] rotate-[6deg] shadow-[0_24px_60px_rgba(0,0,0,0.5)] transition-transform duration-700 hover:rotate-[3deg]"
             />
           </div>
         </Reveal>

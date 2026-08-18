@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 
 const links = [
@@ -135,22 +136,37 @@ export function Header() {
         </div>
       </div>
 
-      {open && (
-        <div className="absolute left-0 right-0 top-full z-50 border-t border-sand/60 bg-ivory px-5 py-8 md:hidden">
-          <div className="flex min-h-[50vh] flex-col gap-5">
-            {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="font-display py-3 text-3xl text-deep sm:text-4xl"
-                onClick={() => setOpen(false)}
-              >
-                {t.nav[link.key]}
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="fixed inset-0 z-[80] flex flex-col justify-end bg-ivory px-5 pb-10 pt-28 lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.35 }}
+          >
+            <p className="kicker mb-8">{t.footer.mark}</p>
+            <nav className="flex flex-col">
+              {links.map((link, index) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, y: 18 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.08 + index * 0.06, duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <Link
+                    href={link.href}
+                    className="font-display block border-t border-sand/70 py-4 text-[2.6rem] leading-none text-deep sm:text-6xl"
+                    onClick={() => setOpen(false)}
+                  >
+                    {t.nav[link.key]}
+                  </Link>
+                </motion.div>
+              ))}
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

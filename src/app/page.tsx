@@ -7,6 +7,7 @@ import { Investigations } from "@/components/home/Investigations";
 import { Book } from "@/components/home/Book";
 import { International } from "@/components/home/International";
 import { Training } from "@/components/home/Training";
+import { PressArchive } from "@/components/home/PressArchive";
 import { PhotoArchive } from "@/components/home/PhotoArchive";
 import { Recognition } from "@/components/home/Recognition";
 import { ContactPreview } from "@/components/home/ContactPreview";
@@ -23,6 +24,7 @@ export default function Home() {
       <Book />
       <International />
       <Training />
+      <PressArchive />
       <PhotoArchive />
       <Recognition />
       <ContactPreview />

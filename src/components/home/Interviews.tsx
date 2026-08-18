@@ -56,6 +56,9 @@ export function Interviews({
                 sizes="(min-width: 768px) 60vw, 100vw"
               />
               <div className="absolute inset-0 bg-ink/20 transition-colors group-hover:bg-ink/35" />
+              <span className="absolute top-1/2 left-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-ivory/80 bg-ink/35 text-ivory md:hidden">
+                ▶
+              </span>
             </div>
             <div className="flex flex-col justify-between p-5 sm:p-7 md:col-span-2 md:p-10">
               <div>

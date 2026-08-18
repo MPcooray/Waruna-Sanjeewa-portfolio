@@ -16,14 +16,24 @@ export default function PublicationsPage() {
       <section className="bg-deep py-16 text-ivory md:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-12 md:px-8">
           <div className="md:col-span-5">
-            <Image
-              src="/images/book-cover.png"
-              alt={page.sinhalaTitle}
-              width={470}
-              height={700}
-              className="mx-auto w-full max-w-[16rem] rotate-[3deg] shadow-[0_30px_80px_rgba(0,0,0,0.45)] sm:max-w-sm"
-              priority
-            />
+            <div className="mx-auto flex w-full max-w-md items-end justify-center gap-3 sm:max-w-lg">
+              <Image
+                src="/images/book-cover.png"
+                alt={t.book.coverFront}
+                width={752}
+                height={1024}
+                className="w-[48%] -rotate-[5deg] shadow-[0_24px_60px_rgba(0,0,0,0.5)]"
+                priority
+              />
+              <Image
+                src="/images/book-back.png"
+                alt={t.book.coverBack}
+                width={769}
+                height={1024}
+                className="w-[48%] rotate-[6deg] shadow-[0_24px_60px_rgba(0,0,0,0.5)]"
+                priority
+              />
+            </div>
           </div>
           <div className="md:col-span-7">
             <p className="font-display text-4xl leading-tight md:text-5xl">{page.sinhalaTitle}</p>

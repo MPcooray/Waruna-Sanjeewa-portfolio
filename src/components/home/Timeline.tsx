@@ -1,19 +1,21 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLanguage } from "@/context/LanguageContext";
 import { timeline } from "@/data/site";
 import { Kicker, Reveal } from "@/components/ui/Editorial";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Timeline() {
   const { t, locale } = useLanguage();
   const root = useRef<HTMLElement>(null);
 
-  useEffect(() => {
-    const el = root.current;
-    if (!el) return;
-    const ctx = gsap.context(() => {
+  useGSAP(
+    () => {
       gsap.fromTo(
         ".timeline-progress",
         { scaleY: 0 },
@@ -28,9 +30,9 @@ export function Timeline() {
           },
         },
       );
-    }, el);
-    return () => ctx.revert();
-  }, [locale]);
+    },
+    { scope: root, dependencies: [locale], revertOnUpdate: true },
+  );
 
   return (
     <section id="timeline" ref={root} className="bg-ivory py-24 md:py-32">

@@ -1,14 +1,19 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LanguageProvider } from "@/context/LanguageContext";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const lenisRef = useRef<Lenis | null>(null);
+
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce) return;
@@ -17,7 +22,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       duration: 1.12,
       smoothWheel: true,
     });
-
+    lenisRef.current = lenis;
     lenis.on("scroll", ScrollTrigger.update);
 
     const ticker = (time: number) => {
@@ -33,9 +38,16 @@ export function Providers({ children }: { children: React.ReactNode }) {
       window.removeEventListener("resize", onResize);
       gsap.ticker.remove(ticker);
       lenis.destroy();
-      ScrollTrigger.getAll().forEach((st) => st.kill());
+      lenisRef.current = null;
     };
   }, []);
+
+  useEffect(() => {
+    lenisRef.current?.scrollTo(0, { immediate: true });
+    window.scrollTo(0, 0);
+    const id = window.requestAnimationFrame(() => ScrollTrigger.refresh());
+    return () => window.cancelAnimationFrame(id);
+  }, [pathname]);
 
   return <LanguageProvider>{children}</LanguageProvider>;
 }
