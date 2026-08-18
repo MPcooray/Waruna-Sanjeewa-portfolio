@@ -98,6 +98,33 @@ img {
   filter: grayscale(0.28) sepia(0.22) contrast(1.06) saturate(0.72);
 }
 
+.hero-screen {
+  height: 100dvh;
+  min-height: 32rem;
+  max-height: 100dvh;
+}
+
+.hero-copy {
+  min-height: 100%;
+  padding-top: calc(5.5rem + env(safe-area-inset-top, 0px));
+  padding-bottom: clamp(1.25rem, 5.5vh, 7rem);
+}
+
+.hero-name {
+  margin-top: clamp(0.6rem, 1.8vh, 1.5rem);
+  margin-bottom: clamp(0.7rem, 2vh, 2rem);
+  font-size: clamp(2.65rem, min(16vw, 10vh), 7.4rem);
+}
+
+html[data-locale="si"] .hero-name {
+  font-size: clamp(2.35rem, min(13vw, 8.6vh), 6.2rem);
+}
+
+.hero-meta {
+  margin-top: clamp(0.75rem, 2.2vh, 2.5rem);
+  gap: clamp(1.25rem, 3vh, 2.5rem);
+}
+
 .grain {
   pointer-events: none;
   position: fixed;

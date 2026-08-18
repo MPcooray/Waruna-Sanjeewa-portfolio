@@ -10,7 +10,7 @@ export const galleryPhotos = [
       si: "SLIM-Kantar People’s Awards",
     },
     kicker: { en: "Recognition", si: "පිළිගැනීම" },
-    className: "md:col-span-8 aspect-[3/2]",
+    className: "aspect-[4/3] md:col-span-8 md:aspect-[3/2]",
   },
   {
     src: "/images/gallery/book-presentation-02.png",
@@ -23,7 +23,7 @@ export const galleryPhotos = [
       si: "ග්‍රන්ථය භාරදීම",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
-    className: "md:col-span-4 md:row-span-2 aspect-[3/4] md:aspect-auto md:min-h-[540px]",
+    className: "aspect-[4/3] md:col-span-4 md:row-span-2 md:aspect-auto md:h-full",
   },
   {
     src: "/images/gallery/award-ceremony.png",
@@ -36,7 +36,7 @@ export const galleryPhotos = [
       si: "සම්මාන උළෙලක්",
     },
     kicker: { en: "Recognition", si: "පිළිගැනීම" },
-    className: "md:col-span-8 aspect-[3/2]",
+    className: "aspect-[4/3] md:col-span-8 md:aspect-[3/2]",
   },
   {
     src: "/images/gallery/book-presentation-01.png",
@@ -49,7 +49,7 @@ export const galleryPhotos = [
       si: "ප්‍රකාශිත ග්‍රන්ථය සමඟ",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
-    className: "md:col-span-6 aspect-[4/3]",
+    className: "aspect-[4/3] md:col-span-6",
   },
   {
     src: "/images/gallery/book-office.png",
@@ -62,7 +62,7 @@ export const galleryPhotos = [
       si: "කාර්යාලයක භාරදීමක්",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
-    className: "md:col-span-6 aspect-[4/3]",
+    className: "aspect-[4/3] md:col-span-6",
   },
   {
     src: "/images/gallery/media-event.png",
@@ -75,7 +75,7 @@ export const galleryPhotos = [
       si: "මාධ්‍ය රැස්වීමක්",
     },
     kicker: { en: "Archive", si: "ලේඛනාගාරය" },
-    className: "md:col-span-5 aspect-[3/2]",
+    className: "aspect-[4/3] md:col-span-5 md:aspect-[3/2]",
   },
   {
     src: "/images/gallery/book-presentation-03.png",
@@ -88,7 +88,7 @@ export const galleryPhotos = [
       si: "ග්‍රන්ථයේ පිටපත් සමඟ",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
-    className: "md:col-span-7 aspect-[4/3]",
+    className: "aspect-[4/3] md:col-span-7",
   },
   {
     src: "/images/gallery/book-with-trophies.png",
@@ -101,7 +101,7 @@ export const galleryPhotos = [
       si: "ග්‍රන්ථය සමඟ",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
-    className: "md:col-span-6 aspect-[4/3]",
+    className: "aspect-[4/3] md:col-span-6",
   },
   {
     src: "/images/gallery/book-presentation-04.png",
@@ -114,6 +114,6 @@ export const galleryPhotos = [
       si: "තවත් භාරදීමක්",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
-    className: "md:col-span-6 aspect-[4/3]",
+    className: "aspect-[4/3] md:col-span-6",
   },
 ];

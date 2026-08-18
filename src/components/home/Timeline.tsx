@@ -44,16 +44,19 @@ export function Timeline() {
           </h2>
         </Reveal>
 
-        <div className="timeline-list relative mt-16 md:mt-20 md:ml-8">
-          <div className="absolute top-0 bottom-0 left-[5.5rem] hidden w-px bg-beige md:block" />
-          <div className="timeline-progress absolute top-0 left-[5.5rem] hidden h-full w-px origin-top bg-deep md:block" />
+        <div className="timeline-list relative mt-16 md:mt-20">
+          <div className="absolute top-0 bottom-0 left-[7.25rem] hidden w-px bg-beige md:block" />
+          <div className="timeline-progress absolute top-0 left-[7.25rem] hidden h-full w-px origin-top bg-deep md:block" />
           <ol className="space-y-12 md:space-y-16">
             {timeline.map((item, index) => (
               <Reveal key={`${item.year}-${item.title.en}`} delay={index * 0.03}>
-                <li className="grid gap-2 border-l border-sand pl-5 md:border-l-0 md:pl-0 md:grid-cols-[7rem_1fr] md:gap-12">
-                  <p className="font-display text-2xl text-brown md:text-right md:text-3xl">
+                <li className="grid gap-2 border-l border-sand pl-5 md:grid-cols-[6rem_2.5rem_1fr] md:items-start md:gap-0 md:border-l-0 md:pl-0">
+                  <p className="relative z-10 font-display text-2xl text-brown md:pt-0.5 md:text-right md:text-3xl">
                     {item.year}
                   </p>
+                  <span className="relative z-10 hidden md:flex md:justify-center md:pt-3" aria-hidden>
+                    <span className="size-2 rounded-full bg-ivory ring-1 ring-deep/40" />
+                  </span>
                   <div>
                     <h3 className="font-display text-2xl text-deep md:text-3xl">
                       {item.title[locale]}

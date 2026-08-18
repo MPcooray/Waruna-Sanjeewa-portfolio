@@ -52,13 +52,13 @@ export function PhotoArchive() {
         </Reveal>
 
         <ArchiveFold more={t.photos.more} less={t.photos.less} fadeFrom="beige">
-          <div className="mt-14 grid gap-3 sm:grid-cols-2 md:grid-cols-12">
+          <div className="mt-14 grid grid-cols-2 gap-0 md:grid-cols-12">
             {galleryPhotos.map((photo, index) => (
               <button
                 key={photo.src}
                 type="button"
                 onClick={() => setOpen(index)}
-                className={`group relative overflow-hidden bg-deep text-left ${photo.className}`}
+                className={`group relative h-full min-h-0 w-full self-stretch overflow-hidden bg-deep text-left ${photo.className}`}
               >
                 <Image
                   src={photo.src}

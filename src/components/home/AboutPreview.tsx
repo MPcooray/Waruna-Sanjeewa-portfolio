@@ -37,7 +37,7 @@ export function AboutPreview() {
                 sizes="(min-width: 768px) 40vw, 100vw"
               />
             </div>
-            <p className="mt-4 text-sm text-brown">Waruna Sanjeewa Liyanage</p>
+            <p className="mt-4 text-sm text-brown">{t.hero.lines.join(" ")}</p>
           </Link>
         </Reveal>
       </div>
