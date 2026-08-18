@@ -86,14 +86,21 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   openGraph: {
-    title: "Waruna Sanjeewa Liyanage | Journalist, Author & Media Trainer",
+    title: "Waruna Sanjeewa Liyanage | Journalist & Author",
     description:
-      "Official portfolio of Waruna Sanjeewa Liyanage — journalist, author, and media trainer. An archive of more than two decades in Sri Lankan and international journalism.",
-    type: "profile",
+      "Official portfolio of Waruna Sanjeewa Liyanage — Sri Lankan journalist, author of Investigative Journalism, and media trainer.",
+    type: "website",
     url: siteUrl,
     siteName: "Waruna Sanjeewa Liyanage",
     locale: "en_LK",
+    alternateLocale: ["si_LK"],
     images: [
+      {
+        url: "/images/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Waruna Sanjeewa Liyanage",
+      },
       {
         url: "/images/profile.jpg",
         width: 1200,
@@ -104,10 +111,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Waruna Sanjeewa Liyanage | Journalist, Author & Media Trainer",
+    title: "Waruna Sanjeewa Liyanage | Journalist & Author",
     description:
-      "Official portfolio — journalist, author of Investigative Journalism, and media trainer.",
-    images: ["/images/profile.jpg"],
+      "Official portfolio of Waruna Sanjeewa Liyanage — Sri Lankan journalist, author of Investigative Journalism, and media trainer.",
+    images: ["/images/og.jpg"],
   },
 };
 
