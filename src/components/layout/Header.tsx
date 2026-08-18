@@ -34,6 +34,23 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  // Close mobile menu when resizing to desktop
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 768) setOpen(false);
+    };
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
+
   useEffect(() => {
     if (pathname !== "/") return;
 
@@ -108,8 +125,8 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="border-t border-sand/60 bg-ivory px-5 py-8 md:hidden">
-          <div className="flex flex-col gap-5">
+        <div className="absolute left-0 right-0 top-full z-50 border-t border-sand/60 bg-ivory px-5 py-8 md:hidden">
+          <div className="flex min-h-[50vh] flex-col gap-5">
             {links.map((link) => (
               <Link
                 key={link.href}

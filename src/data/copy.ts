@@ -134,8 +134,8 @@ export const copy = {
     },
     footer: {
       mark: "The Archive of a Journalist",
-      credit: "A Tetrova project",
-      rights: "All rights reserved.",
+      credit: "Crafted by Tetrova Technologies",
+      rights: "All rights reserved",
     },
   },
   si: {
@@ -156,7 +156,7 @@ export const copy = {
     hero: {
       kicker: "ප්‍රවෘත්තිකරු · කතුවරයා · මාධ්‍ය පුහුණුකරු",
       lines: ["වරුණ", "සංජීව", "ලියනගේ"],
-      lede: "දශක දෙකකට වැඩි කාලයක් කතාන්දර ලේඛනය කරමින්, සත්‍යය සොයමින්, ප්‍රවෘත්තිකරණය හැඩගන්වමින්.",
+      lede: "දශක දෙකකට වැඩි කාලයක් පුරා කතන්දර සොයමින්, සත්‍යය හෙළි කරමින්, මාධ්‍යකරණයේ සලකුණක් තබමින්.",
       explore: "ලේඛනාගාරය ගවේෂණය කරන්න",
     },
     career: {
@@ -271,8 +271,8 @@ export const copy = {
     },
     footer: {
       mark: "ප්‍රවෘත්තිකරුවෙකුගේ ලේඛනාගාරය",
-      credit: "Tetrova ව්‍යාපෘතියකි",
-      rights: "සියලු හිමිකම් ඇවිරිණි.",
+      credit: "Tetrova Technologies නිර්මාණයකි",
+      rights: "සියලු හිමිකම් ඇවිරිණි",
     },
   },
 } as const;

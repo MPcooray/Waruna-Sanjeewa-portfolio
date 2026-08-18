@@ -1,9 +1,9 @@
 "use client";
 
-import { AnimatePresence, motion } from "framer-motion";
+import { Kicker, Reveal } from "@/components/ui/Editorial";
 import { useLanguage } from "@/context/LanguageContext";
 import { conferences } from "@/data/site";
-import { Kicker, Reveal } from "@/components/ui/Editorial";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
 const MAP = {
@@ -133,9 +133,7 @@ export function International() {
                         onFocus={() => setActive(index)}
                         onClick={() => setActive(index)}
                       >
-                        <title>
-                          {pin.city[locale]}, {pin.country[locale]} {pin.year}
-                        </title>
+                        <title>{`${pin.city[locale]}, ${pin.country[locale]} ${pin.year}`}</title>
                       </circle>
                       {isActive && (
                         <circle

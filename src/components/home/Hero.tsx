@@ -52,7 +52,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-deep/85 via-transparent to-deep/40" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-16 pt-28 md:px-8 md:pb-20">
+      <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-28 md:px-8 md:pb-28">
         <motion.p
           className="kicker text-sand"
           initial={{ opacity: 0, y: 10 }}
@@ -61,9 +61,16 @@ export function Hero() {
         >
           {t.hero.kicker}
         </motion.p>
-        <h1 className="font-display mt-6 text-[16vw] leading-[0.86] tracking-[-0.03em] sm:text-[12vw] lg:text-[8.4rem]">
+        <h1
+          className={`font-display mt-6 mb-8 text-[16vw] tracking-[-0.03em] sm:text-[12vw] lg:text-[8.4rem] ${
+            locale === "si" ? "leading-[1.2]" : "leading-[1.05]"
+          }`}
+        >
           {t.hero.lines.map((line, lineIndex) => (
-            <span key={line} className="block overflow-hidden">
+            <span
+              key={line}
+              className={`block overflow-hidden ${locale === "si" ? "pb-3" : "pb-2"}`}
+            >
               {locale === "en" ? (
                 line.split("").map((char, i) => (
                   <motion.span
@@ -83,8 +90,8 @@ export function Hero() {
               ) : (
                 <motion.span
                   className="inline-block"
-                  initial={{ y: 36, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
+                  initial={{ y: "110%", opacity: 0 }}
+                  animate={{ y: "0%", opacity: 1 }}
                   transition={{ duration: 0.9, delay: 0.22 + lineIndex * 0.12 }}
                 >
                   {line}
