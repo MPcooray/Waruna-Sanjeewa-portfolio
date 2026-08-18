@@ -145,6 +145,7 @@ export const copy = {
       body: "For journalism, training, or conversations about the work — a letter is enough.",
       email: "Email",
       linkedin: "LinkedIn",
+      country: "Country",
       location: "Sri Lanka",
     },
     footer: {
@@ -297,6 +298,7 @@ export const copy = {
       body: "ප්‍රවෘත්තිකරණය, පුහුණුව, හෝ මෙම වැඩ පිළිබඳ සංවාදයක් සඳහා — ලිපියක් ප්‍රමාණවත් ය.",
       email: "විද්‍යුත් තැපෑල",
       linkedin: "LinkedIn",
+      country: "රට",
       location: "ශ්‍රී ලංකාව",
     },
     footer: {

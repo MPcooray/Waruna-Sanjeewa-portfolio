@@ -32,7 +32,7 @@ export function ContactPreview() {
             <p className="mt-3 text-lg text-deep group-hover:opacity-60">waruna-liyanage</p>
           </a>
           <div className="border-t border-sand pt-6">
-            <p className="kicker">{t.contact.location}</p>
+            <p className="kicker">{t.contact.country}</p>
             <p className="mt-3 text-lg text-deep">{t.contact.location}</p>
           </div>
         </Reveal>
