@@ -6,14 +6,18 @@ import { useLanguage } from "@/context/LanguageContext";
 import { Kicker, Reveal, TextLink } from "@/components/ui/Editorial";
 
 export function AboutPreview() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <section id="about" className="bg-beige py-24 md:py-32">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-8">
         <Reveal className="md:col-span-7">
           <Kicker>{t.about.kicker}</Kicker>
-          <blockquote className="font-display mt-6 text-3xl leading-[1.15] tracking-tight text-deep md:text-5xl">
+          <blockquote
+            className={`font-display mt-6 text-3xl tracking-tight text-deep md:text-5xl ${
+              locale === "si" ? "leading-[1.55]" : "leading-[1.25]"
+            }`}
+          >
             {t.about.heading}
           </blockquote>
           <p className="mt-5 text-sm tracking-wide text-brown">{t.about.attribution}</p>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowIcon } from "@/components/ui/Editorial";
 
 export default function NotFound() {
   return (
@@ -8,9 +9,9 @@ export default function NotFound() {
         <h1 className="font-display mt-5 text-5xl text-deep md:text-7xl">This page is not in the archive.</h1>
         <Link
           href="/"
-          className="mt-10 inline-flex text-[0.875rem] tracking-[0.22em] uppercase text-deep"
+          className="mt-10 inline-flex items-center gap-2 text-[0.875rem] tracking-[0.22em] uppercase text-deep"
         >
-          Return home →
+          Return home <ArrowIcon />
         </Link>
       </div>
     </section>
