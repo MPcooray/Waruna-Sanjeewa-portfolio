@@ -21,7 +21,7 @@ export function Footer() {
     <footer className="bg-deep text-ivory">
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <p className="kicker text-sand">{t.footer.mark}</p>
-        <h2 className="font-display mt-6 max-w-4xl text-5xl leading-[0.95] tracking-tight md:text-7xl">
+        <h2 className="font-display mt-6 max-w-4xl text-4xl leading-[0.95] tracking-tight sm:text-5xl md:text-7xl">
           Waruna
           <br />
           Sanjeewa

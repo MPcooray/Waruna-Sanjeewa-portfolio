@@ -48,7 +48,7 @@ export function Timeline() {
           <ol className="space-y-12 md:space-y-16">
             {timeline.map((item, index) => (
               <Reveal key={`${item.year}-${item.title.en}`} delay={index * 0.03}>
-                <li className="grid gap-3 md:grid-cols-[7rem_1fr] md:gap-12">
+                <li className="grid gap-2 border-l border-sand pl-5 md:border-l-0 md:pl-0 md:grid-cols-[7rem_1fr] md:gap-12">
                   <p className="font-display text-2xl text-brown md:text-right md:text-3xl">
                     {item.year}
                   </p>

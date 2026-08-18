@@ -27,7 +27,7 @@ export function VideoModal({ videoId, title, onClose }: VideoModalProps) {
 
   return (
     <motion.div
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/88 px-4 py-10"
+      className="fixed inset-0 z-[110] flex items-center justify-center bg-ink/88 px-3 py-8 sm:px-4 sm:py-10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -44,7 +44,7 @@ export function VideoModal({ videoId, title, onClose }: VideoModalProps) {
         <div className="mb-4 flex items-end justify-between gap-6">
           <div>
             <p className="kicker text-sand">{t.interviews.featured}</p>
-            <h3 className="font-display mt-2 text-2xl text-ivory md:text-3xl">{title}</h3>
+            <h3 className="font-display mt-2 text-xl text-ivory sm:text-2xl md:text-3xl">{title}</h3>
           </div>
           <button
             type="button"

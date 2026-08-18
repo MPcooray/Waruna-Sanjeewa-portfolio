@@ -44,12 +44,12 @@ export function Hero() {
             alt="Waruna Sanjeewa Liyanage"
             fill
             priority
-            className="portrait-filter object-cover object-[62%_18%]"
+            className="portrait-filter object-cover object-[48%_12%] sm:object-[62%_18%]"
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-deep via-deep/78 to-deep/25" />
-        <div className="absolute inset-0 bg-gradient-to-t from-deep/85 via-transparent to-deep/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-deep via-deep/55 to-deep/35 md:bg-gradient-to-r md:from-deep md:via-deep/78 md:to-deep/25" />
+        <div className="absolute inset-0 hidden bg-gradient-to-t from-deep/85 via-transparent to-deep/40 md:block" />
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-end px-5 pb-20 pt-28 md:px-8 md:pb-28">

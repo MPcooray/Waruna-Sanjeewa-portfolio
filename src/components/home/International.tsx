@@ -39,7 +39,7 @@ export function International() {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-12 lg:gap-12">
           <Reveal className="bg-ivory lg:col-span-8">
-            <div className="relative aspect-[4/5] w-full sm:aspect-[5/4]">
+            <div className="relative aspect-[3/4] w-full overflow-hidden sm:aspect-[5/4] md:aspect-[8/6]">
               <svg
                 viewBox={MAP.viewBox}
                 className="h-full w-full"
@@ -73,6 +73,7 @@ export function International() {
                       fill="#7A5A42"
                       fontSize="28"
                       letterSpacing="0.16em"
+                      className="hidden sm:block"
                     >
                       {line.label}
                     </text>
@@ -102,6 +103,7 @@ export function International() {
                         stroke={isActive ? "#3B2A20" : "#7A5A42"}
                         strokeWidth="1.6"
                         opacity="0.55"
+                        className="hidden sm:block"
                       />
                       <text
                         x={pin.label.x}
@@ -110,6 +112,7 @@ export function International() {
                         fill="#3B2A20"
                         fontSize={isActive ? 42 : 36}
                         fontFamily="var(--font-cormorant), Georgia, serif"
+                        className="hidden sm:block"
                       >
                         {pin.city[locale]}
                       </text>
@@ -120,13 +123,14 @@ export function International() {
                         fill="#7A5A42"
                         fontSize="22"
                         letterSpacing="0.18em"
+                        className="hidden sm:block"
                       >
                         {pin.year} · {locale === "en" ? pin.country.en.toUpperCase() : pin.country.si}
                       </text>
                       <circle
                         cx={pin.pin.x}
                         cy={pin.pin.y}
-                        r="36"
+                        r="56"
                         fill="transparent"
                         className="cursor-pointer"
                         onMouseEnter={() => setActive(index)}
@@ -171,7 +175,7 @@ export function International() {
                   type="button"
                   onClick={() => setActive(index)}
                   onMouseEnter={() => setActive(index)}
-                  className={`flex-1 border-t pt-3 text-left text-[0.72rem] tracking-[0.18em] ${
+                  className={`min-h-12 flex-1 border-t pt-3 text-left text-[0.72rem] tracking-[0.18em] ${
                     active === index
                       ? "border-deep text-deep"
                       : "border-sand text-brown/60 hover:text-brown"
