@@ -52,7 +52,7 @@ export function PhotoArchive() {
         </Reveal>
 
         <ArchiveFold more={t.photos.more} less={t.photos.less} fadeFrom="beige">
-          <div className="mt-14 grid gap-3 sm:grid-cols-2 md:grid-cols-12">
+          <div className="mt-14 grid gap-3 sm:grid-cols-2 md:grid-cols-12 items-start">
             {galleryPhotos.map((photo, index) => (
               <button
                 key={photo.src}

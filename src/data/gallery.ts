@@ -23,7 +23,7 @@ export const galleryPhotos = [
       si: "ග්‍රන්ථය භාරදීම",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
-    className: "md:col-span-4 md:row-span-2 aspect-[3/4] md:aspect-auto md:min-h-[540px]",
+    className: "md:col-span-4 aspect-[3/4] md:aspect-[3/4]",
   },
   {
     src: "/images/gallery/award-ceremony.png",

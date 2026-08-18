@@ -18,7 +18,7 @@ export default function AboutPage() {
             <div className="relative aspect-[3/4] overflow-hidden bg-sand md:sticky md:top-28">
               <Image
                 src="/images/portrait.jpg"
-                alt="Waruna Sanjeewa Liyanage"
+                alt={t.photos.captionPortrait}
                 fill
                 className="portrait-filter object-cover object-[58%_12%]"
                 sizes="(min-width: 768px) 33vw, 100vw"

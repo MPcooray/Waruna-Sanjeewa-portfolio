@@ -22,11 +22,12 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
         <p className="kicker text-sand">{t.footer.mark}</p>
         <h2 className="font-display mt-6 max-w-4xl text-4xl leading-[0.95] tracking-tight sm:text-5xl md:text-7xl">
-          Waruna
-          <br />
-          Sanjeewa
-          <br />
-          Liyanage
+          {t.hero.lines.map((line, index) => (
+            <span key={index}>
+              {line}
+              {index < t.hero.lines.length - 1 && <br />}
+            </span>
+          ))}
         </h2>
         <div className="editorial-rule mt-12 bg-brown/50" />
         <div className="mt-10 grid gap-10 md:grid-cols-3">

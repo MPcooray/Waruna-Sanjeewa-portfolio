@@ -1,11 +1,11 @@
 "use client";
 
+import { useLanguage } from "@/context/LanguageContext";
+import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import { AnimatePresence, motion } from "framer-motion";
-import { useLanguage } from "@/context/LanguageContext";
 
 const links = [
   { href: "/about", key: "about" as const },

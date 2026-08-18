@@ -1,13 +1,13 @@
 "use client";
 
+import { ArrowIcon } from "@/components/ui/Editorial";
+import { useLanguage } from "@/context/LanguageContext";
+import { useGSAP } from "@gsap/react";
+import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { motion } from "framer-motion";
-import { useLanguage } from "@/context/LanguageContext";
-import { ArrowIcon } from "@/components/ui/Editorial";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,7 +65,7 @@ export function Hero() {
         <div className="hero-photo absolute inset-0 origin-top scale-110">
           <Image
             src="/images/portrait.jpg"
-            alt="Waruna Sanjeewa Liyanage"
+            alt={t.photos.captionPortrait}
             fill
             priority
             className="portrait-filter object-cover object-[48%_12%] sm:object-[62%_18%]"

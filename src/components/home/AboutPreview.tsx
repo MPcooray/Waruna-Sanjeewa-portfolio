@@ -31,13 +31,13 @@ export function AboutPreview() {
             <div className="relative aspect-[3/4] overflow-hidden bg-sand">
               <Image
                 src="/images/portrait.jpg"
-                alt="Waruna Sanjeewa Liyanage"
+                alt={t.photos.captionPortrait}
                 fill
                 className="portrait-filter object-cover object-[58%_12%] transition-transform duration-700 group-hover:scale-[1.04]"
                 sizes="(min-width: 768px) 40vw, 100vw"
               />
             </div>
-            <p className="mt-4 text-sm text-brown">Waruna Sanjeewa Liyanage</p>
+            <p className="mt-4 text-sm text-brown">{t.photos.captionPortrait}</p>
           </Link>
         </Reveal>
       </div>
