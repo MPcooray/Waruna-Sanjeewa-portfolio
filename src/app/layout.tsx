@@ -67,6 +67,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Waruna Sanjeewa Liyanage", url: siteUrl }],
   creator: "Waruna Sanjeewa Liyanage",
   publisher: "Waruna Sanjeewa Liyanage",
+  verification: {
+    google: "1ly95rImm4IMsioRWsUQA8uGFEjAwCAwcQHMSnQZsx4",
+  },
   alternates: {
     canonical: "/",
   },
