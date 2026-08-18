@@ -57,7 +57,9 @@ export function Interviews({
               />
               <div className="absolute inset-0 bg-ink/20 transition-colors group-hover:bg-ink/35" />
               <span className="absolute top-1/2 left-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-ivory/80 bg-ink/35 text-ivory md:hidden">
-                ▶
+                <svg viewBox="0 0 12 14" className="ml-0.5 size-4" fill="currentColor" aria-hidden>
+                  <path d="M1 1.2v11.6L11 7 1 1.2Z" />
+                </svg>
               </span>
             </div>
             <div className="flex flex-col justify-between p-5 sm:p-7 md:col-span-2 md:p-10">
@@ -68,8 +70,11 @@ export function Interviews({
                 </h3>
                 <p className="mt-4 leading-7 text-ink/75">{featured.subtitle[locale]}</p>
               </div>
-              <p className="mt-10 text-[0.875rem] tracking-[0.22em] uppercase text-deep">
-                ▶ {t.interviews.watch}
+              <p className="mt-10 inline-flex items-center gap-2 text-[0.875rem] tracking-[0.22em] uppercase text-deep">
+                <svg viewBox="0 0 12 14" className="size-3" fill="currentColor" aria-hidden>
+                  <path d="M1 1.2v11.6L11 7 1 1.2Z" />
+                </svg>
+                {t.interviews.watch}
               </p>
             </div>
           </button>

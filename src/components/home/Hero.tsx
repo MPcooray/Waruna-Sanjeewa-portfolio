@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
+import { ArrowIcon } from "@/components/ui/Editorial";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,7 +128,7 @@ export function Hero() {
           >
             <span className="hero-scroll-line h-12 w-px bg-ivory/50 transition-transform group-hover:scale-y-125" />
             <span>{t.hero.explore}</span>
-            <span className="transition-transform group-hover:translate-y-1">↓</span>
+            <ArrowIcon direction="down" className="transition-transform group-hover:translate-y-1" />
           </motion.a>
         </div>
       </div>

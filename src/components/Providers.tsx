@@ -32,10 +32,17 @@ export function Providers({ children }: { children: React.ReactNode }) {
     gsap.ticker.lagSmoothing(0);
 
     const onResize = () => ScrollTrigger.refresh();
+    const onNav = (event: Event) => {
+      const menuOpen = (event as CustomEvent<boolean>).detail;
+      if (menuOpen) lenis.stop();
+      else lenis.start();
+    };
     window.addEventListener("resize", onResize);
+    window.addEventListener("portfolio:nav", onNav);
 
     return () => {
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("portfolio:nav", onNav);
       gsap.ticker.remove(ticker);
       lenis.destroy();
       lenisRef.current = null;

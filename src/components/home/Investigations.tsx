@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { investigations } from "@/data/site";
-import { Kicker, Reveal, TextLink } from "@/components/ui/Editorial";
+import { ArrowIcon, Kicker, Reveal, TextLink } from "@/components/ui/Editorial";
 
 export function Investigations() {
   const { t, locale } = useLanguage();
@@ -28,8 +28,8 @@ export function Investigations() {
                 <div className="md:col-span-8">
                   <h3 className="font-display text-2xl text-deep sm:text-3xl md:text-4xl">{item.title[locale]}</h3>
                   <p className="mt-4 max-w-2xl leading-7 text-ink/75">{item.summary[locale]}</p>
-                  <span className="mt-6 inline-block text-[0.875rem] tracking-[0.2em] uppercase text-brown transition-transform group-hover:translate-x-1">
-                    {t.investigations.cta} →
+                  <span className="mt-6 inline-flex items-center gap-2 text-[0.875rem] tracking-[0.2em] uppercase text-brown transition-transform group-hover:translate-x-1">
+                    {t.investigations.cta} <ArrowIcon />
                   </span>
                 </div>
               </Link>

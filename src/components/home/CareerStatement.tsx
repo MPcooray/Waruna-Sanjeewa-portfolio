@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import { careerPath } from "@/data/site";
-import { Kicker, Reveal } from "@/components/ui/Editorial";
+import { ArrowIcon, Kicker, Reveal } from "@/components/ui/Editorial";
 
 export function CareerStatement() {
   const { t, locale } = useLanguage();
@@ -28,8 +28,8 @@ export function CareerStatement() {
                   {item[locale]}
                 </p>
                 {index < careerPath.length - 1 && (
-                  <p className="py-3 text-lg text-sand md:py-5 md:text-2xl" aria-hidden>
-                    ↓
+                  <p className="py-3 text-sand md:py-5" aria-hidden>
+                    <ArrowIcon direction="down" className="size-4 text-sand md:size-6" />
                   </p>
                 )}
               </li>

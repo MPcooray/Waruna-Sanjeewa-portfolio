@@ -33,6 +33,34 @@ export function Kicker({
   return <p className={`kicker ${className}`}>{children}</p>;
 }
 
+export function ArrowIcon({
+  direction = "right",
+  className = "",
+}: {
+  direction?: "right" | "down" | "up";
+  className?: string;
+}) {
+  const rotate =
+    direction === "down" ? "rotate-90" : direction === "up" ? "-rotate-90" : "";
+
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={`inline-block size-[0.9em] shrink-0 ${rotate} ${className}`}
+      fill="none"
+      aria-hidden
+    >
+      <path
+        d="M2.5 8h11M9.5 4l4 4-4 4"
+        stroke="currentColor"
+        strokeWidth="1.35"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
+      />
+    </svg>
+  );
+}
+
 export function TextLink({
   href,
   children,
@@ -56,7 +84,7 @@ export function TextLink({
         {children}
       </span>
       <span className="transition-transform duration-300 group-hover:translate-x-1">
-        {external ? "↗" : "→"}
+        <ArrowIcon />
       </span>
     </a>
   );

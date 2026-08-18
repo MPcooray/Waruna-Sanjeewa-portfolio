@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ArrowIcon } from "@/components/ui/Editorial";
 
 export function ArchiveFold({
   children,
@@ -38,7 +39,7 @@ export function ArchiveFold({
           aria-expanded={expanded}
         >
           <span className="flex h-11 w-11 items-center justify-center rounded-full border border-sand bg-ivory text-xl leading-none shadow-[0_8px_24px_rgba(33,28,24,0.08)]">
-            {expanded ? "↑" : "↓"}
+            <ArrowIcon direction={expanded ? "up" : "down"} className="size-4" />
           </span>
           <span className="text-[0.8125rem] tracking-[0.18em] uppercase text-brown">
             {expanded ? less : more}
