@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useReducedMotion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
 import { ArrowIcon, Kicker, Reveal } from "@/components/ui/Editorial";
 
@@ -9,25 +11,88 @@ const paths = [
   {
     key: "journalism" as const,
     href: "/journalism",
-    image: "/images/gallery/book-presentation-01.png",
+    images: [
+      "/images/gallery/book-presentation-01.png",
+      "/images/gallery/book-presentation-02.png",
+      "/images/gallery/book-presentation-03.png",
+      "/images/gallery/book-presentation-04.png",
+      "/images/gallery/book-office.png",
+      "/images/gallery/book-with-trophies.png",
+    ],
     align: "left" as const,
   },
   {
     key: "training" as const,
     href: "/training",
-    image: "/images/gallery/media-event.png",
+    images: [
+      "/images/gallery/media-event.png",
+      "/images/gallery/slim-kantar-awards.png",
+      "/images/gallery/award-ceremony.png",
+    ],
     align: "right" as const,
   },
   {
     key: "music" as const,
     href: "/music",
-    image: null,
+    images: [] as string[],
     align: "left" as const,
   },
 ];
 
+function PathSlides({
+  images,
+  offset = 0,
+  paused,
+}: {
+  images: string[];
+  offset?: number;
+  paused?: boolean;
+}) {
+  const [index, setIndex] = useState(0);
+  const reduced = useReducedMotion();
+
+  useEffect(() => {
+    if (images.length < 2 || reduced || paused) return;
+
+    let interval: ReturnType<typeof setInterval> | undefined;
+    const start = window.setTimeout(() => {
+      interval = setInterval(() => {
+        setIndex((current) => (current + 1) % images.length);
+      }, 1500);
+    }, offset);
+
+    return () => {
+      window.clearTimeout(start);
+      if (interval) clearInterval(interval);
+    };
+  }, [images.length, offset, paused, reduced]);
+
+  if (images.length === 0) {
+    return <div className="absolute inset-0 bg-deep" />;
+  }
+
+  return (
+    <>
+      {images.map((src, imageIndex) => (
+        <Image
+          key={src}
+          src={src}
+          alt=""
+          fill
+          className={`object-cover object-[50%_18%] transition-opacity duration-700 ease-out ${
+            imageIndex === index ? "opacity-100" : "opacity-0"
+          }`}
+          sizes="(min-width: 768px) 58vw, 100vw"
+          priority={imageIndex === 0}
+        />
+      ))}
+    </>
+  );
+}
+
 export function ThreePaths() {
   const { t } = useLanguage();
+  const [hovered, setHovered] = useState<string | null>(null);
 
   return (
     <section id="paths" className="bg-beige py-24 md:py-32">
@@ -48,6 +113,8 @@ export function ThreePaths() {
               <Reveal key={path.key} delay={index * 0.06}>
                 <Link
                   href={path.href}
+                  onMouseEnter={() => setHovered(path.key)}
+                  onMouseLeave={() => setHovered(null)}
                   className={`group grid overflow-hidden bg-ivory md:grid-cols-12 ${
                     right ? "md:[direction:rtl]" : ""
                   }`}
@@ -57,17 +124,11 @@ export function ThreePaths() {
                       right ? "md:[direction:ltr]" : ""
                     }`}
                   >
-                    {path.image ? (
-                      <Image
-                        src={path.image}
-                        alt=""
-                        fill
-                        className="object-cover object-[50%_18%] transition-transform duration-700 group-hover:scale-[1.04]"
-                        sizes="(min-width: 768px) 58vw, 100vw"
-                      />
-                    ) : (
-                      <div className="absolute inset-0 bg-deep" />
-                    )}
+                    <PathSlides
+                      images={path.images}
+                      offset={index * 1000}
+                      paused={hovered === path.key}
+                    />
                     <div className="absolute inset-0 bg-ink/25 transition-colors duration-500 group-hover:bg-ink/40" />
                   </div>
                   <div
