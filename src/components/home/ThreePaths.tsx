@@ -95,7 +95,7 @@ export function ThreePaths() {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <section id="paths" className="bg-beige py-24 md:py-32">
+    <section id="paths" className="bg-beige pt-10 pb-24 md:pt-12 md:pb-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker>{t.paths.kicker}</Kicker>

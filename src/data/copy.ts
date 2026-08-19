@@ -32,7 +32,7 @@ export const copy = {
         "The first purpose of investigative journalism is to disclose what power would rather keep hidden.",
       attribution: "From the book · Investigative Journalism",
       body: "Waruna Sanjeewa Liyanage has worked for more than two decades across Sri Lanka’s print and electronic media — from feature writing and newspaper editing to the newsroom of Derana, where he serves as News Manager. He trains journalists, and he works in music as a lyricist, chorus singer, and collaborator. His research book on investigative journalism is published by Sooriya.",
-      cta: "Read my story",
+      cta: "Read his story",
     },
     aboutPage: {
       kicker: "Biography",
@@ -260,7 +260,7 @@ export const copy = {
       contact: "සම්බන්ධවන්න",
     },
     hero: {
-      kicker: "ප්‍රවෘත්තිකරු · මාධ්‍ය පුහුණුකරු · සංගීතඥයා",
+      kicker: "පුවත්පත් කලාව · මාධ්‍ය පුහුණුව · සංගීතය",
       lines: ["වරුණ", "සංජීව", "ලියනගේ"],
       lede: "ප්‍රවෘත්තිකරණය, මාධ්‍ය පුහුණුව සහ සංගීතය ඔස්සේ දශක දෙකකට වැඩි කාලයක් පුරා ගොඩනැගුණු අත්දැකීම් සමුදායකි.",
       explore: "වැඩ ගවේෂණය කරන්න",
@@ -275,7 +275,7 @@ export const copy = {
         "බලය වසන් කිරීමට උත්සාහ කරන දේ හෙළිදරව් කිරීම ගවේෂණාත්මක ප්‍රවෘත්තිකරණයේ මූලික අරමුණයි.",
       attribution: "ග්‍රන්ථයෙන් · ගවේෂණාත්මක ප්‍රවෘත්තිකරණය",
       body: "වරුණ සංජීව ලියනගේ ශ්‍රී ලංකාවේ මුද්‍රිත සහ විද්‍යුත් මාධ්‍ය හරහා දශක දෙකකට වැඩි කාලයක් කටයුතු කර ඇත — විශේෂාංග ලේඛනයේ සහ පුවත්පත් සංස්කරණයේ සිට දෙරණ ප්‍රවෘත්ති කාමරය දක්වා. ඔහු මාධ්‍ය පුහුණුකරුවෙකු වන අතර ගී පද රචකයෙකු, ගායකයෙකු සහ කලාකරුවන් සමඟ සහයෝගී වන්නෙකි. ගවේෂණාත්මක ප්‍රවෘත්තිකරණය පිළිබඳ පර්යේෂණ ග්‍රන්ථය සූරිය ප්‍රකාශකයන් විසින් ප්‍රකාශයට පත් කර ඇත.",
-      cta: "මගේ කතාව කියවන්න",
+      cta: "ඔහුගේ කතාව කියවන්න",
     },
     aboutPage: {
       kicker: "චරිතාපදානය",

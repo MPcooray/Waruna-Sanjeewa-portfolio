@@ -9,7 +9,7 @@ export function AboutPreview() {
   const { t, locale } = useLanguage();
 
   return (
-    <section id="about" className="bg-beige py-24 md:py-32">
+    <section id="about" className="bg-beige pt-24 pb-12 md:pt-32 md:pb-16">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-8">
         <Reveal className="md:col-span-7">
           <Kicker>{t.about.kicker}</Kicker>
