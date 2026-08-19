@@ -114,7 +114,7 @@ export const pressClippings = [
       en: "A stay in Sigiriya",
       si: "සීගිරියේ නවාතැනක්",
     },
-    kicker: { en: "Lankadeepa · 1999", si: "ලංකාදීප · 1999" },
+    kicker: { en: "Lankadeepa · May 1999", si: "ලංකාදීප · 1999 මැයි" },
   },
   {
     src: "/images/press/1999-heritage.jpg",
@@ -144,16 +144,16 @@ export const pressClippings = [
   },
   {
     src: "/images/press/stock-market.jpg",
-    year: "2003",
+    year: "2001",
     alt: {
-      en: "Newspaper feature Mirror of Development: The Stock Market, by Waruna Sanjeewa Liyanage",
-      si: "සංවර්ධනයේ කැඩපත: කොටස් වෙළෙඳ පොළ නම් පුවත්පත් විශේෂාංගය, වරුණ සංජීව ලියනගේ",
+      en: "Aruna feature Mirror of Development: The Stock Market, 21 September 2001, by Waruna Sanjeewa Liyanage",
+      si: "සංවර්ධනයේ කැඩපත: කොටස් වෙළෙඳ පොළ නම් අරුණ විශේෂාංගය, 2001 සැප්තැම්බර් 21, වරුණ සංජීව ලියනගේ",
     },
     caption: {
       en: "The stock market, as a mirror",
       si: "කොටස් වෙළෙඳ පොළ, කැඩපතක් ලෙස",
     },
-    kicker: { en: "Aruna · business", si: "අරුණ · ව්‍යාපාර" },
+    kicker: { en: "Aruna · Sep 2001", si: "අරුණ · 2001 සැප්" },
   },
   {
     src: "/images/press/2003-05-18-perera-and-sons.jpg",
