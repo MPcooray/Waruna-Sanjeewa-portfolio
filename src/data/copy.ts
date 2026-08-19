@@ -98,10 +98,8 @@ export const copy = {
     international: {
       kicker: "International journalism",
       title: "Three conferences, three countries",
-      hover: "Select a city",
       lede: "From Sri Lanka to the Global Investigative Journalism Conference — Norway, South Africa, Germany.",
       series: "GIJC",
-      mapCaption: "Europe and Africa — the theatre of three gatherings.",
     },
     training: {
       kicker: "Media trainer",
@@ -251,10 +249,8 @@ export const copy = {
     international: {
       kicker: "ජාත්‍යන්තර ප්‍රවෘත්තිකරණය",
       title: "සමුළු තුනක්, රටවල් තුනක්",
-      hover: "නගරයක් තෝරන්න",
       lede: "ශ්‍රී ලංකාවේ සිට ගෝලීය ගවේෂණාත්මක ප්‍රවෘත්තිකරණ සමුළුව දක්වා — නෝර්වේ, දකුණු අප්‍රිකාව, ජර්මනිය.",
       series: "GIJC",
-      mapCaption: "යුරෝපය සහ අප්‍රිකාව — සමුළු තුනේ භූමිය.",
     },
     training: {
       kicker: "මාධ්‍ය පුහුණුකරු",

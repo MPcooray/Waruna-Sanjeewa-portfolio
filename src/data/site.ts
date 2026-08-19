@@ -168,9 +168,6 @@ export const conferences = [
       en: "An international gathering of investigative reporters, editors, and trainers.",
       si: "ගවේෂණාත්මක වාර්තාකරුවන්, සංස්කාරකවරුන් සහ පුහුණුකරුවන්ගේ ජාත්‍යන්තර රැස්වීමකි.",
     },
-    coords: "61.1° N · 10.5° E",
-    pin: { x: 2316, y: 391 },
-    label: { x: 1860, y: 368, anchor: "end" as const },
   },
   {
     year: "2017",
@@ -184,9 +181,6 @@ export const conferences = [
       en: "Conference biography published by GIJC17 records his work as News Manager at Derana.",
       si: "GIJC17 සමුළු චරිතාපදානය ඔහු දෙරණ ප්‍රවෘත්ති කළමනාකරු ලෙස සටහන් කරයි.",
     },
-    coords: "26.2° S · 28.0° E",
-    pin: { x: 2530, y: 1572 },
-    label: { x: 2820, y: 1558, anchor: "start" as const },
   },
   {
     year: "2019",
@@ -197,12 +191,9 @@ export const conferences = [
       si: "ගෝලීය ගවේෂණාත්මක ප්‍රවෘත්තිකරණ සමුළුව",
     },
     note: {
-      en: "The third GIJC in a sequence spanning Europe and Africa.",
-      si: "යුරෝපය සහ අප්‍රිකාව හරහා දිවෙන GIJC අනුක්‍රමයේ තෙවැනි සමුළුව.",
+      en: "The third Global Investigative Journalism Conference in this sequence.",
+      si: "මෙම අනුක්‍රමයේ තෙවැනි ගෝලීය ගවේෂණාත්මක ප්‍රවෘත්තිකරණ සමුළුව.",
     },
-    coords: "53.6° N · 10.0° E",
-    pin: { x: 2310, y: 493 },
-    label: { x: 2588, y: 486, anchor: "start" as const },
   },
 ];
 
