@@ -1,5 +1,4 @@
 import { Hero } from "@/components/home/Hero";
-import { CareerStatement } from "@/components/home/CareerStatement";
 import { AboutPreview } from "@/components/home/AboutPreview";
 import { ThreePaths } from "@/components/home/ThreePaths";
 import { Interviews } from "@/components/home/Interviews";
@@ -14,7 +13,6 @@ export default function Home() {
     <>
       <Hero />
       <AboutPreview />
-      <CareerStatement />
       <ThreePaths />
       <Investigations limit={3} />
       <Interviews featuredOnly />
