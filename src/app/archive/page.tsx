@@ -1,28 +1,16 @@
 "use client";
 
-import { PageIntro } from "@/components/layout/PageIntro";
-import { Timeline } from "@/components/home/Timeline";
-import { PressArchive } from "@/components/home/PressArchive";
+import { ArchiveExplorer, ArchiveHeader } from "@/components/home/ArchiveExplorer";
 import { PhotoArchive } from "@/components/home/PhotoArchive";
-import { Recognition } from "@/components/home/Recognition";
-import { International } from "@/components/home/International";
-import { useLanguage } from "@/context/LanguageContext";
+import { Timeline } from "@/components/home/Timeline";
 
 export default function ArchivePage() {
-  const { t } = useLanguage();
-
   return (
     <>
-      <PageIntro
-        kicker={t.nav.archive}
-        title={t.footer.mark}
-        lede={t.photos.note}
-      />
+      <ArchiveHeader />
+      <ArchiveExplorer />
       <Timeline />
-      <International />
-      <PressArchive />
       <PhotoArchive />
-      <Recognition />
     </>
   );
 }

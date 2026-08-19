@@ -252,13 +252,18 @@ export const trainingTopics = [
   { en: "Journalism training", si: "ප්‍රවෘත්තිකරණ පුහුණුව" },
 ];
 
-export const careerPath = [
-  { en: "Print", si: "මුද්‍රිත" },
-  { en: "Television", si: "රූපවාහිනිය" },
-  { en: "Investigative journalism", si: "ගවේෂණාත්මක ප්‍රවෘත්තිකරණය" },
-  { en: "International conferences", si: "ජාත්‍යන්තර සමුළු" },
-  { en: "Media training", si: "මාධ්‍ය පුහුණුව" },
-  { en: "Publishing", si: "ප්‍රකාශනය" },
+export const disciplines = [
+  { en: "Journalism", si: "ප්‍රවෘත්තිකරණය" },
+  { en: "Training", si: "පුහුණුව" },
+  { en: "Music", si: "සංගීතය" },
+];
+
+export const songs = [
+  {
+    number: "01",
+    title: { en: "Midella Mal", si: "මිදෙල්ල මල්" },
+    lyrics: { en: "Waruna Sanjeewa Liyanage", si: "වරුණ සංජීව ලියනගේ" },
+  },
 ];
 
 export const stats = [

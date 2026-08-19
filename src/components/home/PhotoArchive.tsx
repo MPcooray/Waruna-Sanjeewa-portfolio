@@ -8,9 +8,18 @@ import { galleryPhotos } from "@/data/gallery";
 import { Kicker, Reveal } from "@/components/ui/Editorial";
 import { ArchiveFold } from "@/components/ui/ArchiveFold";
 
-export function PhotoArchive() {
+export function PhotoArchive({
+  group,
+  heading,
+}: {
+  group?: "Publication" | "Recognition" | "Archive";
+  heading?: string;
+}) {
   const { t, locale } = useLanguage();
   const [open, setOpen] = useState<number | null>(null);
+  const photos = group
+    ? galleryPhotos.filter((photo) => photo.kicker.en === group)
+    : galleryPhotos;
 
   useEffect(() => {
     if (open === null) return;
@@ -18,15 +27,11 @@ export function PhotoArchive() {
     const onKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") setOpen(null);
       if (event.key === "ArrowRight") {
-        setOpen((current) =>
-          current === null ? current : (current + 1) % galleryPhotos.length,
-        );
+        setOpen((current) => (current === null ? current : (current + 1) % photos.length));
       }
       if (event.key === "ArrowLeft") {
         setOpen((current) =>
-          current === null
-            ? current
-            : (current - 1 + galleryPhotos.length) % galleryPhotos.length,
+          current === null ? current : (current - 1 + photos.length) % photos.length,
         );
       }
     };
@@ -37,9 +42,9 @@ export function PhotoArchive() {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [open, photos.length]);
 
-  const active = open !== null ? galleryPhotos[open] : null;
+  const active = open !== null ? photos[open] : null;
 
   return (
     <section id="photos" className="bg-beige py-24 md:py-32">
@@ -47,24 +52,26 @@ export function PhotoArchive() {
         <Reveal>
           <Kicker>{t.photos.kicker}</Kicker>
           <h2 className="font-display mt-5 text-4xl tracking-tight text-deep md:text-6xl">
-            {t.photos.title}
+            {heading ?? t.photos.title}
           </h2>
         </Reveal>
 
         <ArchiveFold more={t.photos.more} less={t.photos.less} fadeFrom="beige">
           <div className="mt-14 grid grid-cols-2 gap-0 md:grid-cols-12">
-            {galleryPhotos.map((photo, index) => (
+            {photos.map((photo, index) => (
               <button
                 key={photo.src}
                 type="button"
                 onClick={() => setOpen(index)}
-                className={`group relative h-full min-h-0 w-full self-stretch overflow-hidden bg-deep text-left ${photo.className}`}
+                className={`group relative h-full min-h-0 w-full self-stretch overflow-hidden bg-deep text-left ${
+                  group ? "aspect-[4/3] md:col-span-4" : photo.className
+                }`}
               >
                 <Image
                   src={photo.src}
                   alt={photo.alt[locale]}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  className="object-cover object-[50%_18%] transition-transform duration-700 group-hover:scale-[1.04]"
                   sizes="(min-width: 768px) 50vw, 100vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100 md:opacity-0" />
@@ -114,10 +121,10 @@ export function PhotoArchive() {
                   <p className="font-display mt-1 text-xl">{active.caption[locale]}</p>
                 </div>
                 <div className="flex items-center gap-4 text-[0.8125rem] tracking-[0.18em] uppercase">
-                  <button type="button" onClick={() => setOpen((open + galleryPhotos.length - 1) % galleryPhotos.length)}>
+                  <button type="button" onClick={() => setOpen((open + photos.length - 1) % photos.length)}>
                     Prev
                   </button>
-                  <button type="button" onClick={() => setOpen((open + 1) % galleryPhotos.length)}>
+                  <button type="button" onClick={() => setOpen((open + 1) % photos.length)}>
                     Next
                   </button>
                   <button type="button" onClick={() => setOpen(null)}>

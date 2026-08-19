@@ -5,11 +5,16 @@ import { useLanguage } from "@/context/LanguageContext";
 import { investigations } from "@/data/site";
 import { ArrowIcon, Kicker, Reveal, TextLink } from "@/components/ui/Editorial";
 
-export function Investigations() {
+export function Investigations({
+  limit,
+}: {
+  limit?: number;
+}) {
   const { t, locale } = useLanguage();
+  const items = limit ? investigations.slice(0, limit) : investigations;
 
   return (
-    <section id="journalism" className="bg-ivory py-24 md:py-32">
+    <section id="investigations" className="bg-ivory py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker>{t.investigations.kicker}</Kicker>
@@ -18,7 +23,7 @@ export function Investigations() {
           </h2>
         </Reveal>
         <div className="mt-16 divide-y divide-sand">
-          {investigations.map((item, index) => (
+          {items.map((item, index) => (
             <Reveal key={item.title.en} delay={index * 0.05}>
               <Link
                 href="/journalism"
@@ -37,7 +42,7 @@ export function Investigations() {
           ))}
         </div>
         <div className="mt-6">
-          <TextLink href="/journalism">{t.investigations.cta}</TextLink>
+          {limit ? <TextLink href="/journalism">{t.investigations.cta}</TextLink> : null}
         </div>
       </div>
     </section>

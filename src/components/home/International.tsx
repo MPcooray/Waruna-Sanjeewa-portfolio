@@ -8,7 +8,7 @@ export function International() {
   const { t, locale } = useLanguage();
 
   return (
-    <section id="international" className="bg-beige py-24 md:py-32">
+    <section id="conferences" className="bg-ivory py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker>{t.international.kicker}</Kicker>
@@ -18,25 +18,38 @@ export function International() {
           <p className="mt-6 max-w-2xl text-base leading-8 text-brown">{t.international.lede}</p>
         </Reveal>
 
-        <div className="mt-16 divide-y divide-sand border-t border-sand">
-          {conferences.map((item, index) => (
-            <Reveal key={item.year} delay={index * 0.05}>
-              <article className="grid gap-3 py-10 md:grid-cols-12 md:items-start md:gap-4">
-                <p className="kicker md:col-span-3">
-                  {item.year} · {t.international.series}
-                </p>
-                <div className="md:col-span-8">
-                  <h3 className="font-display text-2xl text-deep sm:text-3xl md:text-4xl">
+        <div className="mt-16 space-y-4 md:mt-20">
+          {conferences.map((item, index) => {
+            const right = index % 2 === 1;
+            return (
+              <Reveal key={item.year} delay={index * 0.05}>
+                <article
+                  className={`border-t border-sand py-12 md:py-16 ${
+                    right ? "md:text-right" : ""
+                  }`}
+                >
+                  <p className="kicker">{item.year}</p>
+                  <h3
+                    className={`font-display mt-5 text-3xl leading-tight text-deep sm:text-4xl md:text-5xl ${
+                      right ? "md:ml-auto md:max-w-2xl" : "max-w-2xl"
+                    }`}
+                  >
                     {item.event[locale]}
                   </h3>
-                  <p className="mt-3 text-sm tracking-wide text-brown">
-                    {item.city[locale]}, {item.country[locale]}
+                  <p className="mt-4 text-sm tracking-[0.14em] uppercase text-brown">
+                    {item.city[locale]} · {item.country[locale]}
                   </p>
-                  <p className="mt-4 max-w-2xl leading-7 text-ink/75">{item.note[locale]}</p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
+                  <p
+                    className={`mt-6 leading-7 text-ink/75 ${
+                      right ? "md:ml-auto md:max-w-xl" : "max-w-xl"
+                    }`}
+                  >
+                    {item.note[locale]}
+                  </p>
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

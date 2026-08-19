@@ -50,18 +50,20 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Waruna Sanjeewa Liyanage | Journalist, Author & Media Trainer",
+    default: "Waruna Sanjeewa Liyanage | Journalist, Trainer & Musician",
     template: "%s | Waruna Sanjeewa Liyanage",
   },
   description:
-    "Official portfolio of Waruna Sanjeewa Liyanage (වරුණ සංජීව ලියනගේ) — Sri Lankan journalist, author of Investigative Journalism, and media trainer. More than two decades in print, television, and investigative reporting.",
+    "Official archive of Waruna Sanjeewa Liyanage (වරුණ සංජීව ලියනගේ) — Sri Lankan journalist, media trainer, and musician. Print and electronic journalism, teaching, and music.",
   keywords: [
     "Waruna Sanjeewa Liyanage",
-    "Waruna S. Liyanage",
     "වරුණ සංජීව ලියනගේ",
     "Sri Lankan journalist",
     "investigative journalism",
     "Derana news manager",
+    "media trainer",
+    "Sri Lankan musician",
+    "Midella Mal",
     "Sooriya Publishers",
   ],
   authors: [{ name: "Waruna Sanjeewa Liyanage", url: siteUrl }],
@@ -86,9 +88,9 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true },
   },
   openGraph: {
-    title: "Waruna Sanjeewa Liyanage | Journalist & Author",
+    title: "Waruna Sanjeewa Liyanage | Journalist, Trainer & Musician",
     description:
-      "Official portfolio of Waruna Sanjeewa Liyanage — Sri Lankan journalist, author of Investigative Journalism, and media trainer.",
+      "Official archive of Waruna Sanjeewa Liyanage — journalist, media trainer, and musician.",
     type: "website",
     url: siteUrl,
     siteName: "Waruna Sanjeewa Liyanage",
@@ -111,9 +113,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Waruna Sanjeewa Liyanage | Journalist & Author",
+    title: "Waruna Sanjeewa Liyanage | Journalist, Trainer & Musician",
     description:
-      "Official portfolio of Waruna Sanjeewa Liyanage — Sri Lankan journalist, author of Investigative Journalism, and media trainer.",
+      "Official archive of Waruna Sanjeewa Liyanage — journalist, media trainer, and musician.",
     images: ["/images/og.jpg"],
   },
 };

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { PageIntro } from "@/components/layout/PageIntro";
+import { Timeline } from "@/components/home/Timeline";
 import { useLanguage } from "@/context/LanguageContext";
 import { TextLink } from "@/components/ui/Editorial";
 
@@ -35,11 +36,13 @@ export default function AboutPage() {
             <p className={`mt-8 ${bodyClass}`}>{page.p4}</p>
             <div className="mt-12 flex flex-wrap gap-8">
               <TextLink href="/journalism">{t.nav.journalism}</TextLink>
-              <TextLink href="/archive">{t.nav.archive}</TextLink>
+              <TextLink href="/training">{t.nav.training}</TextLink>
+              <TextLink href="/music">{t.nav.music}</TextLink>
             </div>
           </article>
         </div>
       </section>
+      <Timeline />
     </>
   );
 }

@@ -12,24 +12,28 @@ const filters: VideoCategory[] = ["all", "interviews", "discussions", "journalis
 
 export function Interviews({
   featuredOnly = false,
+  featuredId,
+  moreHref = "/training",
 }: {
   featuredOnly?: boolean;
+  featuredId?: string;
+  moreHref?: string;
 }) {
   const { t, locale } = useLanguage();
   const [filter, setFilter] = useState<VideoCategory>("all");
   const [active, setActive] = useState<string | null>(null);
 
-  const featured = videos[0];
+  const featured = videos.find((video) => video.id === featuredId) ?? videos[0];
   const list = useMemo(() => {
-    const rest = videos.slice(1);
+    const rest = videos.filter((video) => video.id !== featured.id);
     if (filter === "all") return rest;
     return rest.filter((video) => video.category === filter);
-  }, [filter]);
+  }, [filter, featured.id]);
 
   const playing = videos.find((video) => video.id === active);
 
   return (
-    <section id="interviews" className="bg-beige py-24 md:py-32">
+    <section id="conversations" className="bg-beige py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
@@ -38,7 +42,7 @@ export function Interviews({
               {t.interviews.title}
             </h2>
           </div>
-          {featuredOnly && <TextLink href="/interviews">{t.interviews.more}</TextLink>}
+          {featuredOnly && <TextLink href={moreHref}>{t.interviews.more}</TextLink>}
         </Reveal>
 
         <Reveal className="mt-14" delay={0.08}>
@@ -80,6 +84,7 @@ export function Interviews({
           </button>
         </Reveal>
 
+        {!featuredOnly && (
         <div className="mt-12 flex flex-wrap gap-x-6 gap-y-3">
           {filters.map((item) => (
             <button
@@ -94,7 +99,9 @@ export function Interviews({
             </button>
           ))}
         </div>
+        )}
 
+        {!featuredOnly && (
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {list.map((video) => (
             <button
@@ -127,6 +134,7 @@ export function Interviews({
             </button>
           ))}
         </div>
+        )}
       </div>
 
       <AnimatePresence>

@@ -3,15 +3,7 @@
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import { links } from "@/data/site";
-
-const nav = [
-  { href: "/about", key: "about" as const },
-  { href: "/journalism", key: "journalism" as const },
-  { href: "/interviews", key: "interviews" as const },
-  { href: "/publications", key: "publications" as const },
-  { href: "/archive", key: "archive" as const },
-  { href: "/contact", key: "contact" as const },
-];
+import { navLinks } from "@/data/nav";
 
 export function Footer() {
   const { t, locale } = useLanguage();
@@ -33,7 +25,7 @@ export function Footer() {
         <div className="editorial-rule mt-12 bg-brown/50" />
         <div className="mt-10 grid gap-10 md:grid-cols-3">
           <div className="flex flex-col gap-3 text-[0.875rem] tracking-[0.18em] uppercase text-beige">
-            {nav.map((item) => (
+            {navLinks.map((item) => (
               <Link key={item.href} href={item.href} className="hover:text-ivory">
                 {t.nav[item.key]}
               </Link>

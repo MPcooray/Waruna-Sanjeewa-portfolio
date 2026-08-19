@@ -6,15 +6,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { useLanguage } from "@/context/LanguageContext";
-
-const links = [
-  { href: "/about", key: "about" as const },
-  { href: "/journalism", key: "journalism" as const },
-  { href: "/interviews", key: "interviews" as const },
-  { href: "/publications", key: "publications" as const },
-  { href: "/archive", key: "archive" as const },
-  { href: "/contact", key: "contact" as const },
-];
+import { navLinks } from "@/data/nav";
 
 export function Header() {
   const { t, locale, setLocale } = useLanguage();
@@ -96,7 +88,7 @@ export function Header() {
         >
           <p className="kicker mb-8">{t.footer.mark}</p>
           <nav className="flex flex-col">
-            {links.map((link, index) => (
+            {navLinks.map((link, index) => (
               <motion.div
                 key={link.href}
                 initial={{ opacity: 0, y: 18 }}
@@ -131,14 +123,14 @@ export function Header() {
           <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-4 pt-[max(1rem,env(safe-area-inset-top))] sm:px-5 md:px-8">
             <Link
               href="/"
-              className="font-display min-w-0 truncate text-[1.05rem] tracking-tight sm:text-[1.2rem]"
+              className="font-display min-w-0 max-w-[12.5rem] text-[1.02rem] leading-[1.15] tracking-tight sm:max-w-none sm:text-[1.2rem]"
               onClick={() => setOpen(false)}
             >
               {t.brand}
             </Link>
 
             <nav className="hidden items-center gap-5 lg:flex lg:gap-7">
-              {links.map((link) => (
+              {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
