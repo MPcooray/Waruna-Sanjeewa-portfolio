@@ -263,7 +263,18 @@ export const songs = [
   {
     number: "01",
     title: { en: "Midella Mal", si: "මිදෙල්ල මල්" },
-    lyrics: { en: "Waruna Sanjeewa Liyanage", si: "වරුණ සංජීව ලියනගේ" },
+    artist: { en: "Waruna Sanjeewa Liyanage", si: "වරුණ සංජීව ලියනගේ" },
+    music: { en: "Nawarathna Gamage", si: "නවරත්න ගමගේ" },
+    lyrics: { en: "Amarasena Kankanamge", si: "අමරසේන කන්කානම්ගේ" },
+    youtubeId: "ayGsB-cnAVQ",
+  },
+  {
+    number: "02",
+    title: { en: "Mal Suwadai", si: "මල් සුවඳයි" },
+    artist: { en: "Waruna Sanjeewa Liyanage & Shanika Sumanasekara", si: "වරුණ සංජීව ලියනගේ සහ ශානිකා සුමනසේකර" },
+    music: { en: "H.M. Jayawardena", si: "එච්.එම්. ජයවර්ධන" },
+    lyrics: { en: "Manjula Prabhath Hettiarachchi", si: "මංජුල ප්‍රභාත් හෙට්ටිආරච්චි" },
+    youtubeId: "bBdfB906eQo",
   },
 ];
 
@@ -302,3 +313,35 @@ export const links = {
   book: "https://grantha.lk/gaweshanathmaka-prawurthikaranaya-waruna-sanjeewa-sooriya.html",
   gijc: "https://gijc17.sched.com/warunasanjeewaliyanage",
 };
+
+export const chorusSongs = [
+  {
+    title: { en: "Nan suran bathiyen", si: "නන් සුරන් භක්තියෙන්" },
+    leadArtist: { en: "Bandara Athauda", si: "බණ්ඩාර අතාවුද" },
+    youtubeId: "xK56HXAN80M",
+    label: { en: "Lead Artist", si: "ප්‍රධාන ගායනය" },
+  },
+  {
+    title: { en: "Ruwan nidana hela bimai", si: "රුවන් නිධාන හෙළ බිමයි" },
+    leadArtist: { en: "Victor Rathnayake", si: "වික්ටර් රත්නායක" },
+    youtubeId: "dIA_nfUIgVI",
+    label: { en: "Lead Artist", si: "ප්‍රධාන ගායනය" },
+  },
+  {
+    title: { en: "Api Ekama Rane Kurullo", si: "අපි එකම රෑනේ කුරුල්ලෝ" },
+    leadArtist: { en: "Wijesundara Weragoda", si: "විජේසුන්දර වේරගොඩ" },
+    youtubeId: "_oH1OltpX4g",
+    label: { en: "Lead Artist", si: "ප්‍රධාන ගායනය" },
+  },
+  {
+    title: { en: "Mage deshaya", si: "මගේ දේශය" },
+    leadArtist: { en: "Nanda Malini", si: "නන්දා මාලිනී" },
+    youtubeId: "WL1qPp-UukQ",
+    label: { en: "Lead Artist", si: "ප්‍රධාන ගායනය" },
+  },
+  {
+    title: { en: "Kiri Suwandai", si: "කිරි සුවඳයි" },
+    leadArtist: { en: "Song from 'Dor Danda' Stage Play", si: "'දොර් දන්ඩා' නාට්‍යයේ එන ගීතයකි" },
+    label: { en: "Source", si: "මූලාශ්‍රය" },
+  },
+];
