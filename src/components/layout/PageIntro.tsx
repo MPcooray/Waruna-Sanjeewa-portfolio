@@ -7,10 +7,12 @@ export function PageIntro({
   kicker,
   title,
   lede,
+  titleClassName,
 }: {
   kicker: string;
   title: string;
   lede?: string;
+  titleClassName?: string;
 }) {
   const { locale } = useLanguage();
   const sinhala = locale === "si";
@@ -20,7 +22,9 @@ export function PageIntro({
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Kicker>{kicker}</Kicker>
         <h1
-          className={`font-display mt-5 max-w-4xl text-4xl tracking-tight text-deep sm:text-5xl md:text-7xl ${
+          className={`font-display mt-5 max-w-4xl tracking-tight text-deep ${
+            titleClassName || "text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+          } ${
             sinhala ? "leading-[1.45] md:leading-[1.4]" : "leading-[1.15] md:leading-[1.12]"
           }`}
         >

@@ -146,14 +146,14 @@ export const pressClippings = [
     src: "/images/press/stock-market.jpg",
     year: "2001",
     alt: {
-      en: "Aruna feature Mirror of Development: The Stock Market, 21 September 2001, by Waruna Sanjeewa Liyanage",
-      si: "සංවර්ධනයේ කැඩපත: කොටස් වෙළෙඳ පොළ නම් අරුණ විශේෂාංගය, 2001 සැප්තැම්බර් 21, වරුණ සංජීව ලියනගේ",
+      en: "Aratuwa feature Mirror of Development: The Stock Market, 21 September 2001, by Waruna Sanjeewa Liyanage",
+      si: "සංවර්ධනයේ කැඩපත: කොටස් වෙළෙඳ පොළ නම් අරටුව විශේෂාංගය, 2001 සැප්තැම්බර් 21, වරුණ සංජීව ලියනගේ",
     },
     caption: {
       en: "The stock market, as a mirror",
       si: "කොටස් වෙළෙඳ පොළ, කැඩපතක් ලෙස",
     },
-    kicker: { en: "Aruna · Sep 2001", si: "අරුණ · 2001 සැප්" },
+    kicker: { en: "Aratuwa · Sep 2001", si: "අරටුව · 2001 සැප්" },
   },
   {
     src: "/images/press/2003-05-18-perera-and-sons.jpg",
@@ -172,14 +172,14 @@ export const pressClippings = [
     src: "/images/press/2003-06-03-harischandra.jpg",
     year: "2003",
     alt: {
-      en: "Aruna feature on Harischandra, 3 June 2003, by Waruna Sanjeewa Liyanage",
-      si: "හරිස්චන්ද්‍ර පිළිබඳ අරුණ විශේෂාංගය, 2003 ජූනි 3, වරුණ සංජීව ලියනගේ",
+      en: "Aratuwa feature on Harischandra, 3 June 2003, by Waruna Sanjeewa Liyanage",
+      si: "හරිස්චන්ද්‍ර පිළිබඳ අරටුව විශේෂාංගය, 2003 ජූනි 3, වරුණ සංජීව ලියනගේ",
     },
     caption: {
       en: "Harischandra, in trade",
       si: "හරිස්චන්ද්‍ර, වෙළෙඳ ලොවේ",
     },
-    kicker: { en: "Aruna · Jun 2003", si: "අරුණ · 2003 ජූනි" },
+    kicker: { en: "Aratuwa · Jun 2003", si: "අරටුව · 2003 ජූනි" },
   },
   {
     src: "/images/press/handunnetti-interview.jpg",

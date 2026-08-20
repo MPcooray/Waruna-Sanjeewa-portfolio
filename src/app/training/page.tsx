@@ -1,47 +1,148 @@
 "use client";
 
+import { useRef } from "react";
 import Image from "next/image";
 import { PageIntro } from "@/components/layout/PageIntro";
 import { Training } from "@/components/home/Training";
 import { International } from "@/components/home/International";
 import { Interviews } from "@/components/home/Interviews";
-import { Kicker, Reveal } from "@/components/ui/Editorial";
+import { ArrowIcon, Kicker, Reveal } from "@/components/ui/Editorial";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function TrainingPage() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
   const page = t.trainingPage;
+  const sankathanaScrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollSankathana = (direction: "left" | "right") => {
+    if (sankathanaScrollRef.current) {
+      const { scrollLeft, clientWidth } = sankathanaScrollRef.current;
+      const scrollTo =
+        direction === "left"
+          ? scrollLeft - clientWidth * 0.75
+          : scrollLeft + clientWidth * 0.75;
+      sankathanaScrollRef.current.scrollTo({
+        left: scrollTo,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <>
-      <PageIntro kicker={page.kicker} title={page.title} lede={page.lede} />
+      <PageIntro kicker={page.kicker} title={page.title} lede={page.lede} titleClassName="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]" />
 
       <section className="bg-beige py-24 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-12 md:items-center md:px-8">
-          <Reveal className="md:col-span-6">
-            <div className="relative aspect-[4/3] overflow-hidden bg-sand">
-              <Image
-                src="/images/gallery/award-ceremony.png"
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
-            </div>
-          </Reveal>
-          <Reveal className="md:col-span-6" delay={0.08}>
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal className="max-w-3xl">
             <Kicker>{page.universityKicker}</Kicker>
-            <h2 className="font-display mt-5 text-4xl tracking-tight text-deep md:text-5xl">
+            <h2 className="font-display mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] tracking-tight text-deep">
               {page.universityTitle}
             </h2>
-            <p className="mt-8 max-w-md leading-8 text-ink/80">{page.universityBody}</p>
+            <p className="mt-8 max-w-2xl leading-8 text-ink/80">{page.universityBody}</p>
+          </Reveal>
+
+          <div className="mt-16 grid gap-6 sm:grid-cols-3">
+            <Reveal className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs" delay={0.05}>
+              <Image
+                src="/images/gallery/training-01.jpg"
+                alt="Waruna lecturing at Samarambha '23"
+                fill
+                className="object-cover object-center"
+                sizes="(min-width: 768px) 30vw, 100vw"
+              />
+            </Reveal>
+            <Reveal className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs" delay={0.1}>
+              <Image
+                src="/images/gallery/training-02.jpg"
+                alt="Waruna teaching data gathering methods"
+                fill
+                className="object-cover object-center"
+                sizes="(min-width: 768px) 30vw, 100vw"
+              />
+            </Reveal>
+            <Reveal className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs" delay={0.15}>
+              <Image
+                src="/images/gallery/training-03.jpg"
+                alt="Waruna lecturing in classroom"
+                fill
+                className="object-cover object-center"
+                sizes="(min-width: 768px) 30vw, 100vw"
+              />
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <Training bgClass="bg-deep" />
+
+      {/* Publications Section */}
+      <section className="bg-ivory py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal>
+            <Kicker>{page.publicationsKicker}</Kicker>
+            <h2 className="font-display mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] tracking-tight text-deep">
+              {page.publicationsTitle}
+            </h2>
+            <p className="mt-6 max-w-2xl leading-8 text-brown">{page.publicationsBody}</p>
+          </Reveal>
+
+          {/* Sankathana Journal Covers Horizontal Scroll with side arrows */}
+          <Reveal className="mt-14" delay={0.08}>
+            <div className="relative group/sankathana">
+              {/* Left side scroll arrow button */}
+              <button
+                type="button"
+                onClick={() => scrollSankathana("left")}
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-sand/20 bg-ink/65 text-ivory hover:bg-ink/85 hover:scale-105 transition duration-300 shadow-md md:opacity-0 md:group-hover/sankathana:opacity-100 opacity-90"
+                aria-label="Previous cover"
+              >
+                <ArrowIcon className="rotate-180 size-[14px]" />
+              </button>
+
+              {/* Right side scroll arrow button */}
+              <button
+                type="button"
+                onClick={() => scrollSankathana("right")}
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-sand/20 bg-ink/65 text-ivory hover:bg-ink/85 hover:scale-105 transition duration-300 shadow-md md:opacity-0 md:group-hover/sankathana:opacity-100 opacity-90"
+                aria-label="Next cover"
+              >
+                <ArrowIcon className="size-[14px]" />
+              </button>
+
+              <div 
+                ref={sankathanaScrollRef}
+                className="relative overflow-x-auto pb-6 flex gap-6 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-none"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              >
+                {[
+                  { year: "2024", src: "/images/gallery/sankathana-2024.jpg" },
+                  { year: "2023", src: "/images/gallery/sankathana-2023.jpg" },
+                  { year: "2022", src: "/images/gallery/sankathana-2022.jpg" },
+                  { year: "2021", src: "/images/gallery/sankathana-2021.jpg" },
+                ].map((cover) => (
+                  <div key={cover.year} className="group relative aspect-[1.6/1] h-[160px] sm:h-[220px] md:h-[250px] flex-shrink-0 overflow-hidden">
+                    <Image
+                      src={cover.src}
+                      alt={`National Media Sankathana ${cover.year}`}
+                      fill
+                      className="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                      sizes="(min-width: 768px) 400px, 260px"
+                    />
+                    <div className="absolute inset-0 bg-ink/5 opacity-100 group-hover:opacity-0 transition-opacity" />
+                    <div className="absolute bottom-3 left-3 bg-ink/75 px-2 py-0.5 rounded-sm">
+                      <span className="font-display text-[0.75rem] text-ivory tracking-widest">{cover.year}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
 
-      <Training />
-      <International />
-      <Interviews featuredId="TAemrO-_ETw" />
+      <International bgClass="bg-beige" />
+      <Interviews featuredId="TAemrO-_ETw" bgClass="bg-ivory" />
     </>
   );
 }

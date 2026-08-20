@@ -20,7 +20,7 @@ export function JsonLd() {
         alternateName: ["වරුණ සංජීව ලියනගේ"],
         jobTitle: "Journalist, media trainer, and musician",
         description:
-          "Sri Lankan journalist, media trainer, and musician. News Manager at Derana, with more than two decades in print and electronic journalism, teaching, and music.",
+          "Sri Lankan journalist, media trainer, and musician. News Manager at Derana, with more than two decades in print and digital journalism, teaching, and music.",
         url: siteUrl,
         image: {
           "@type": "ImageObject",

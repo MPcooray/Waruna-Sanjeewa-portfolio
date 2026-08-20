@@ -5,14 +5,16 @@ import { links } from "@/data/site";
 import { Kicker, Reveal } from "@/components/ui/Editorial";
 
 export function ContactPreview() {
-  const { t } = useLanguage();
+  const { t, locale } = useLanguage();
 
   return (
     <section id="contact" className="bg-beige py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker>{t.contact.kicker}</Kicker>
-          <h2 className="font-display mt-5 max-w-3xl text-4xl tracking-tight text-deep md:text-6xl lg:text-7xl">
+          <h2 className={`font-display mt-5 max-w-3xl tracking-tight text-deep ${
+            locale === "si" ? "text-3xl md:text-5xl lg:text-6xl" : "text-4xl md:text-6xl lg:text-7xl"
+          }`}>
             {t.contact.title}
           </h2>
           <p className="mt-8 max-w-xl text-lg leading-8 text-ink/80">{t.contact.body}</p>

@@ -14,14 +14,18 @@ export function AboutPreview() {
         <Reveal className="md:col-span-7">
           <Kicker>{t.about.kicker}</Kicker>
           <blockquote
-            className={`font-display mt-6 text-3xl tracking-tight text-deep md:text-5xl ${
-              locale === "si" ? "leading-[1.55]" : "leading-[1.25]"
+            className={`font-display mt-6 tracking-tight text-deep ${
+              locale === "si"
+                ? "text-[1.65rem] leading-[1.45] md:text-[2.5rem] md:leading-[1.4]"
+                : "text-3xl leading-[1.25] md:text-5xl md:leading-[1.25]"
             }`}
           >
             {t.about.heading}
           </blockquote>
-          <p className="mt-5 text-sm tracking-wide text-brown">{t.about.attribution}</p>
-          <p className="mt-10 max-w-xl text-[1.05rem] leading-8 text-ink/85">{t.about.body}</p>
+          <p className={`mt-5 tracking-wide text-brown ${locale === "si" ? "text-base" : "text-sm"}`}>{t.about.attribution}</p>
+          <p className={`max-w-xl text-ink/85 ${
+            locale === "si" ? "mt-6 text-[0.95rem] leading-7" : "mt-10 text-[1.05rem] leading-8"
+          }`}>{t.about.body}</p>
           <div className="mt-10">
             <TextLink href="/about">{t.about.cta}</TextLink>
           </div>

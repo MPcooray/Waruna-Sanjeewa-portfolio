@@ -8,80 +8,41 @@ import { videos, type VideoCategory } from "@/data/site";
 import { Kicker, Reveal, TextLink } from "@/components/ui/Editorial";
 import { VideoModal } from "@/components/ui/VideoModal";
 
-const filters: VideoCategory[] = ["all", "interviews", "discussions", "journalism"];
+const filters: VideoCategory[] = ["all", "interviews", "discussions"];
 
 export function Interviews({
   featuredOnly = false,
   featuredId,
   moreHref = "/training",
+  bgClass = "bg-ivory",
 }: {
   featuredOnly?: boolean;
   featuredId?: string;
   moreHref?: string;
+  bgClass?: string;
 }) {
   const { t, locale } = useLanguage();
   const [filter, setFilter] = useState<VideoCategory>("all");
   const [active, setActive] = useState<string | null>(null);
 
-  const featured = videos.find((video) => video.id === featuredId) ?? videos[0];
   const list = useMemo(() => {
-    const rest = videos.filter((video) => video.id !== featured.id);
-    if (filter === "all") return rest;
-    return rest.filter((video) => video.category === filter);
-  }, [filter, featured.id]);
+    if (filter === "all") return videos;
+    return videos.filter((video) => video.category === filter);
+  }, [filter]);
 
   const playing = videos.find((video) => video.id === active);
 
   return (
-    <section id="conversations" className="bg-beige py-24 md:py-32">
+    <section id="conversations" className={`${bgClass} py-24 md:py-32`}>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
             <Kicker>{t.interviews.kicker}</Kicker>
-            <h2 className="font-display mt-5 text-4xl tracking-tight text-deep md:text-6xl">
+            <h2 className="font-display mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] tracking-tight text-deep">
               {t.interviews.title}
             </h2>
           </div>
           {featuredOnly && <TextLink href={moreHref}>{t.interviews.more}</TextLink>}
-        </Reveal>
-
-        <Reveal className="mt-14" delay={0.08}>
-          <button
-            type="button"
-            onClick={() => setActive(featured.id)}
-            className="group grid w-full overflow-hidden bg-ivory text-left md:grid-cols-5"
-          >
-            <div className="relative aspect-video overflow-hidden bg-deep md:col-span-3 md:aspect-auto md:min-h-[420px]">
-              <Image
-                src={featured.thumbnail}
-                alt={featured.title[locale]}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(min-width: 768px) 60vw, 100vw"
-              />
-              <div className="absolute inset-0 bg-ink/20 transition-colors group-hover:bg-ink/35" />
-              <span className="absolute top-1/2 left-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-ivory/80 bg-ink/35 text-ivory md:hidden">
-                <svg viewBox="0 0 12 14" className="ml-0.5 size-4" fill="currentColor" aria-hidden>
-                  <path d="M1 1.2v11.6L11 7 1 1.2Z" />
-                </svg>
-              </span>
-            </div>
-            <div className="flex flex-col justify-between p-5 sm:p-7 md:col-span-2 md:p-10">
-              <div>
-                <p className="kicker">{t.interviews.featured}</p>
-                <h3 className="font-display mt-5 text-3xl text-deep md:text-4xl">
-                  {featured.title[locale]}
-                </h3>
-                <p className="mt-4 leading-7 text-ink/75">{featured.subtitle[locale]}</p>
-              </div>
-              <p className="mt-10 inline-flex items-center gap-2 text-[0.875rem] tracking-[0.22em] uppercase text-deep">
-                <svg viewBox="0 0 12 14" className="size-3" fill="currentColor" aria-hidden>
-                  <path d="M1 1.2v11.6L11 7 1 1.2Z" />
-                </svg>
-                {t.interviews.watch}
-              </p>
-            </div>
-          </button>
         </Reveal>
 
         {!featuredOnly && (

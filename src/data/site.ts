@@ -1,22 +1,23 @@
 export type Locale = "en" | "si";
 export type VideoCategory = "all" | "interviews" | "discussions" | "journalism";
 
-export const videos = [
-  {
-    id: "c9gxowcsSnw",
-    slug: "sankathana",
-    thumbnail: "/images/videos/sankathana.jpg",
-    category: "discussions" as const,
-    duration: "",
-    title: {
-      en: "Sankathana",
-      si: "සංකථන",
-    },
-    subtitle: {
-      en: "A long-form conversation on journalism and public life.",
-      si: "ප්‍රවෘත්තිකරණය සහ පොදු ජීවිතය පිළිබඳ දීර්ඝ සංවාදයක්.",
-    },
+export const sankathanaVideo = {
+  id: "c9gxowcsSnw",
+  slug: "sankathana",
+  thumbnail: "/images/videos/sankathana.jpg",
+  category: "discussions" as const,
+  duration: "",
+  title: {
+    en: "Sankathana",
+    si: "සංකථන",
   },
+  subtitle: {
+    en: "A long-form conversation on journalism and public life.",
+    si: "ප්‍රවෘත්තිකරණය සහ පොදු ජීවිතය පිළිබඳ දීර්ඝ සංවාදයක්.",
+  },
+};
+
+export const videos = [
   {
     id: "TAemrO-_ETw",
     slug: "interview",
@@ -28,38 +29,38 @@ export const videos = [
       si: "සම්මුඛ සාකච්ඡාව",
     },
     subtitle: {
-      en: "Waruna Sanjeewa Liyanage in conversation.",
-      si: "වරුණ සංජීව ලියනගේ සමඟ සම්මුඛ සාකච්ඡාව.",
+      en: "An in-depth interview on media and broadcast journalism.",
+      si: "මාධ්‍ය සහ විකාශන මාධ්‍ය කලාව පිළිබඳ ගැඹුරු සම්මුඛ සාකච්ඡාවක්.",
     },
   },
   {
     id: "DSr63DipgTQ",
     slug: "conversation-one",
     thumbnail: "/images/videos/conversation-1.jpg",
-    category: "journalism" as const,
+    category: "discussions" as const,
     duration: "",
     title: {
-      en: "On the Record",
-      si: "වාර්තාවේ",
+      en: "Conversation",
+      si: "සංවාදය",
     },
     subtitle: {
-      en: "From the video archive.",
-      si: "වීඩියෝ ලේඛනාගාරයෙන්.",
+      en: "Reflections on media ethics and modern newsroom practices.",
+      si: "මාධ්‍ය ආචාරධර්ම සහ නවීන පුවත් කාමර භාවිතය පිළිබඳ මතකයන්.",
     },
   },
   {
     id: "HeV16oOInNQ",
     slug: "conversation-two",
     thumbnail: "/images/videos/conversation-2.jpg",
-    category: "journalism" as const,
+    category: "discussions" as const,
     duration: "",
     title: {
-      en: "In Conversation",
-      si: "සංවාදයේ",
+      en: "Conversation",
+      si: "සංවාදය",
     },
     subtitle: {
-      en: "From the video archive.",
-      si: "වීඩියෝ ලේඛනාගාරයෙන්.",
+      en: "A discussion on investigative reporting and public interest.",
+      si: "ගවේෂණාත්මක මාධ්‍යකරණය සහ පොදු ජන උනන්දුව පිළිබඳ සාකච්ඡාවක්.",
     },
   },
 ];
@@ -91,7 +92,7 @@ export const timeline = [
   },
   {
     year: "2005",
-    title: { en: "Electronic media", si: "විද්‍යුත් මාධ්‍ය" },
+    title: { en: "Digital media", si: "ඩිජිටල් මාධ්‍ය" },
     detail: {
       en: "Reporter and news editor, Max TV.",
       si: "Max TV හි වාර්තාකරු සහ ප්‍රවෘත්ති සංස්කාරක.",
