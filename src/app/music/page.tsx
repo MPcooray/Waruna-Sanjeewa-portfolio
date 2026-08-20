@@ -210,12 +210,12 @@ export default function MusicPage() {
                   alt: "Kalabhumi Group Photo",
                 },
                 {
-                  image: "/images/gallery/kalabhumi-extra-1.png",
-                  alt: "Music Archive Document 1",
-                },
-                {
                   image: "/images/gallery/kalabhumi-extra-2.png",
                   alt: "Pahasara Mathakaya Cover",
+                },
+                {
+                  image: "/images/gallery/kalabhumi-extra-1.png",
+                  alt: "Music Archive Document 1",
                 },
               ].map((item, index) => (
                 <button

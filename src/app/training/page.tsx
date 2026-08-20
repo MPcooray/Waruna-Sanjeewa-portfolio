@@ -42,33 +42,56 @@ export default function TrainingPage() {
             <p className="mt-8 max-w-2xl leading-8 text-ink/80">{page.universityBody}</p>
           </Reveal>
 
-          <div className="mt-16 grid gap-6 sm:grid-cols-3">
-            <Reveal className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs" delay={0.05}>
-              <Image
-                src="/images/gallery/training-01.jpg"
-                alt="Waruna lecturing at Samarambha '23"
-                fill
-                className="object-cover object-center"
-                sizes="(min-width: 768px) 30vw, 100vw"
-              />
+          <div className="mt-16 grid gap-8 sm:grid-cols-3">
+            <Reveal className="flex flex-col" delay={0.05}>
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs">
+                <Image
+                  src="/images/gallery/training-01.jpg"
+                  alt="Waruna lecturing at D.S. Senanayake College"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 768px) 30vw, 100vw"
+                />
+              </div>
+              <p className="mt-4 text-[0.8125rem] leading-relaxed text-ink/75 font-medium border-l-2 border-brown/30 pl-3">
+                {locale === "en" 
+                  ? "Lecture on Journalism — D.S. Senanayake College" 
+                  : "ප්‍රවෘත්තිකරණය පිළිබඳ දේශනය — ඩී.එස්. සේනානායක විද්‍යාලය"}
+              </p>
             </Reveal>
-            <Reveal className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs" delay={0.1}>
-              <Image
-                src="/images/gallery/training-02.jpg"
-                alt="Waruna teaching data gathering methods"
-                fill
-                className="object-cover object-center"
-                sizes="(min-width: 768px) 30vw, 100vw"
-              />
+
+            <Reveal className="flex flex-col" delay={0.1}>
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs">
+                <Image
+                  src="/images/gallery/training-02.jpg"
+                  alt="Waruna teaching data journalism"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 768px) 30vw, 100vw"
+                />
+              </div>
+              <p className="mt-4 text-[0.8125rem] leading-relaxed text-ink/75 font-medium border-l-2 border-brown/30 pl-3">
+                {locale === "en" 
+                  ? "Lecture on Data Journalism — Center for Investigative Reporting, Sri Lanka" 
+                  : "දත්ත ප්‍රවෘත්තිකරණය පිළිබඳ දේශනය — ගවේෂණාත්මක වාර්තාකරණ මධ්‍යස්ථානය, ශ්‍රී ලංකාව"}
+              </p>
             </Reveal>
-            <Reveal className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs" delay={0.15}>
-              <Image
-                src="/images/gallery/training-03.jpg"
-                alt="Waruna lecturing in classroom"
-                fill
-                className="object-cover object-center"
-                sizes="(min-width: 768px) 30vw, 100vw"
-              />
+
+            <Reveal className="flex flex-col" delay={0.15}>
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs">
+                <Image
+                  src="/images/gallery/training-03.jpg"
+                  alt="Waruna lecturing at Sri Pali Campus"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(min-width: 768px) 30vw, 100vw"
+                />
+              </div>
+              <p className="mt-4 text-[0.8125rem] leading-relaxed text-ink/75 font-medium border-l-2 border-brown/30 pl-3">
+                {locale === "en" 
+                  ? "Guest Lecture — Sri Palee Campus, University of Colombo" 
+                  : "ආරාධිත දේශනය — ශ්‍රී පාලි මණ්ඩපය, කොළඹ විශ්වවිද්‍යාලය"}
+              </p>
             </Reveal>
           </div>
         </div>
@@ -85,6 +108,19 @@ export default function TrainingPage() {
               {page.publicationsTitle}
             </h2>
             <p className="mt-6 max-w-2xl leading-8 text-brown">{page.publicationsBody}</p>
+            <div className="mt-6 flex flex-wrap items-center">
+              <a
+                href="https://dgi.gov.lk/divisions/research-monitoring-unit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-display text-[0.8125rem] tracking-[0.2em] uppercase text-deep hover:text-brown transition duration-300"
+              >
+                {locale === "en" ? "Research & Monitoring Unit (DGI)" : "පර්යේෂණ හා නිරීක්ෂණ අංශය (රජයේ ප්‍රවෘත්ති දෙපාර්තමේන්තුව)"}
+                <svg viewBox="0 0 16 16" className="size-[11px]" fill="none" stroke="currentColor" strokeWidth="1.75">
+                  <path d="M5 11l6-6M5 5h6v6" />
+                </svg>
+              </a>
+            </div>
           </Reveal>
 
           {/* Sankathana Journal Covers Horizontal Scroll with side arrows */}

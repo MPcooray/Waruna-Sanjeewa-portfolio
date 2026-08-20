@@ -20,7 +20,7 @@ export function International({ bgClass = "bg-ivory" }: { bgClass?: string }) {
           <p className={`mt-6 max-w-2xl text-base leading-8 ${isDark ? "text-beige/90" : "text-brown"}`}>{t.international.lede}</p>
         </Reveal>
 
-        <div className="mt-16 grid gap-8 md:mt-20 md:grid-cols-3 md:gap-10">
+        <div className="mt-16 grid gap-6 md:mt-20 md:grid-cols-4 md:gap-6">
           {conferences.map((item, index) => {
             const hasImages = item.images && item.images.length > 0;
             const isGallery = item.images && item.images.length > 1;
@@ -41,7 +41,7 @@ export function International({ bgClass = "bg-ivory" }: { bgClass?: string }) {
                                   alt={`${item.event[locale]} - ${imgIndex + 1}`}
                                   fill
                                   className="object-cover"
-                                  sizes="(min-width: 768px) 30vw, 100vw"
+                                  sizes="(min-width: 768px) 22vw, 100vw"
                                 />
                               </div>
                             ))}
@@ -56,7 +56,7 @@ export function International({ bgClass = "bg-ivory" }: { bgClass?: string }) {
                           alt={item.event[locale]}
                           fill
                           className="object-cover transition-transform duration-700 hover:scale-[1.03]"
-                          sizes="(min-width: 768px) 30vw, 100vw"
+                          sizes="(min-width: 768px) 22vw, 100vw"
                         />
                       )}
                     </div>
@@ -68,9 +68,6 @@ export function International({ bgClass = "bg-ivory" }: { bgClass?: string }) {
                   </h3>
                   <p className={`mt-4 text-[0.8125rem] tracking-[0.14em] uppercase ${isDark ? "text-sand" : "text-brown"}`}>
                     {item.city[locale]} · {item.country[locale]}
-                  </p>
-                  <p className={`mt-5 text-sm leading-6 ${isDark ? "text-beige/80" : "text-ink/75"}`}>
-                    {item.note[locale]}
                   </p>
                 </article>
               </Reveal>
