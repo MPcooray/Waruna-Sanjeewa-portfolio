@@ -7,14 +7,16 @@ import { ArrowIcon, Kicker, Reveal, TextLink } from "@/components/ui/Editorial";
 
 export function Investigations({
   limit,
+  bgClass,
 }: {
   limit?: number;
+  bgClass?: string;
 }) {
   const { t, locale } = useLanguage();
   const items = limit ? investigations.slice(0, limit) : investigations;
 
   return (
-    <section id="investigations" className="bg-beige py-24 md:py-32">
+    <section id="investigations" className={`${bgClass || "bg-beige"} py-24 md:py-32`}>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker>{t.investigations.kicker}</Kicker>
@@ -33,9 +35,6 @@ export function Investigations({
                 <div className="md:col-span-8">
                   <h3 className="font-display text-2xl text-deep sm:text-3xl md:text-4xl">{item.title[locale]}</h3>
                   <p className="mt-4 max-w-2xl leading-7 text-ink/75">{item.summary[locale]}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-[0.875rem] tracking-[0.2em] uppercase text-brown transition-transform group-hover:translate-x-1">
-                    {t.investigations.cta} <ArrowIcon />
-                  </span>
                 </div>
               </Link>
             </Reveal>

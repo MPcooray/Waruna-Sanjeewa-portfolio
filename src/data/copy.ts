@@ -147,8 +147,8 @@ export const copy = {
       sankathanaBody:
         "Selected writing and conversation from Sankathana — part of the print and spoken archive.",
       sankathanaCta: "Watch",
-      deranaKicker: "Derana",
-      deranaTitle: "From page to newsroom.",
+      deranaKicker: "Digital Journalism",
+      deranaTitle: "A Career in Journalism",
       deranaBody:
         "Newsroom work spanning reporting, editing, and news management — from Max TV and Isura FM to Derana, where he serves as News Manager.",
     },
