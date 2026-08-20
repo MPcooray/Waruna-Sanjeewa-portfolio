@@ -91,7 +91,7 @@ export const timeline = [
   },
   {
     year: "2005",
-    title: { en: "Electronic media", si: "විද්‍යුත් මාධ්‍ය" },
+    title: { en: "Digital media", si: "ඩිජිටල් මාධ්‍ය" },
     detail: {
       en: "Reporter and news editor, Max TV.",
       si: "Max TV හි වාර්තාකරු සහ ප්‍රවෘත්ති සංස්කාරක.",

@@ -25,7 +25,7 @@ const paths = [
     key: "training" as const,
     href: "/training",
     images: [
-      "/images/gallery/media-event.png",
+      "/images/videos/sankathana.jpg",
       "/images/gallery/slim-kantar-awards.png",
       "/images/gallery/award-ceremony.png",
     ],

@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     template: "%s | Waruna Sanjeewa Liyanage",
   },
   description:
-    "Official archive of Waruna Sanjeewa Liyanage (වරුණ සංජීව ලියනගේ) — Sri Lankan journalist, media trainer, and musician. Print and electronic journalism, teaching, and music.",
+    "Official archive of Waruna Sanjeewa Liyanage (වරුණ සංජීව ලියනගේ) — Sri Lankan journalist, media trainer, and musician. Print and digital journalism, teaching, and music.",
   keywords: [
     "Waruna Sanjeewa Liyanage",
     "වරුණ සංජීව ලියනගේ",

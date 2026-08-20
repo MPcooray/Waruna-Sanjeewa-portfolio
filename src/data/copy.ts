@@ -5,7 +5,7 @@ export const copy = {
     meta: {
       title: "Waruna Sanjeewa Liyanage — Journalism, Training & Music",
       description:
-        "The archive of Waruna Sanjeewa Liyanage — journalist, media trainer, and musician. Print and electronic journalism, teaching, and a body of songs and collaborations.",
+        "The archive of Waruna Sanjeewa Liyanage — journalist, media trainer, and musician. Print and digital journalism, teaching, and a body of songs and collaborations.",
     },
     brand: "Waruna Sanjeewa Liyanage",
     nav: {
@@ -31,7 +31,7 @@ export const copy = {
       heading:
         "The first purpose of investigative journalism is to disclose what power would rather keep hidden.",
       attribution: "From the book · Investigative Journalism",
-      body: "Waruna Sanjeewa Liyanage has worked for more than two decades across Sri Lanka’s print and electronic media — from feature writing and newspaper editing to the newsroom of Derana, where he serves as News Manager. He trains journalists, and he works in music as a lyricist, chorus singer, and collaborator. His research book on investigative journalism is published by Sooriya.",
+      body: "Waruna Sanjeewa Liyanage has worked for more than two decades across Sri Lanka’s print and digital media — from feature writing and newspaper editing to the newsroom of Derana, where he serves as News Manager. He trains journalists, and he works in music as a lyricist, chorus singer, and collaborator. His research book on investigative journalism is published by Sooriya.",
       cta: "Read his story",
     },
     aboutPage: {
@@ -39,7 +39,7 @@ export const copy = {
       title: "A life in the newsroom",
       intro:
         "Journalist, editor, news manager, trainer, author, and musician — a working life in three disciplines, built in newspapers, broadcast, the classroom, and song.",
-      p1: "Waruna Sanjeewa Liyanage entered the media as a feature writer for Sunday Lankadeepa, one of Sri Lanka’s leading national newspapers. He later worked as an editor and sub-editor on several papers, including Aratuwa Business Newspaper, before moving into electronic media as a reporter and news editor at Max TV and then news editor at Isura FM.",
+      p1: "Waruna Sanjeewa Liyanage entered the media as a feature writer for Sunday Lankadeepa, one of Sri Lanka’s leading national newspapers. He later worked as an editor and sub-editor on several papers, including Aratuwa Business Newspaper, before moving into digital media as a reporter and news editor at Max TV and then news editor at Isura FM.",
       p2: "In 2009 he joined Derana, a leading Sri Lankan media institution, as a news editor. He later served as assistant manager and now works as News Manager. Across that span he has reported on local and international events and carried investigative work as one thread of a wider journalistic practice.",
       p3: "He obtained the Diploma in Journalism from the University of Colombo in 1998 with distinction, including the Lakshman Jayawardena Gold Medal. He later completed a postgraduate diploma in journalism and a Master’s degree in Mass Media at the University of Colombo, and is a member of the Chartered Institute of Journalists. His school education was at D. S. Senanayake College, Colombo.",
       p4: "As a journalist he has taken part in local and foreign media conferences, including the Global Investigative Journalism Conference in Norway (2015), South Africa (2017), and Germany (2019). He trains journalists — including in investigative journalism — with various institutions, and lectures in media. His research book, Investigative Journalism: Global & National Perspective, is published by Sooriya Publishers. Alongside that work he writes lyrics, sings in chorus, and collaborates with artists.",
@@ -113,8 +113,8 @@ export const copy = {
       journalism: {
         index: "01",
         title: "Journalism",
-        lede: "Print & electronic",
-        body: "Print and electronic journalism across decades.",
+        lede: "Print & digital",
+        body: "Print and digital journalism across decades.",
       },
       training: {
         index: "02",
@@ -132,15 +132,15 @@ export const copy = {
     journalismPage: {
       kicker: "Journalism",
       title: "More than two decades in pursuit of the story.",
-      lede: "Print and electronic journalism — newspapers, journals, the book, and the Derana newsroom.",
+      lede: "Print and digital journalism — newspapers, journals, the book, and the Derana newsroom.",
       printIndex: "01",
       printTitle: "Print journalism",
       printLede: "Books · Newspapers · Journals · Essays",
       printCta: "Explore print journalism",
       electronicIndex: "02",
-      electronicTitle: "Electronic journalism",
+      electronicTitle: "Digital journalism",
       electronicLede: "Newsroom · Television · Reporting",
-      electronicCta: "Explore electronic journalism",
+      electronicCta: "Explore digital journalism",
       aroundBook: "Around the book",
       sankathanaKicker: "Journal work",
       sankathanaTitle: "Sankathana",
@@ -183,13 +183,13 @@ export const copy = {
     },
     archivePage: {
       title: "The archive",
-      lede: "Print, electronic, training, conversations, music, photographs, and documents — the full record, as it is catalogued.",
+      lede: "Print, digital, training, conversations, music, photographs, and documents — the full record, as it is catalogued.",
       search: "Search the archive…",
       empty: "Nothing in the archive matches that yet.",
       filters: {
         all: "All",
         print: "Print",
-        electronic: "Electronic",
+        electronic: "Digital",
         training: "Training",
         conferences: "Conferences",
         interviews: "Interviews",
@@ -375,15 +375,15 @@ export const copy = {
     journalismPage: {
       kicker: "ප්‍රවෘත්තිකරණය",
       title: "කතන්දරය පසුපස දශක දෙකකට වැඩි කාලයක්.",
-      lede: "මුද්‍රිත සහ විද්‍යුත් ප්‍රවෘත්තිකරණය — පුවත්පත්, සඟරා, ග්‍රන්ථය සහ දෙරණ ප්‍රවෘත්ති කාමරය.",
+      lede: "මුද්‍රිත සහ ඩිජිටල් ප්‍රවෘත්තිකරණය — පුවත්පත්, සඟරා, ග්‍රන්ථය සහ දෙරණ ප්‍රවෘත්ති කාමරය.",
       printIndex: "01",
       printTitle: "මුද්‍රිත ප්‍රවෘත්තිකරණය",
       printLede: "ග්‍රන්ථ · පුවත්පත් · සඟරා · රචනා",
       printCta: "මුද්‍රිත ප්‍රවෘත්තිකරණය",
       electronicIndex: "02",
-      electronicTitle: "විද්‍යුත් ප්‍රවෘත්තිකරණය",
+      electronicTitle: "ඩිජිටල් ප්‍රවෘත්තිකරණය",
       electronicLede: "ප්‍රවෘත්ති කාමරය · රූපවාහිනිය · වාර්තාකරණය",
-      electronicCta: "විද්‍යුත් ප්‍රවෘත්තිකරණය",
+      electronicCta: "ඩිජිටල් ප්‍රවෘත්තිකරණය",
       aroundBook: "ග්‍රන්ථය වටා",
       sankathanaKicker: "සඟරා වැඩ",
       sankathanaTitle: "සංකථන",
@@ -424,13 +424,13 @@ export const copy = {
     },
     archivePage: {
       title: "ලේඛනාගාරය",
-      lede: "මුද්‍රිත, විද්‍යුත්, පුහුණුව, සංවාද, සංගීතය, ඡායාරූප සහ ලේඛන — ලේඛනගත වන පරිදි සම්පූර්ණ වාර්තාව.",
+      lede: "මුද්‍රිත, ඩිජිටල්, පුහුණුව, සංවාද, සංගීතය, ඡායාරූප සහ ලේඛන — ලේඛනගත වන පරිදි සම්පූර්ණ වාර්තාව.",
       search: "ලේඛනාගාරය සොයන්න…",
       empty: "එයට ගැලපෙන දෙයක් තවම ලේඛනාගාරයේ නැත.",
       filters: {
         all: "සියල්ල",
         print: "මුද්‍රිත",
-        electronic: "විද්‍යුත්",
+        electronic: "ඩිජිටල්",
         training: "පුහුණුව",
         conferences: "සමුළු",
         interviews: "සංවාද",

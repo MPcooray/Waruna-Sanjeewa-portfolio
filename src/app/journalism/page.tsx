@@ -54,7 +54,7 @@ export default function JournalismPage() {
             <a href="#electronic" className="group block overflow-hidden bg-beige">
               <div className="relative aspect-[4/3]">
                 <Image
-                  src="/images/gallery/media-event.png"
+                  src="/images/videos/conversation-1.jpg"
                   alt=""
                   fill
                   className="object-cover object-[50%_18%] transition-transform duration-700 group-hover:scale-[1.04]"
@@ -132,7 +132,7 @@ export default function JournalismPage() {
           <Reveal className="md:col-span-7" delay={0.08}>
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
-                src="/images/gallery/media-event.png"
+                src="/images/videos/sankathana.jpg"
                 alt=""
                 fill
                 className="object-cover object-[50%_18%]"

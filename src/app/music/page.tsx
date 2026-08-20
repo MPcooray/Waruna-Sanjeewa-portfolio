@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { songs } from "@/data/site";
 import { Kicker, Reveal } from "@/components/ui/Editorial";
 import { useLanguage } from "@/context/LanguageContext";
@@ -73,13 +74,24 @@ export default function MusicPage() {
       </section>
 
       <section className="bg-ivory py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <Reveal>
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-8">
+          <Reveal className="md:col-span-7">
             <Kicker>{t.music.kalabhumiKicker}</Kicker>
-            <h2 className="font-display mt-5 max-w-3xl text-4xl tracking-tight text-deep md:text-6xl">
+            <h2 className="font-display mt-5 text-4xl tracking-tight text-deep md:text-6xl">
               {t.music.kalabhumiTitle}
             </h2>
-            <p className="mt-8 max-w-2xl leading-8 text-ink/80">{t.music.kalabhumiBody}</p>
+            <p className="mt-8 leading-8 text-ink/80">{t.music.kalabhumiBody}</p>
+          </Reveal>
+          <Reveal className="md:col-span-5" delay={0.1}>
+            <div className="relative aspect-[4/3] overflow-hidden bg-sand">
+              <Image
+                src="/images/kalabhumi.jpg"
+                alt="Kalabhumi"
+                fill
+                className="portrait-filter object-cover"
+                sizes="(min-width: 768px) 40vw, 100vw"
+              />
+            </div>
           </Reveal>
         </div>
       </section>
