@@ -96,7 +96,7 @@ export const copy = {
       buy: "Available from booksellers including Grantha.lk and Sooriya Publishers.",
     },
     international: {
-      kicker: "International exchange",
+      kicker: "International Conferences",
       title: "Knowledge without borders",
       lede: "Professional participation in the Global Investigative Journalism Conference — Lillehammer, Johannesburg, and Hamburg.",
       series: "GIJC",
@@ -162,6 +162,9 @@ export const copy = {
         "University lecturing sits beside the newsroom — passing method, ethics, and investigative practice to students of media.",
       workshopsKicker: "Training workshops",
       conversationsKicker: "Conversations",
+      publicationsKicker: "Research journals",
+      publicationsTitle: "National Media Journals",
+      publicationsBody: "Research journals on media criticism and composition, published annually by the Government Information Department.",
     },
     music: {
       kicker: "Music",
@@ -339,7 +342,7 @@ export const copy = {
       cta: "භාවිතය කියවන්න",
     },
     international: {
-      kicker: "ජාත්‍යන්තර හුවමාරුව",
+      kicker: "ජාත්‍යන්තර සම්මන්ත්‍රණ",
       title: "සීමා නොමැති දැනුම",
       lede: "ගෝලීය ගවේෂණාත්මක ප්‍රවෘත්තිකරණ සමුළුවට වෘත්තීය සහභාගීත්වය — ලිලේහැමර්, ජොහැනස්බර්ග් සහ හැම්බර්ග්.",
       series: "GIJC",
@@ -404,6 +407,9 @@ export const copy = {
         "විශ්වවිද්‍යාල දේශන ප්‍රවෘත්ති කාමරය අසල තැබේ — ක්‍රමය, ආචාර ධර්ම සහ ගවේෂණ භාවිතය මාධ්‍ය ශිෂ්‍යයන්ට ලබා දෙමින්.",
       workshopsKicker: "පුහුණු වැඩමුළු",
       conversationsKicker: "සංවාද",
+      publicationsKicker: "පර්යේෂණ සඟරා",
+      publicationsTitle: "ජාතික මාධ්‍ය සංකථන",
+      publicationsBody: "රජයේ ප්‍රවෘත්ති දෙපාර්තමේන්තුව විසින් වාර්ෂිකව ප්‍රකාශයට පත් කරන ලද, මාධ්‍ය විචාරය සහ සංස්කෘතිය පිළිබඳ පර්යේෂණ සඟරා.",
     },
     music: {
       kicker: "සංගීතය",

@@ -29,8 +29,8 @@ export const videos = [
       si: "සම්මුඛ සාකච්ඡාව",
     },
     subtitle: {
-      en: "Waruna Sanjeewa Liyanage in conversation.",
-      si: "වරුණ සංජීව ලියනගේ සමඟ සම්මුඛ සාකච්ඡාව.",
+      en: "An in-depth interview on media and broadcast journalism.",
+      si: "මාධ්‍ය සහ විකාශන මාධ්‍ය කලාව පිළිබඳ ගැඹුරු සම්මුඛ සාකච්ඡාවක්.",
     },
   },
   {
@@ -44,8 +44,8 @@ export const videos = [
       si: "සංවාදය",
     },
     subtitle: {
-      en: "From the video archive.",
-      si: "වීඩියෝ ලේඛනාගාරයෙන්.",
+      en: "Reflections on media ethics and modern newsroom practices.",
+      si: "මාධ්‍ය ආචාරධර්ම සහ නවීන පුවත් කාමර භාවිතය පිළිබඳ මතකයන්.",
     },
   },
   {
@@ -59,8 +59,8 @@ export const videos = [
       si: "සංවාදය",
     },
     subtitle: {
-      en: "From the video archive.",
-      si: "වීඩියෝ ලේඛනාගාරයෙන්.",
+      en: "A discussion on investigative reporting and public interest.",
+      si: "ගවේෂණාත්මක මාධ්‍යකරණය සහ පොදු ජන උනන්දුව පිළිබඳ සාකච්ඡාවක්.",
     },
   },
 ];

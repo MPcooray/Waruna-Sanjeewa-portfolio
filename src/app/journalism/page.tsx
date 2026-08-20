@@ -104,16 +104,41 @@ export default function JournalismPage() {
             {page.lede}
           </p>
 
+          {/* Mobile Vertical Timeline */}
+          <div className="relative mt-16 md:hidden">
+            {/* Vertical connector line */}
+            <div className="absolute left-[5px] top-2 bottom-2 w-[1px] bg-sand" />
+            <div className="space-y-10">
+              {digitalJournalismTimeline.map((item, index) => (
+                <Reveal key={index} delay={index * 0.05} className="relative pl-8">
+                  {/* Timeline node dot */}
+                  <div className="absolute left-0 top-1.5 size-[11px] rounded-full bg-ivory ring-2 ring-sand z-10" />
+                  
+                  <div className="font-display text-lg text-brown font-semibold">
+                    {item.year}
+                  </div>
+                  <h3 className="font-display mt-1.5 text-lg text-deep font-semibold leading-snug">
+                    {item.title[locale]}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-ink/75">
+                    {item.detail[locale]}
+                  </p>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          {/* Desktop Horizontal Grid Timeline */}
           <div 
-            className="relative mt-20 overflow-x-auto pb-4 -mx-5 px-5 md:mx-0 md:px-0"
+            className="relative mt-20 hidden md:block overflow-x-auto pb-4"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {/* Timeline connector line */}
-            <div className="absolute top-[59px] left-5 right-5 h-[1px] bg-sand md:left-0 md:right-0" />
+            <div className="absolute top-[59px] left-0 right-0 h-[1px] bg-sand" />
             
-            <div className="flex gap-8 relative min-w-[max-content] md:min-w-0 md:grid md:grid-cols-5 md:gap-6">
+            <div className="grid grid-cols-5 gap-6 relative">
               {digitalJournalismTimeline.map((item, index) => (
-                <Reveal key={index} delay={index * 0.05} className="w-[280px] md:w-auto flex-shrink-0">
+                <Reveal key={index} delay={index * 0.05}>
                   <div className="relative pt-16">
                     {/* Timeline node dot */}
                     <div className="absolute top-[54px] left-0 size-[12px] rounded-full bg-ivory ring-2 ring-sand z-10" />
@@ -161,60 +186,7 @@ export default function JournalismPage() {
                 </a>
               </div>
             </Reveal>
-
-            {/* Sankathana Journal Covers Horizontal Scroll with side arrows */}
-            <Reveal className="mt-14" delay={0.08}>
-              <div className="relative group/sankathana">
-                {/* Left side scroll arrow button */}
-                <button
-                  type="button"
-                  onClick={() => scrollSankathana("left")}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-sand/20 bg-ink/65 text-ivory hover:bg-ink/85 hover:scale-105 transition duration-300 shadow-md md:opacity-0 md:group-hover/sankathana:opacity-100 opacity-90"
-                  aria-label="Previous cover"
-                >
-                  <ArrowIcon className="rotate-180 size-[14px]" />
-                </button>
-
-                {/* Right side scroll arrow button */}
-                <button
-                  type="button"
-                  onClick={() => scrollSankathana("right")}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-sand/20 bg-ink/65 text-ivory hover:bg-ink/85 hover:scale-105 transition duration-300 shadow-md md:opacity-0 md:group-hover/sankathana:opacity-100 opacity-90"
-                  aria-label="Next cover"
-                >
-                  <ArrowIcon className="size-[14px]" />
-                </button>
-
-                <div 
-                  ref={sankathanaScrollRef}
-                  className="relative overflow-x-auto pb-6 flex gap-6 -mx-5 px-5 md:mx-0 md:px-0 scrollbar-none"
-                  style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
-                  {[
-                    { year: "2024", src: "/images/gallery/sankathana-2024.jpg" },
-                    { year: "2023", src: "/images/gallery/sankathana-2023.jpg" },
-                    { year: "2022", src: "/images/gallery/sankathana-2022.jpg" },
-                    { year: "2021", src: "/images/gallery/sankathana-2021.jpg" },
-                  ].map((cover) => (
-                    <div key={cover.year} className="group relative aspect-[1.6/1] h-[160px] sm:h-[220px] md:h-[250px] flex-shrink-0 overflow-hidden">
-                      <Image
-                        src={cover.src}
-                        alt={`National Media Sankathana ${cover.year}`}
-                        fill
-                        className="object-contain transition-transform duration-500 group-hover:scale-[1.02]"
-                        sizes="(min-width: 768px) 400px, 260px"
-                      />
-                      <div className="absolute inset-0 bg-ink/5 opacity-100 group-hover:opacity-0 transition-opacity" />
-                      <div className="absolute bottom-3 left-3 bg-ink/75 px-2 py-0.5 rounded-sm">
-                        <span className="font-display text-[0.75rem] text-ivory tracking-widest">{cover.year}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal className="mt-14" delay={0.12}>
+            <Reveal className="mt-12" delay={0.08}>
               <button
                 type="button"
                 onClick={() => setOpenSankathana(true)}

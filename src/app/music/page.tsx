@@ -81,7 +81,7 @@ export default function MusicPage() {
                 src="/images/kalabhumi-cropped.jpg"
                 alt="Kalabhumi"
                 fill
-                className="portrait-filter object-cover object-top"
+                className="object-cover object-top"
                 sizes="(min-width: 768px) 40vw, 100vw"
               />
             </div>

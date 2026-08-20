@@ -38,7 +38,7 @@ export function Interviews({
         <Reveal className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
             <Kicker>{t.interviews.kicker}</Kicker>
-            <h2 className="font-display mt-5 text-4xl tracking-tight text-deep md:text-6xl">
+            <h2 className="font-display mt-5 text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] tracking-tight text-deep">
               {t.interviews.title}
             </h2>
           </div>

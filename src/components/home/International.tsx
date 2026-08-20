@@ -13,7 +13,7 @@ export function International({ bgClass = "bg-ivory" }: { bgClass?: string }) {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker className={isDark ? "text-sand" : ""}>{t.international.kicker}</Kicker>
-          <h2 className={`font-display mt-5 max-w-3xl text-4xl tracking-tight md:text-6xl ${isDark ? "text-ivory" : "text-deep"}`}>
+          <h2 className={`font-display mt-5 max-w-3xl text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] tracking-tight ${isDark ? "text-ivory" : "text-deep"}`}>
             {t.international.title}
           </h2>
           <p className={`mt-6 max-w-2xl text-base leading-8 ${isDark ? "text-beige/90" : "text-brown"}`}>{t.international.lede}</p>
