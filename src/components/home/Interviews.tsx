@@ -33,7 +33,7 @@ export function Interviews({
   const playing = videos.find((video) => video.id === active);
 
   return (
-    <section id="conversations" className="bg-beige py-24 md:py-32">
+    <section id="conversations" className="bg-ivory py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
@@ -49,7 +49,7 @@ export function Interviews({
           <button
             type="button"
             onClick={() => setActive(featured.id)}
-            className="group grid w-full overflow-hidden bg-ivory text-left md:grid-cols-5"
+            className="group grid w-full overflow-hidden bg-beige text-left md:grid-cols-5"
           >
             <div className="relative aspect-video overflow-hidden bg-deep md:col-span-3 md:aspect-auto md:min-h-[420px]">
               <Image

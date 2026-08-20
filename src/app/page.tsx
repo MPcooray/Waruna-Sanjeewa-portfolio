@@ -4,7 +4,6 @@ import { ThreePaths } from "@/components/home/ThreePaths";
 import { Interviews } from "@/components/home/Interviews";
 import { Investigations } from "@/components/home/Investigations";
 import { Book } from "@/components/home/Book";
-import { MusicFeature } from "@/components/home/MusicFeature";
 import { Recognition } from "@/components/home/Recognition";
 import { ContactPreview } from "@/components/home/ContactPreview";
 
@@ -17,7 +16,6 @@ export default function Home() {
       <Investigations limit={3} />
       <Interviews featuredOnly />
       <Book />
-      <MusicFeature />
       <Recognition />
       <ContactPreview />
     </>

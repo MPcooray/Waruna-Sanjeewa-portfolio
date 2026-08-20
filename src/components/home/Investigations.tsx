@@ -14,7 +14,7 @@ export function Investigations({
   const items = limit ? investigations.slice(0, limit) : investigations;
 
   return (
-    <section id="investigations" className="bg-ivory py-24 md:py-32">
+    <section id="investigations" className="bg-beige py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker>{t.investigations.kicker}</Kicker>

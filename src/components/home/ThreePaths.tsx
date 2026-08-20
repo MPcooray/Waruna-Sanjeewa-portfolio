@@ -95,7 +95,7 @@ export function ThreePaths() {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <section id="paths" className="bg-beige pt-10 pb-24 md:pt-12 md:pb-32">
+    <section id="paths" className="bg-ivory pt-10 pb-24 md:pt-12 md:pb-32">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker>{t.paths.kicker}</Kicker>
@@ -115,7 +115,7 @@ export function ThreePaths() {
                   href={path.href}
                   onMouseEnter={() => setHovered(path.key)}
                   onMouseLeave={() => setHovered(null)}
-                  className={`group grid overflow-hidden bg-ivory md:grid-cols-12 ${
+                  className={`group grid overflow-hidden bg-beige md:grid-cols-12 ${
                     right ? "md:[direction:rtl]" : ""
                   }`}
                 >
