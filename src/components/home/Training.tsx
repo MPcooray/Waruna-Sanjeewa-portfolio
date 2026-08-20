@@ -20,7 +20,7 @@ export function Training({ bgClass = "bg-ivory" }: { bgClass?: string }) {
             {trainingTopics.map((topic) => (
               <li
                 key={topic.en}
-                className={`font-display py-5 text-2xl sm:py-6 sm:text-3xl md:text-4xl ${isDark ? "text-ivory" : "text-deep"}`}
+                className={`font-display py-4 text-xl sm:py-5 sm:text-2xl md:text-[1.75rem] ${isDark ? "text-ivory" : "text-deep"}`}
               >
                 {topic[locale]}
               </li>

@@ -19,32 +19,19 @@ export function International({ bgClass = "bg-ivory" }: { bgClass?: string }) {
           <p className={`mt-6 max-w-2xl text-base leading-8 ${isDark ? "text-beige/90" : "text-brown"}`}>{t.international.lede}</p>
         </Reveal>
 
-        <div className="mt-16 space-y-4 md:mt-20">
+        <div className="mt-16 grid gap-8 md:mt-20 md:grid-cols-3 md:gap-10">
           {conferences.map((item, index) => {
-            const right = index % 2 === 1;
             return (
               <Reveal key={item.year} delay={index * 0.05}>
-                <article
-                  className={`border-t py-12 md:py-16 ${isDark ? "border-sand/30 text-ivory" : "border-sand"} ${
-                    right ? "md:text-right" : ""
-                  }`}
-                >
+                <article className={`border-t pt-8 md:pt-10 ${isDark ? "border-sand/30 text-ivory" : "border-sand"}`}>
                   <p className={`kicker ${isDark ? "text-sand" : ""}`}>{item.year}</p>
-                  <h3
-                    className={`font-display mt-5 text-3xl leading-tight sm:text-4xl md:text-5xl ${isDark ? "text-ivory" : "text-deep"} ${
-                      right ? "md:ml-auto md:max-w-2xl" : "max-w-2xl"
-                    }`}
-                  >
+                  <h3 className={`font-display mt-5 text-2xl leading-tight sm:text-3xl ${isDark ? "text-ivory" : "text-deep"}`}>
                     {item.event[locale]}
                   </h3>
-                  <p className={`mt-4 text-sm tracking-[0.14em] uppercase ${isDark ? "text-sand" : "text-brown"}`}>
+                  <p className={`mt-4 text-[0.8125rem] tracking-[0.14em] uppercase ${isDark ? "text-sand" : "text-brown"}`}>
                     {item.city[locale]} · {item.country[locale]}
                   </p>
-                  <p
-                    className={`mt-6 leading-7 ${isDark ? "text-beige/80" : "text-ink/75"} ${
-                      right ? "md:ml-auto md:max-w-xl" : "max-w-xl"
-                    }`}
-                  >
+                  <p className={`mt-5 text-sm leading-6 ${isDark ? "text-beige/80" : "text-ink/75"}`}>
                     {item.note[locale]}
                   </p>
                 </article>

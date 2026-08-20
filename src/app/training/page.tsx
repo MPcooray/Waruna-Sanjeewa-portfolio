@@ -17,25 +17,44 @@ export default function TrainingPage() {
       <PageIntro kicker={page.kicker} title={page.title} lede={page.lede} titleClassName="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]" />
 
       <section className="bg-beige py-24 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-12 md:items-center md:px-8">
-          <Reveal className="md:col-span-6">
-            <div className="relative aspect-[4/3] overflow-hidden bg-sand">
-              <Image
-                src="/images/gallery/award-ceremony.png"
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(min-width: 768px) 50vw, 100vw"
-              />
-            </div>
-          </Reveal>
-          <Reveal className="md:col-span-6" delay={0.08}>
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal className="max-w-3xl">
             <Kicker>{page.universityKicker}</Kicker>
             <h2 className="font-display mt-5 text-4xl tracking-tight text-deep md:text-5xl">
               {page.universityTitle}
             </h2>
-            <p className="mt-8 max-w-md leading-8 text-ink/80">{page.universityBody}</p>
+            <p className="mt-8 max-w-2xl leading-8 text-ink/80">{page.universityBody}</p>
           </Reveal>
+
+          <div className="mt-16 grid gap-6 sm:grid-cols-3">
+            <Reveal className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs" delay={0.05}>
+              <Image
+                src="/images/gallery/training-01.jpg"
+                alt="Waruna lecturing at Samarambha '23"
+                fill
+                className="object-cover object-center"
+                sizes="(min-width: 768px) 30vw, 100vw"
+              />
+            </Reveal>
+            <Reveal className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs" delay={0.1}>
+              <Image
+                src="/images/gallery/training-02.jpg"
+                alt="Waruna teaching data gathering methods"
+                fill
+                className="object-cover object-center"
+                sizes="(min-width: 768px) 30vw, 100vw"
+              />
+            </Reveal>
+            <Reveal className="relative aspect-[4/3] w-full overflow-hidden bg-sand border border-sand/10 shadow-[0_8px_24px_rgba(33,28,24,0.05)] rounded-xs" delay={0.15}>
+              <Image
+                src="/images/gallery/training-03.jpg"
+                alt="Waruna lecturing in classroom"
+                fill
+                className="object-cover object-center"
+                sizes="(min-width: 768px) 30vw, 100vw"
+              />
+            </Reveal>
+          </div>
         </div>
       </section>
 

@@ -1,22 +1,23 @@
 export type Locale = "en" | "si";
 export type VideoCategory = "all" | "interviews" | "discussions" | "journalism";
 
-export const videos = [
-  {
-    id: "c9gxowcsSnw",
-    slug: "sankathana",
-    thumbnail: "/images/videos/sankathana.jpg",
-    category: "discussions" as const,
-    duration: "",
-    title: {
-      en: "Sankathana",
-      si: "සංකථන",
-    },
-    subtitle: {
-      en: "A long-form conversation on journalism and public life.",
-      si: "ප්‍රවෘත්තිකරණය සහ පොදු ජීවිතය පිළිබඳ දීර්ඝ සංවාදයක්.",
-    },
+export const sankathanaVideo = {
+  id: "c9gxowcsSnw",
+  slug: "sankathana",
+  thumbnail: "/images/videos/sankathana.jpg",
+  category: "discussions" as const,
+  duration: "",
+  title: {
+    en: "Sankathana",
+    si: "සංකථන",
   },
+  subtitle: {
+    en: "A long-form conversation on journalism and public life.",
+    si: "ප්‍රවෘත්තිකරණය සහ පොදු ජීවිතය පිළිබඳ දීර්ඝ සංවාදයක්.",
+  },
+};
+
+export const videos = [
   {
     id: "TAemrO-_ETw",
     slug: "interview",
@@ -36,11 +37,11 @@ export const videos = [
     id: "DSr63DipgTQ",
     slug: "conversation-one",
     thumbnail: "/images/videos/conversation-1.jpg",
-    category: "journalism" as const,
+    category: "discussions" as const,
     duration: "",
     title: {
-      en: "On the Record",
-      si: "වාර්තාවේ",
+      en: "Conversation",
+      si: "සංවාදය",
     },
     subtitle: {
       en: "From the video archive.",
@@ -51,11 +52,11 @@ export const videos = [
     id: "HeV16oOInNQ",
     slug: "conversation-two",
     thumbnail: "/images/videos/conversation-2.jpg",
-    category: "journalism" as const,
+    category: "discussions" as const,
     duration: "",
     title: {
-      en: "In Conversation",
-      si: "සංවාදයේ",
+      en: "Conversation",
+      si: "සංවාදය",
     },
     subtitle: {
       en: "From the video archive.",

@@ -41,12 +41,12 @@ export const galleryPhotos = [
   {
     src: "/images/gallery/book-presentation-01.png",
     alt: {
-      en: "Waruna Sanjeewa Liyanage presenting Investigative Journalism: Global and National Perspective",
-      si: "ගවේෂණාත්මක ප්‍රවෘත්තිකරණය ග්‍රන්ථය සමඟ වරුණ සංජීව ලියනගේ",
+      en: "Waruna Sanjeewa Liyanage presenting his book to Nawarathna Gamage",
+      si: "නවරත්න ගමගේ මහතාට ගවේෂණාත්මක ප්‍රවෘත්තිකරණය ග්‍රන්ථය පිළිගන්වමින් වරුණ සංජීව ලියනගේ",
     },
     caption: {
-      en: "Investigative Journalism, as published",
-      si: "ප්‍රකාශිත ග්‍රන්ථය සමඟ",
+      en: "Presenting the book to Nawarathna Gamage",
+      si: "නවරත්න ගමගේ මහතාට ග්‍රන්ථය පිළිගැන්වීම",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
     className: "aspect-[4/3] md:col-span-6",
@@ -54,12 +54,12 @@ export const galleryPhotos = [
   {
     src: "/images/gallery/book-office.png",
     alt: {
-      en: "Waruna Sanjeewa Liyanage presenting his book to Dr. Tudor Weerasinghe",
-      si: "ආචාර්ය ටියුඩර් වීරසිංහ මහතාට ගවේෂණාත්මක ප්‍රවෘත්තිකරණය ග්‍රන්ථය පිළිගන්වමින් වරුණ සංජීව ලියනගේ",
+      en: "Waruna Sanjeewa Liyanage presenting his book to Prof. Tudor Weerasinghe",
+      si: "මහාචාර්ය ටියුඩර් වීරසිංහ මහතාට ගවේෂණාත්මක ප්‍රවෘත්තිකරණය ග්‍රන්ථය පිළිගන්වමින් වරුණ සංජීව ලියනගේ",
     },
     caption: {
-      en: "Presenting the book to Dr. Tudor Weerasinghe",
-      si: "ආචාර්ය ටියුඩර් වීරසිංහ මහතාට ග්‍රන්ථය පිළිගැන්වීම",
+      en: "Presenting the book to Prof. Tudor Weerasinghe",
+      si: "මහාචාර්ය ටියුඩර් වීරසිංහ මහතාට ග්‍රන්ථය පිළිගැන්වීම",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
     className: "aspect-[4/3] md:col-span-6",
@@ -80,12 +80,12 @@ export const galleryPhotos = [
   {
     src: "/images/gallery/book-presentation-03.png",
     alt: {
-      en: "Waruna Sanjeewa Liyanage with copies of his published book",
-      si: "ප්‍රකාශිත ග්‍රන්ථයේ පිටපත් සමඟ වරුණ සංජීව ලියනගේ",
+      en: "Waruna Sanjeewa Liyanage presenting his book to Prof. Dharmakeerthi Sri Ranjan",
+      si: "මහාචාර්ය ධර්මකීර්ති ශ්‍රී රංජන් මහතාට ගවේෂණාත්මක ප්‍රවෘත්තිකරණය ග්‍රන්ථය පිළිගන්වමින් වරුණ සංජීව ලියනගේ",
     },
     caption: {
-      en: "With copies of the book",
-      si: "ග්‍රන්ථයේ පිටපත් සමඟ",
+      en: "Presenting the book to Prof. Dharmakeerthi Sri Ranjan",
+      si: "මහාචාර්ය ධර්මකීර්ති ශ්‍රී රංජන් මහතාට ග්‍රන්ථය පිළිගැන්වීම",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
     className: "aspect-[4/3] md:col-span-7",
@@ -106,12 +106,12 @@ export const galleryPhotos = [
   {
     src: "/images/gallery/book-presentation-04.png",
     alt: {
-      en: "Waruna Sanjeewa Liyanage presenting Investigative Journalism",
-      si: "ගවේෂණාත්මක ප්‍රවෘත්තිකරණය භාරදෙමින් වරුණ සංජීව ලියනගේ",
+      en: "Waruna Sanjeewa Liyanage presenting his book to Prof. Sandagomi Koparahewa",
+      si: "මහාචාර්ය සඳගෝමි කෝපරහේවා මහතාට ගවේෂණාත්මක ප්‍රවෘත්තිකරණය ග්‍රන්ථය පිළිගන්වමින් වරුණ සංජීව ලියනගේ",
     },
     caption: {
-      en: "Another presentation of the book",
-      si: "තවත් භාරදීමක්",
+      en: "Presenting the book to Prof. Sandagomi Koparahewa",
+      si: "මහාචාර්ය සඳගෝමි කෝපරහේවා මහතාට ග්‍රන්ථය පිළිගැන්වීම",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
     className: "aspect-[4/3] md:col-span-6",

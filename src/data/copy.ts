@@ -156,8 +156,8 @@ export const copy = {
       kicker: "Media trainer",
       title: "Passing journalism forward.",
       lede: "For years alongside his newsroom career, Waruna has worked with journalists, students, and media professionals.",
-      universityKicker: "01 — University",
-      universityTitle: "Teaching the next generation.",
+      universityKicker: "University",
+      universityTitle: "Teaching the next generation",
       universityBody:
         "University lecturing sits beside the newsroom — passing method, ethics, and investigative practice to students of media.",
       workshopsKicker: "Training workshops",
@@ -398,8 +398,8 @@ export const copy = {
       kicker: "මාධ්‍ය පුහුණුකරු",
       title: "ප්‍රවෘත්තිකරණය ඉදිරියට ගෙන යාම.",
       lede: "ප්‍රවෘත්ති කාමරයට සමගාමීව, වසර ගණනාවක් ප්‍රවෘත්තිකරුවන්, ශිෂ්‍යයන් සහ මාධ්‍ය වෘත්තිකයන් සමඟ වැඩ කර ඇත.",
-      universityKicker: "01 — විශ්වවිද්‍යාලය",
-      universityTitle: "ඊළඟ පරම්පරාවට ඉගැන්වීම.",
+      universityKicker: "විශ්වවිද්‍යාලය",
+      universityTitle: "ඊළඟ පරම්පරාවට ඉගැන්වීම",
       universityBody:
         "විශ්වවිද්‍යාල දේශන ප්‍රවෘත්ති කාමරය අසල තැබේ — ක්‍රමය, ආචාර ධර්ම සහ ගවේෂණ භාවිතය මාධ්‍ය ශිෂ්‍යයන්ට ලබා දෙමින්.",
       workshopsKicker: "පුහුණු වැඩමුළු",
