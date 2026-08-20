@@ -14,10 +14,12 @@ export function Interviews({
   featuredOnly = false,
   featuredId,
   moreHref = "/training",
+  bgClass = "bg-ivory",
 }: {
   featuredOnly?: boolean;
   featuredId?: string;
   moreHref?: string;
+  bgClass?: string;
 }) {
   const { t, locale } = useLanguage();
   const [filter, setFilter] = useState<VideoCategory>("all");
@@ -33,7 +35,7 @@ export function Interviews({
   const playing = videos.find((video) => video.id === active);
 
   return (
-    <section id="conversations" className="bg-ivory py-24 md:py-32">
+    <section id="conversations" className={`${bgClass} py-24 md:py-32`}>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>

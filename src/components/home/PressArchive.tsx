@@ -8,7 +8,11 @@ import { pressClippings } from "@/data/press";
 import { Kicker, Reveal } from "@/components/ui/Editorial";
 import { ArchiveFold } from "@/components/ui/ArchiveFold";
 
-export function PressArchive() {
+export function PressArchive({
+  bgClass = "bg-ivory",
+}: {
+  bgClass?: string;
+}) {
   const { t, locale } = useLanguage();
   const [open, setOpen] = useState<number | null>(null);
   const count = pressClippings.length;
@@ -37,9 +41,10 @@ export function PressArchive() {
   }, [open, count]);
 
   const active = open !== null ? pressClippings[open] : null;
+  const fadeColor = bgClass.includes("beige") ? "beige" : "ivory";
 
   return (
-    <section id="press" className="bg-ivory py-24 md:py-32">
+    <section id="press" className={`${bgClass} py-24 md:py-32`}>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker>{t.press.kicker}</Kicker>
@@ -49,7 +54,7 @@ export function PressArchive() {
           <p className="mt-6 max-w-2xl text-base leading-8 text-brown">{t.press.lede}</p>
         </Reveal>
 
-        <ArchiveFold more={t.press.more} less={t.press.less} fadeFrom="ivory">
+        <ArchiveFold more={t.press.more} less={t.press.less} fadeFrom={fadeColor}>
           <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {pressClippings.map((clipping, index) => (
               <button

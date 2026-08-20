@@ -14,7 +14,7 @@ export default function TrainingPage() {
 
   return (
     <>
-      <PageIntro kicker={page.kicker} title={page.title} lede={page.lede} />
+      <PageIntro kicker={page.kicker} title={page.title} lede={page.lede} titleClassName="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]" />
 
       <section className="bg-beige py-24 md:py-32">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-12 md:items-center md:px-8">
@@ -39,9 +39,9 @@ export default function TrainingPage() {
         </div>
       </section>
 
-      <Training />
-      <International />
-      <Interviews featuredId="TAemrO-_ETw" />
+      <Training bgClass="bg-deep" />
+      <International bgClass="bg-beige" />
+      <Interviews featuredId="TAemrO-_ETw" bgClass="bg-ivory" />
     </>
   );
 }

@@ -11,9 +11,11 @@ import { ArchiveFold } from "@/components/ui/ArchiveFold";
 export function PhotoArchive({
   group,
   heading,
+  bgClass = "bg-beige",
 }: {
   group?: "Publication" | "Recognition" | "Archive";
   heading?: string;
+  bgClass?: string;
 }) {
   const { t, locale } = useLanguage();
   const [open, setOpen] = useState<number | null>(null);
@@ -23,19 +25,11 @@ export function PhotoArchive({
 
   useEffect(() => {
     if (open === null) return;
-
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(null);
-      if (event.key === "ArrowRight") {
-        setOpen((current) => (current === null ? current : (current + 1) % photos.length));
-      }
-      if (event.key === "ArrowLeft") {
-        setOpen((current) =>
-          current === null ? current : (current - 1 + photos.length) % photos.length,
-        );
-      }
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(null);
+      if (e.key === "ArrowLeft") setOpen((open - 1 + photos.length) % photos.length);
+      if (e.key === "ArrowRight") setOpen((open + 1) % photos.length);
     };
-
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
     return () => {
@@ -45,9 +39,10 @@ export function PhotoArchive({
   }, [open, photos.length]);
 
   const active = open !== null ? photos[open] : null;
+  const fadeColor = bgClass.includes("ivory") ? "ivory" : "beige";
 
   return (
-    <section id="photos" className="bg-beige py-24 md:py-32">
+    <section id="photos" className={`${bgClass} py-24 md:py-32`}>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <Kicker>{t.photos.kicker}</Kicker>
@@ -56,7 +51,7 @@ export function PhotoArchive({
           </h2>
         </Reveal>
 
-        <ArchiveFold more={t.photos.more} less={t.photos.less} fadeFrom="beige">
+        <ArchiveFold more={t.photos.more} less={t.photos.less} fadeFrom={fadeColor}>
           <div className="mt-14 grid grid-cols-2 gap-0 md:grid-cols-12">
             {photos.map((photo, index) => (
               <button
