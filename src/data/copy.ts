@@ -3,7 +3,7 @@ import type { Locale } from "./site";
 export const copy = {
   en: {
     meta: {
-      title: "Waruna Sanjeewa Liyanage — Journalism, Training & Music",
+      title: "Waruna Sanjeewa Liyanage — Journalism, Academia & Music",
       description:
         "The archive of Waruna Sanjeewa Liyanage — journalist, media trainer, and musician. Print and digital journalism, teaching, and a body of songs and collaborations.",
     },
@@ -11,7 +11,7 @@ export const copy = {
     nav: {
       about: "About",
       journalism: "Journalism",
-      training: "Training",
+      training: "Academia",
       music: "Music",
       archive: "Archive",
       contact: "Contact",
@@ -108,7 +108,7 @@ export const copy = {
     },
     paths: {
       kicker: "Three bodies of work",
-      title: "Journalism, training, and music",
+      title: "Journalism, Academia & Music",
       explore: "Explore",
       journalism: {
         index: "01",
@@ -118,7 +118,7 @@ export const copy = {
       },
       training: {
         index: "02",
-        title: "Training",
+        title: "Academia",
         lede: "Lectures · Workshops · Conferences · Conversations",
         body: "Lectures, workshops, and international conferences.",
       },
@@ -251,7 +251,7 @@ export const copy = {
   },
   si: {
     meta: {
-      title: "වරුණ සංජීව ලියනගේ — ප්‍රවෘත්තිකරණය, පුහුණුව සහ සංගීතය",
+      title: "වරුණ සංජීව ලියනගේ — ප්‍රවෘත්තිකරණය, විද්වත් මෙහෙවර සහ සංගීතය",
       description:
         "වරුණ සංජීව ලියනගේගේ ලේඛනාගාරය — ප්‍රවෘත්තිකරු, මාධ්‍ය පුහුණුකරු සහ සංගීතඥයා. මුද්‍රිත සහ විද්‍යුත් ප්‍රවෘත්තිකරණය, ඉගැන්වීම සහ ගීත හා සහයෝගීතාව.",
     },
@@ -259,7 +259,7 @@ export const copy = {
     nav: {
       about: "පිළිබඳව",
       journalism: "ප්‍රවෘත්තිකරණය",
-      training: "පුහුණුව",
+      training: "විද්වත් මෙහෙවර",
       music: "සංගීතය",
       archive: "ලේඛනාගාරය",
       contact: "සම්බන්ධවන්න",
@@ -356,7 +356,7 @@ export const copy = {
     },
     paths: {
       kicker: "වැඩ කඳවුරු තුනක්",
-      title: "ප්‍රවෘත්තිකරණය, පුහුණුව සහ සංගීතය",
+      title: "ප්‍රවෘත්තිකරණය, විද්වත් මෙහෙවර සහ සංගීතය",
       explore: "ගවේෂණය",
       journalism: {
         index: "01",
@@ -366,7 +366,7 @@ export const copy = {
       },
       training: {
         index: "02",
-        title: "පුහුණුව",
+        title: "විද්වත් මෙහෙවර",
         lede: "දේශන · වැඩමුළු · සමුළු · සංවාද",
         body: "දේශන, වැඩමුළු සහ ජාත්‍යන්තර සමුළු.",
       },

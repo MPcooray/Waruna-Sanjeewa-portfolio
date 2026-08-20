@@ -54,6 +54,12 @@ export default function JournalismPage() {
       <div id="print">
         <Book showVideos />
         <PhotoArchive group="Publication" bgClass="bg-deep" hideHeader />
+        <PhotoArchive
+          group="Newspaper"
+          heading="Publishing the Book in Newspapers"
+          bgClass="bg-deep"
+          hideHeader
+        />
         
         {/* National Media Journals covers scroll gallery */}
         <section className="bg-ivory py-24 md:py-32">

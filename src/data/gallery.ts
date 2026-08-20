@@ -116,4 +116,56 @@ export const galleryPhotos = [
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
     className: "aspect-[4/3] md:col-span-6",
   },
+  {
+    src: "/images/gallery/book-newspaper-01.jpeg",
+    alt: {
+      en: "Newspaper coverage of the book publication",
+      si: "ග්‍රන්ථ ප්‍රකාශනය පිළිබඳ පුවත්පත් වාර්තාවක්",
+    },
+    caption: {
+      en: "Book publication in Lankadeepa newspaper",
+      si: "ලන්කාදීප පුවත්පත ග්‍රන්ථ ප්‍රකාශනය",
+    },
+    kicker: { en: "Newspaper", si: "පුවත්පත" },
+    className: "aspect-[4/3] md:col-span-6",
+  },
+  {
+    src: "/images/gallery/book-newspaper-02.jpeg",
+    alt: {
+      en: "Newspaper coverage of the book publication",
+      si: "ග්‍රන්ථ ප්‍රකාශනය පිළිබඳ පුවත්පත් වාර්තාවක්",
+    },
+    caption: {
+      en: "Book publication in Sathi Aga Aruna newspaper",
+      si: "සති ආග අරුණ පුවත්පත ප්‍රකාශනය",
+    },
+    kicker: { en: "Newspaper", si: "පුවත්පත" },
+    className: "aspect-[4/3] md:col-span-6",
+  },
+  {
+    src: "/images/gallery/book-newspaper-03.jpeg",
+    alt: {
+      en: "Newspaper coverage of the book publication",
+      si: "ග්‍රන්ථ ප්‍රකාශනය පිළිබඳ පුවත්පත් වාර්තාවක්",
+    },
+    caption: {
+      en: "Book publication in Mawbima newspaper",
+      si: "මව්බිම පුවත්පත ග්‍රන්ථ ප්‍රකාශනය",
+    },
+    kicker: { en: "Newspaper", si: "පුවත්පත" },
+    className: "aspect-[4/3] md:col-span-6",
+  },
+  {
+    src: "/images/gallery/book-newspaper-04.jpeg",
+    alt: {
+      en: "Newspaper coverage of the book publication",
+      si: "ග්‍රන්ථ ප්‍රකාශනය පිළිබඳ පුවත්පත් වාර්තාවක්",
+    },
+    caption: {
+      en: "Book publication in Dinamina newspaper",
+      si: "දිනමින පුවත්පත ග්‍රන්ථ ප්‍රකාශනය",
+    },
+    kicker: { en: "Newspaper", si: "පුවත්පත" },
+    className: "aspect-[4/3] md:col-span-6",
+  },
 ];
