@@ -63,7 +63,7 @@ export const copy = {
       more: "Open the full archive",
     },
     investigations: {
-      kicker: "Investigative journalism",
+      kicker: "Investigative work",
       title: "Investigating beyond the headline",
       cta: "Read the practice",
     },
@@ -141,7 +141,7 @@ export const copy = {
       electronicTitle: "Digital journalism",
       electronicLede: "Newsroom · Television · Reporting",
       electronicCta: "Explore digital journalism",
-      aroundBook: "Around the book",
+      aroundBook: "Presenting the book",
       sankathanaKicker: "Journal work",
       sankathanaTitle: "Sankathana",
       sankathanaBody:
@@ -199,8 +199,8 @@ export const copy = {
       },
     },
     photos: {
-      kicker: "Through the years",
-      title: "From the archive",
+      kicker: "INVESTIGATIVE JOURNALISM",
+      title: "Presenting the book",
       captionPortrait: "Waruna Sanjeewa Liyanage",
       captionBook: "The book, as published",
       note: "Book presentations, awards, and gatherings — a still record of the working life.",
@@ -334,7 +334,7 @@ export const copy = {
       buy: "Grantha.lk සහ සූරිය ප්‍රකාශකයන් ඇතුළු පොත්පත් ශාලාවලින් ලබා ගත හැක.",
     },
     investigations: {
-      kicker: "ගවේෂණාත්මක ප්‍රවෘත්තිකරණය",
+      kicker: "ගවේෂණාත්මක කාර්යභාරය",
       title: "ශීර්ෂ පාඨයට එහා ගවේෂණය",
       cta: "භාවිතය කියවන්න",
     },
@@ -384,7 +384,7 @@ export const copy = {
       electronicTitle: "ඩිජිටල් ප්‍රවෘත්තිකරණය",
       electronicLede: "ප්‍රවෘත්ති කාමරය · රූපවාහිනිය · වාර්තාකරණය",
       electronicCta: "ඩිජිටල් ප්‍රවෘත්තිකරණය",
-      aroundBook: "ග්‍රන්ථය වටා",
+      aroundBook: "ග්‍රන්ථ ප්‍රදානය",
       sankathanaKicker: "සඟරා වැඩ",
       sankathanaTitle: "සංකථන",
       sankathanaBody: "සංකථනයෙන් තෝරාගත් ලේඛනය සහ සංවාදය — මුද්‍රිත සහ කථන ලේඛනාගාරයේ කොටසකි.",
@@ -440,8 +440,8 @@ export const copy = {
       },
     },
     photos: {
-      kicker: "අවුරුදු හරහා",
-      title: "ලේඛනාගාරයෙන්",
+      kicker: "ගවේෂණාත්මක ප්‍රවෘත්තිකරණය",
+      title: "ග්‍රන්ථ ප්‍රදානය",
       captionPortrait: "වරුණ සංජීව ලියනගේ",
       captionBook: "ප්‍රකාශිත ග්‍රන්ථය",
       note: "ග්‍රන්ථ භාරදීම්, සම්මාන සහ රැස්වීම් — වැඩ කරන ජීවිතයේ තවමත් රූ.",

@@ -79,65 +79,29 @@ export default function JournalismPage() {
 
   return (
     <>
-      <PageIntro kicker={page.kicker} title={page.title} lede={page.lede} titleClassName="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem]" />
-
-      <section className="bg-ivory pb-16 md:pb-24">
-        <div className="mx-auto grid max-w-7xl gap-6 px-5 md:grid-cols-2 md:px-8">
-          <Reveal>
-            <a href="#print" className="group block overflow-hidden bg-beige transition-all duration-500 ease-out hover:bg-sand/20 hover:-translate-y-1 hover:shadow-md">
-              <div className="p-7 md:p-9">
-                <p className="kicker">{page.printIndex}</p>
-                <h2 className="font-display mt-4 text-3xl text-deep md:text-4xl">{page.printTitle}</h2>
-                <p className="mt-3 text-sm tracking-wide text-brown">{page.printLede}</p>
-                <p className="mt-8 inline-flex items-center gap-3 text-[0.875rem] tracking-[0.2em] uppercase text-deep">
-                  {page.printCta}
-                  <span className="transition-transform group-hover:translate-x-1">
-                    <ArrowIcon />
-                  </span>
-                </p>
-              </div>
-            </a>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <a href="#electronic" className="group block overflow-hidden bg-beige transition-all duration-500 ease-out hover:bg-sand/20 hover:-translate-y-1 hover:shadow-md">
-              <div className="p-7 md:p-9">
-                <p className="kicker">{page.electronicIndex}</p>
-                <h2 className="font-display mt-4 text-3xl text-deep md:text-4xl">
-                  {page.electronicTitle}
-                </h2>
-                <p className="mt-3 text-sm tracking-wide text-brown">{page.electronicLede}</p>
-                <p className="mt-8 inline-flex items-center gap-3 text-[0.875rem] tracking-[0.2em] uppercase text-deep">
-                  {page.electronicCta}
-                  <span className="transition-transform group-hover:translate-x-1">
-                    <ArrowIcon />
-                  </span>
-                </p>
-              </div>
-            </a>
-          </Reveal>
-        </div>
-      </section>
-
-      <section id="electronic" className="bg-beige py-24 text-ink md:py-32 overflow-hidden">
+      <header className="bg-ivory pt-28 pb-20 text-ink sm:pt-32 md:pt-40 md:pb-28 overflow-hidden">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <Reveal>
-            <Kicker>{page.deranaKicker}</Kicker>
-            <h2 className="font-display mt-5 max-w-3xl text-4xl tracking-tight text-deep md:text-6xl">{page.deranaTitle}</h2>
-          </Reveal>
+          <Kicker>{page.kicker}</Kicker>
+          <h1 className="font-display mt-5 max-w-4xl text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] tracking-tight text-deep leading-[1.15] md:leading-[1.12]">
+            {page.title}
+          </h1>
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-ink/80">
+            {page.lede}
+          </p>
 
           <div 
-            className="relative mt-16 overflow-x-auto pb-4 -mx-5 px-5 md:mx-0 md:px-0"
+            className="relative mt-20 overflow-x-auto pb-4 -mx-5 px-5 md:mx-0 md:px-0"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {/* Timeline connector line */}
-            <div className="absolute top-[59px] left-5 right-5 h-[1px] bg-sand/40 md:left-0 md:right-0" />
+            <div className="absolute top-[59px] left-5 right-5 h-[1px] bg-sand md:left-0 md:right-0" />
             
             <div className="flex gap-8 relative min-w-[max-content] md:min-w-0 md:grid md:grid-cols-5 md:gap-6">
               {digitalJournalismTimeline.map((item, index) => (
                 <Reveal key={index} delay={index * 0.05} className="w-[280px] md:w-auto flex-shrink-0">
                   <div className="relative pt-16">
                     {/* Timeline node dot */}
-                    <div className="absolute top-[54px] left-0 size-[12px] rounded-full bg-beige ring-2 ring-sand z-10" />
+                    <div className="absolute top-[54px] left-0 size-[12px] rounded-full bg-ivory ring-2 ring-sand z-10" />
                     
                     <div className="font-display text-2xl text-brown font-medium">
                       {item.year}
@@ -154,51 +118,52 @@ export default function JournalismPage() {
             </div>
           </div>
         </div>
-      </section>
+      </header>
 
       <div id="print">
         <Book />
+        
+        <section className="bg-ivory py-24 md:py-32">
+          <div className="mx-auto max-w-7xl px-5 md:px-8">
+            <Reveal>
+              <Kicker>{page.sankathanaKicker}</Kicker>
+              <h2 className="font-display mt-5 text-4xl tracking-tight text-deep md:text-6xl">
+                {page.sankathanaTitle}
+              </h2>
+              <p className="mt-6 max-w-2xl leading-8 text-brown">{page.sankathanaBody}</p>
+            </Reveal>
+            <Reveal className="mt-12" delay={0.08}>
+              <button
+                type="button"
+                onClick={() => setOpenSankathana(true)}
+                className="group grid w-full overflow-hidden bg-beige text-left md:grid-cols-12"
+              >
+                <div className="relative aspect-video md:col-span-7 md:aspect-auto md:min-h-[22rem]">
+                  <Image
+                    src={sankathana.thumbnail}
+                    alt={sankathana.title[locale]}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                    sizes="(min-width: 768px) 58vw, 100vw"
+                  />
+                </div>
+                <div className="flex flex-col justify-end p-7 md:col-span-5 md:p-10">
+                  <p className="font-display text-3xl text-deep">{sankathana.title[locale]}</p>
+                  <p className="mt-4 leading-7 text-ink/75">{sankathana.subtitle[locale]}</p>
+                  <p className="mt-8 inline-flex items-center gap-3 text-[0.875rem] tracking-[0.22em] uppercase text-deep">
+                    {page.sankathanaCta} <ArrowIcon />
+                  </p>
+                </div>
+              </button>
+            </Reveal>
+          </div>
+        </section>
+
         <PhotoArchive group="Publication" heading={page.aroundBook} />
         <PressArchive />
       </div>
 
-      <section className="bg-beige py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <Reveal>
-            <Kicker>{page.sankathanaKicker}</Kicker>
-            <h2 className="font-display mt-5 text-4xl tracking-tight text-deep md:text-6xl">
-              {page.sankathanaTitle}
-            </h2>
-            <p className="mt-6 max-w-2xl leading-8 text-brown">{page.sankathanaBody}</p>
-          </Reveal>
-          <Reveal className="mt-12" delay={0.08}>
-            <button
-              type="button"
-              onClick={() => setOpenSankathana(true)}
-              className="group grid w-full overflow-hidden bg-ivory text-left md:grid-cols-12"
-            >
-              <div className="relative aspect-video md:col-span-7 md:aspect-auto md:min-h-[22rem]">
-                <Image
-                  src={sankathana.thumbnail}
-                  alt={sankathana.title[locale]}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
-                  sizes="(min-width: 768px) 58vw, 100vw"
-                />
-              </div>
-              <div className="flex flex-col justify-end p-7 md:col-span-5 md:p-10">
-                <p className="font-display text-3xl text-deep">{sankathana.title[locale]}</p>
-                <p className="mt-4 leading-7 text-ink/75">{sankathana.subtitle[locale]}</p>
-                <p className="mt-8 inline-flex items-center gap-3 text-[0.875rem] tracking-[0.22em] uppercase text-deep">
-                  {page.sankathanaCta} <ArrowIcon />
-                </p>
-              </div>
-            </button>
-          </Reveal>
-        </div>
-      </section>
-
-      <Investigations bgClass="bg-ivory" />
+      <Investigations bgClass="bg-beige" />
 
       <AnimatePresence>
         {openSankathana && (
