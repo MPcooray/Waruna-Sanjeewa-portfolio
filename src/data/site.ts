@@ -126,8 +126,8 @@ export const timeline = [
     year: "2017",
     title: { en: "GIJC · South Africa", si: "GIJC · දකුණු අප්‍රිකාව" },
     detail: {
-      en: "10th Global Investigative Journalism Conference, Johannesburg.",
-      si: "10 වැනි ගෝලීය ගවේෂණාත්මක ප්‍රවෘත්තිකරණ සමුළුව, ජොහැනස්බර්ග්.",
+      en: "Global Investigative Journalism Conference, Johannesburg.",
+      si: "ගෝලීය ගවේෂණාත්මක ප්‍රවෘත්තිකරණ සමුළුව, ජොහැනස්බර්ග්.",
     },
   },
   {
@@ -176,14 +176,28 @@ export const conferences = [
     country: { en: "South Africa", si: "දකුණු අප්‍රිකාව" },
     city: { en: "Johannesburg", si: "ජොහැනස්බර්ග්" },
     event: {
-      en: "10th Global Investigative Journalism Conference",
-      si: "10 වැනි ගෝලීය ගවේෂණාත්මක ප්‍රවෘත්තිකරණ සමුළුව",
+      en: "Global Investigative Journalism Conference",
+      si: "ගෝලීය ගවේෂණාත්මක ප්‍රවෘත්තිකරණ සමුළුව",
     },
     note: {
       en: "Conference biography published by GIJC17 records his work as News Manager at Derana.",
       si: "GIJC17 සමුළු චරිතාපදානය ඔහු දෙරණ ප්‍රවෘත්ති කළමනාකරු ලෙස සටහන් කරයි.",
     },
     images: ["/images/gijc-sa-1.jpg"],
+  },
+  {
+    year: "2018",
+    country: { en: "India", si: "ඉන්දියාව" },
+    city: { en: "New Delhi", si: "නව දිල්ලිය" },
+    event: {
+      en: "Global Investigative Journalism Conference",
+      si: "ගෝලීය ගවේෂණාත්මක ප්‍රවෘත්තිකරණ සමුළුව",
+    },
+    note: {
+      en: "Regional summit gathering investigative journalists from across Asia to share investigative methods.",
+      si: "ගවේෂණාත්මක මාධ්‍ය ක්‍රමවේද බෙදාහදා ගැනීම සඳහා සමස්ත ආසියාව පුරා සිටින ගවේෂණාත්මක මාධ්‍යවේදීන්ගේ කලාපීය සමුළුවකි.",
+    },
+    images: ["/images/gallery/conference-india.jpg"],
   },
   {
     year: "2019",
@@ -251,7 +265,6 @@ export const investigations = [
 export const trainingTopics = [
   { en: "Investigative journalism", si: "ගවේෂණාත්මක ප්‍රවෘත්තිකරණය" },
   { en: "News reporting", si: "ප්‍රවෘත්ති වාර්තාකරණය" },
-  { en: "Media ethics", si: "මාධ්‍ය ආචාර ධර්ම" },
   { en: "Editorial practice", si: "කතෘ භාවිතය" },
   { en: "Journalism training", si: "ප්‍රවෘත්තිකරණ පුහුණුව" },
 ];
