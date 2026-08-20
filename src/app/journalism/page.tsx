@@ -54,6 +54,12 @@ export default function JournalismPage() {
       <div id="print">
         <Book showVideos />
         <PhotoArchive group="Publication" bgClass="bg-deep" hideHeader />
+        <PhotoArchive
+          group="Newspaper"
+          heading="Publishing the Book in Newspapers"
+          bgClass="bg-deep"
+          hideHeader
+        />
         
         <section className="bg-ivory py-24 md:py-32">
           <div className="mx-auto max-w-7xl px-5 md:px-8">

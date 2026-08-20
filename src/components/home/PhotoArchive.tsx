@@ -14,7 +14,7 @@ export function PhotoArchive({
   bgClass = "bg-beige",
   hideHeader = false,
 }: {
-  group?: "Publication" | "Recognition" | "Archive";
+  group?: "Publication" | "Newspaper" | "Recognition" | "Archive";
   heading?: string;
   bgClass?: string;
   hideHeader?: boolean;
