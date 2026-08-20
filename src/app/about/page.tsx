@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { PageIntro } from "@/components/layout/PageIntro";
-import { Timeline } from "@/components/home/Timeline";
 import { useLanguage } from "@/context/LanguageContext";
 import { TextLink } from "@/components/ui/Editorial";
 
@@ -42,7 +41,6 @@ export default function AboutPage() {
           </article>
         </div>
       </section>
-      <Timeline />
     </>
   );
 }

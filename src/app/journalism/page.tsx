@@ -8,68 +8,13 @@ import { Book } from "@/components/home/Book";
 import { PressArchive } from "@/components/home/PressArchive";
 import { PhotoArchive } from "@/components/home/PhotoArchive";
 import { Investigations } from "@/components/home/Investigations";
+import { Awards } from "@/components/home/Awards";
 import { ArrowIcon, Kicker, Reveal } from "@/components/ui/Editorial";
 import { VideoModal } from "@/components/ui/VideoModal";
 import { useLanguage } from "@/context/LanguageContext";
 import { videos, sankathanaVideo } from "@/data/site";
 
-const digitalJournalismTimeline = [
-  {
-    year: "1997 - 2001",
-    title: {
-      en: "Features Writer",
-      si: "විශේෂාංග ලේඛක"
-    },
-    detail: {
-      en: "Sunday Lankadeepa Newspaper. Formed the foundation of his print journalism career writing features.",
-      si: "ඉරිදා ලංකාදීප පුවත්පත. විශේෂාංග ලිපි ලේඛනයෙන් ඔහුගේ මුද්‍රිත මාධ්‍ය ජීවිතයේ අඩිතාලම දමන ලදී."
-    }
-  },
-  {
-    year: "2001 - 2005",
-    title: {
-      en: "Sub Editor",
-      si: "උප කතුවරයා"
-    },
-    detail: {
-      en: "Aratuwa Business Newspaper. Gained extensive editing and newsroom operations experience.",
-      si: "අරටුව ව්‍යාපාරික පුවත්පත. පුළුල් සංස්කරණ සහ ප්‍රවෘත්ති කාමර මෙහෙයුම් අත්දැකීම් ලබා ගන්නා ලදී."
-    }
-  },
-  {
-    year: "2005 - 2006",
-    title: {
-      en: "Reporter / News Editor",
-      si: "වාර්තාකරු සහ ප්‍රවෘත්ති සංස්කාරක"
-    },
-    detail: {
-      en: "Max TV Channel. Transitioned into broadcast media and reporting local and national events.",
-      si: "Max TV නාලිකාව. විද්‍යුත් මාධ්‍යයට පිවිසෙමින් දේශීය සහ ජාතික තොරතුරු වාර්තාකරණය ආරම්භ කළේය."
-    }
-  },
-  {
-    year: "2007 - 2009",
-    title: {
-      en: "News Editor",
-      si: "ප්‍රවෘත්ති සංස්කාරක"
-    },
-    detail: {
-      en: "Isura FM Radio Channel. Directed radio newsroom operations and news bulletin editing.",
-      si: "ඉසුරා එෆ්.එම්. ගුවන්විදුලි නාලිකාව. ගුවන්විදුලි ප්‍රවෘත්ති කාමර මෙහෙයුම් සහ ප්‍රවෘත්ති සංස්කරණ කටයුතු මෙහෙයවන ලදී."
-    }
-  },
-  {
-    year: "2009 - Present",
-    title: {
-      en: "News Manager",
-      si: "ප්‍රවෘත්ති කළමනාකරු"
-    },
-    detail: {
-      en: "FM Derana. Leading overall news operations and management at a premier national station.",
-      si: "එෆ්.එම්. දෙරණ. දිවයිනේ ප්‍රමුඛතම නාලිකාවක සමස්ත ප්‍රවෘත්ති මෙහෙයුම් සහ කළමනාකාරීත්වයට නායකත්වය දෙයි."
-    }
-  }
-];
+
 
 export default function JournalismPage() {
   const { t, locale } = useLanguage();
@@ -103,65 +48,11 @@ export default function JournalismPage() {
           <p className="mt-8 max-w-2xl text-lg leading-8 text-ink/80">
             {page.lede}
           </p>
-
-          {/* Mobile Vertical Timeline */}
-          <div className="relative mt-16 md:hidden">
-            {/* Vertical connector line */}
-            <div className="absolute left-[5px] top-2 bottom-2 w-[1px] bg-sand" />
-            <div className="space-y-10">
-              {digitalJournalismTimeline.map((item, index) => (
-                <Reveal key={index} delay={index * 0.05} className="relative pl-8">
-                  {/* Timeline node dot */}
-                  <div className="absolute left-0 top-1.5 size-[11px] rounded-full bg-ivory ring-2 ring-sand z-10" />
-                  
-                  <div className="font-display text-lg text-brown font-semibold">
-                    {item.year}
-                  </div>
-                  <h3 className="font-display mt-1.5 text-lg text-deep font-semibold leading-snug">
-                    {item.title[locale]}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-ink/75">
-                    {item.detail[locale]}
-                  </p>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop Horizontal Grid Timeline */}
-          <div 
-            className="relative mt-20 hidden md:block overflow-x-auto pb-4"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {/* Timeline connector line */}
-            <div className="absolute top-[59px] left-0 right-0 h-[1px] bg-sand" />
-            
-            <div className="grid grid-cols-5 gap-6 relative">
-              {digitalJournalismTimeline.map((item, index) => (
-                <Reveal key={index} delay={index * 0.05}>
-                  <div className="relative pt-16">
-                    {/* Timeline node dot */}
-                    <div className="absolute top-[54px] left-0 size-[12px] rounded-full bg-ivory ring-2 ring-sand z-10" />
-                    
-                    <div className="font-display text-2xl text-brown font-medium">
-                      {item.year}
-                    </div>
-                    <h3 className="font-display mt-4 text-xl text-deep font-medium leading-snug">
-                      {item.title[locale]}
-                    </h3>
-                    <p className="mt-3 text-[0.875rem] leading-6 text-ink/75">
-                      {item.detail[locale]}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
         </div>
       </header>
 
       <div id="print">
-        <Book />
+        <Book showVideos />
         <PhotoArchive group="Publication" bgClass="bg-deep" hideHeader />
         
         <section className="bg-ivory py-24 md:py-32">
@@ -217,6 +108,7 @@ export default function JournalismPage() {
       </div>
 
       <Investigations bgClass="bg-ivory" />
+      <Awards bgClass="bg-beige" />
 
       <AnimatePresence>
         {openSankathana && (

@@ -9,19 +9,19 @@ const paths = [
   {
     key: "journalism" as const,
     href: "/journalism",
-    image: "/images/home-journalism-v3.jpg",
+    image: "/images/home-journalism-v7.jpg",
     align: "left" as const,
   },
   {
     key: "training" as const,
     href: "/training",
-    image: "/images/home-training-v3.jpg",
+    image: "/images/home-training-v7.jpg",
     align: "right" as const,
   },
   {
     key: "music" as const,
     href: "/music",
-    image: "/images/home-music-v3.jpg",
+    image: "/images/home-music-v7.jpg",
     align: "left" as const,
   },
 ];
