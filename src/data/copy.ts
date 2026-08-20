@@ -184,7 +184,7 @@ export const copy = {
       kalabhumiKicker: "Collaboration",
       kalabhumiTitle: "Kalabhumi",
       kalabhumiBody:
-        "A collaboration with artists, held as one story — photographs, an article, and film, gathered as they enter the archive.",
+        "A musical journey shaped through collaboration, creativity, and a shared passion for Sri Lankan music",
     },
     archivePage: {
       title: "The archive",
@@ -430,7 +430,7 @@ export const copy = {
       kalabhumiKicker: "සහයෝගීතාව",
       kalabhumiTitle: "කලාභූමි",
       kalabhumiBody:
-        "කලාකරුවන් සමඟ සහයෝගීතාවක්, එක කතාවක් ලෙස — ඡායාරූප, ලිපිය සහ චිත්‍රපටය, ලේඛනාගාරයට එන විට එකතු වේ.",
+        "එකට බැඳුණු හඬවල්, නිර්මාණශීලී සිතුවිලි සහ ලාංකේය සංගීතයට ඇති ඇල්මෙන් පෝෂිත වූ සංගීත චාරිකාවක්.",
     },
     archivePage: {
       title: "ලේඛනාගාරය",

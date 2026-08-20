@@ -8,6 +8,7 @@ import { Book } from "@/components/home/Book";
 import { PressArchive } from "@/components/home/PressArchive";
 import { PhotoArchive } from "@/components/home/PhotoArchive";
 import { Investigations } from "@/components/home/Investigations";
+import { Awards } from "@/components/home/Awards";
 import { ArrowIcon, Kicker, Reveal } from "@/components/ui/Editorial";
 import { VideoModal } from "@/components/ui/VideoModal";
 import { useLanguage } from "@/context/LanguageContext";
@@ -217,6 +218,7 @@ export default function JournalismPage() {
       </div>
 
       <Investigations bgClass="bg-ivory" />
+      <Awards bgClass="bg-beige" />
 
       <AnimatePresence>
         {openSankathana && (
