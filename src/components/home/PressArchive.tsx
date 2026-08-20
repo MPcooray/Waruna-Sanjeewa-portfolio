@@ -54,7 +54,7 @@ export function PressArchive({
           <p className="mt-6 max-w-2xl text-base leading-8 text-brown">{t.press.lede}</p>
         </Reveal>
 
-        <ArchiveFold more={t.press.more} less={t.press.less} fadeFrom={fadeColor}>
+        <ArchiveFold more={t.press.more} less={t.press.less} fadeFrom={fadeColor} forceDesktop={true}>
           <div className="mt-14 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {pressClippings.map((clipping, index) => (
               <button

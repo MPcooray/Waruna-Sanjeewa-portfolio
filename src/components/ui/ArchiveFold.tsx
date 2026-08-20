@@ -8,11 +8,13 @@ export function ArchiveFold({
   more,
   less,
   fadeFrom,
+  forceDesktop = false,
 }: {
   children: React.ReactNode;
   more: string;
   less: string;
   fadeFrom: "ivory" | "beige" | "deep";
+  forceDesktop?: boolean;
 }) {
   const [expanded, setExpanded] = useState(false);
   const fade = fadeFrom === "ivory" ? "from-ivory" : fadeFrom === "deep" ? "from-deep" : "from-beige";
@@ -20,18 +22,22 @@ export function ArchiveFold({
   return (
     <div>
       <div
-        className={`relative overflow-hidden transition-[max-height] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] md:max-h-none md:overflow-visible ${
-          expanded ? "max-h-[4000px]" : "max-h-[34rem]"
+        className={`relative overflow-hidden transition-[max-height] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          forceDesktop ? "" : "md:max-h-none md:overflow-visible"
+        } ${
+          expanded ? "max-h-[4000px]" : "max-h-[36rem]"
         }`}
       >
         {children}
         <div
-          className={`pointer-events-none absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t ${fade} to-transparent md:hidden ${
+          className={`pointer-events-none absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t ${fade} to-transparent ${
+            forceDesktop ? "" : "md:hidden"
+          } ${
             expanded ? "opacity-0" : "opacity-100"
           }`}
         />
       </div>
-      <div className="relative z-10 -mt-6 flex justify-center md:hidden">
+      <div className={`relative z-10 -mt-6 flex justify-center ${forceDesktop ? "" : "md:hidden"}`}>
         <button
           type="button"
           onClick={() => setExpanded((value) => !value)}

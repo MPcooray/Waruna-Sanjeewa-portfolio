@@ -15,12 +15,12 @@ export const galleryPhotos = [
   {
     src: "/images/gallery/book-presentation-02.png",
     alt: {
-      en: "Waruna Sanjeewa Liyanage presenting his book Investigative Journalism",
-      si: "ගවේෂණාත්මක ප්‍රවෘත්තිකරණය ග්‍රන්ථය භාරදෙමින් වරුණ සංජීව ලියනගේ",
+      en: "Waruna Sanjeewa Liyanage presenting his book to Nanda Malini",
+      si: "නන්දා මාලිනී මහත්මියට ගවේෂණාත්මක ප්‍රවෘත්තිකරණය ග්‍රන්ථය පිළිගන්වමින් වරුණ සංජීව ලියනගේ",
     },
     caption: {
-      en: "Presenting the book",
-      si: "ග්‍රන්ථය භාරදීම",
+      en: "Presenting the book to Nanda Malini",
+      si: "නන්දා මාලිනී මහත්මියට ග්‍රන්ථය පිළිගැන්වීම",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
     className: "aspect-[4/3] md:col-span-4 md:row-span-2 md:aspect-auto md:h-full",
@@ -54,12 +54,12 @@ export const galleryPhotos = [
   {
     src: "/images/gallery/book-office.png",
     alt: {
-      en: "Waruna Sanjeewa Liyanage presenting his book in an office",
-      si: "කාර්යාලයකදී ග්‍රන්ථය භාරදෙමින් වරුණ සංජීව ලියනගේ",
+      en: "Waruna Sanjeewa Liyanage presenting his book to Dr. Tudor Weerasinghe",
+      si: "ආචාර්ය ටියුඩර් වීරසිංහ මහතාට ගවේෂණාත්මක ප්‍රවෘත්තිකරණය ග්‍රන්ථය පිළිගන්වමින් වරුණ සංජීව ලියනගේ",
     },
     caption: {
-      en: "A presentation in the office",
-      si: "කාර්යාලයක භාරදීමක්",
+      en: "Presenting the book to Dr. Tudor Weerasinghe",
+      si: "ආචාර්ය ටියුඩර් වීරසිංහ මහතාට ග්‍රන්ථය පිළිගැන්වීම",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
     className: "aspect-[4/3] md:col-span-6",
@@ -93,12 +93,12 @@ export const galleryPhotos = [
   {
     src: "/images/gallery/book-with-trophies.png",
     alt: {
-      en: "Waruna Sanjeewa Liyanage presenting his book on investigative journalism",
-      si: "ගවේෂණාත්මක ප්‍රවෘත්තිකරණ ග්‍රන්ථය ඉදිරිපත් කරමින් වරුණ සංජීව ලියනගේ",
+      en: "Waruna Sanjeewa Liyanage presenting his book to Dr. Rohana Weerasinghe",
+      si: "ආචාර්ය රෝහණ වීරසිංහ මහතාට ගවේෂණාත්මක ප්‍රවෘත්තිකරණය ග්‍රන්ථය පිළිගන්වමින් වරුණ සංජීව ලියනගේ",
     },
     caption: {
-      en: "The book, in company",
-      si: "ග්‍රන්ථය සමඟ",
+      en: "Presenting the book to Dr. Rohana Weerasinghe",
+      si: "ආචාර්ය රෝහණ වීරසිංහ මහතාට ග්‍රන්ථය පිළිගැන්වීම",
     },
     kicker: { en: "Publication", si: "ප්‍රකාශනය" },
     className: "aspect-[4/3] md:col-span-6",
