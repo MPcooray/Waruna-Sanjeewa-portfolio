@@ -209,7 +209,7 @@ export const copy = {
     },
     press: {
       kicker: "Print journalism",
-      title: "From the page",
+      title: "From the paper",
       lede: "Selected newspaper features and interviews — photographed from the physical clippings, 1998 to 2003.",
       note: "Pages are shown as they were kept. Click a page to read it more closely.",
       prev: "Prev",
@@ -450,7 +450,7 @@ export const copy = {
     },
     press: {
       kicker: "මුද්‍රිත ප්‍රවෘත්තිකරණය",
-      title: "පිටුවෙන්",
+      title: "පුවත්පත් පිටුවෙන්",
       lede: "තෝරාගත් පුවත්පත් විශේෂාංග සහ සම්මුඛ සාකච්ඡා — 1998 සිට 2003 දක්වා භෞතික කැපුම්වලින් ඡායාරූපගත කළ ඒවායි.",
       note: "පිටු තබාගත් ආකාරයෙන්ම දක්වා ඇත. ළඟින් බැලීමට පිටුවක් තෝරන්න.",
       prev: "පෙර",

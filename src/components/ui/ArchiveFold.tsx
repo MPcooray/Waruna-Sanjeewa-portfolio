@@ -12,10 +12,10 @@ export function ArchiveFold({
   children: React.ReactNode;
   more: string;
   less: string;
-  fadeFrom: "ivory" | "beige";
+  fadeFrom: "ivory" | "beige" | "deep";
 }) {
   const [expanded, setExpanded] = useState(false);
-  const fade = fadeFrom === "ivory" ? "from-ivory" : "from-beige";
+  const fade = fadeFrom === "ivory" ? "from-ivory" : fadeFrom === "deep" ? "from-deep" : "from-beige";
 
   return (
     <div>
@@ -35,13 +35,13 @@ export function ArchiveFold({
         <button
           type="button"
           onClick={() => setExpanded((value) => !value)}
-          className="flex min-h-12 min-w-12 flex-col items-center gap-2 text-deep"
+          className={`flex min-h-12 min-w-12 flex-col items-center gap-2 ${fadeFrom === "deep" ? "text-ivory" : "text-deep"}`}
           aria-expanded={expanded}
         >
-          <span className="flex h-11 w-11 items-center justify-center rounded-full border border-sand bg-ivory text-xl leading-none shadow-[0_8px_24px_rgba(33,28,24,0.08)]">
+          <span className={`flex h-11 w-11 items-center justify-center rounded-full border text-xl leading-none shadow-[0_8px_24px_rgba(33,28,24,0.08)] ${fadeFrom === "deep" ? "bg-deep border-sand/30 text-ivory" : "bg-ivory border-sand text-deep"}`}>
             <ArrowIcon direction={expanded ? "up" : "down"} className="size-4" />
           </span>
-          <span className="text-[0.8125rem] tracking-[0.18em] uppercase text-brown">
+          <span className={`text-[0.8125rem] tracking-[0.18em] uppercase ${fadeFrom === "deep" ? "text-sand" : "text-brown"}`}>
             {expanded ? less : more}
           </span>
         </button>

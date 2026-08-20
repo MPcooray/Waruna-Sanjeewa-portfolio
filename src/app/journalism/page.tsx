@@ -122,6 +122,7 @@ export default function JournalismPage() {
 
       <div id="print">
         <Book />
+        <PhotoArchive group="Publication" bgClass="bg-deep" hideHeader />
         
         <section className="bg-ivory py-24 md:py-32">
           <div className="mx-auto max-w-7xl px-5 md:px-8">
@@ -159,7 +160,6 @@ export default function JournalismPage() {
           </div>
         </section>
 
-        <PhotoArchive group="Publication" heading={page.aroundBook} />
         <PressArchive />
       </div>
 
