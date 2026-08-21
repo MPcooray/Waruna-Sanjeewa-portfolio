@@ -332,13 +332,13 @@ export const links = {
 
 export const chorusSongs = [
   {
-    title: { en: "Nan suran bathiyen", si: "නන් සුරන් භක්තියෙන්" },
+    title: { en: "Nan suran bathiyen", si: "නන් සුරන් බැතියෙන්" },
     leadArtist: { en: "Bandara Athauda", si: "බණ්ඩාර අතාවුද" },
     youtubeId: "xK56HXAN80M",
     label: { en: "Lead Artist", si: "ප්‍රධාන ගායනය" },
   },
   {
-    title: { en: "Ruwan nidana hela bimai", si: "රුවන් නිධාන හෙළ බිමයි" },
+    title: { en: "Ruwan nidana hela bimai", si: "රුවන් නිදන හෙළ බිමයි" },
     leadArtist: { en: "Victor Rathnayake", si: "වික්ටර් රත්නායක" },
     youtubeId: "dIA_nfUIgVI",
     label: { en: "Lead Artist", si: "ප්‍රධාන ගායනය" },
@@ -357,7 +357,7 @@ export const chorusSongs = [
   },
   {
     title: { en: "Kiri Suwandai", si: "කිරි සුවඳයි" },
-    leadArtist: { en: "Song from 'Dor Danda' Stage Play", si: "'දොර් දන්ඩා' නාට්‍යයේ එන ගීතයකි" },
+    leadArtist: { en: "Nawarathna Gamage- Song from 'Dor Danda' Stage Play", si: "නවරත්න ගමගේ- 'දොර් දන්ඩා' නාට්‍යයේ එන ගීතයකි" },
     label: { en: "Source", si: "මූලාශ්‍රය" },
     playUrl: "https://drive.google.com/file/d/1hZeCPF5Gz4usza85SEB3ZYtPysIVoF4p/view?usp=drive_link",
   },
@@ -365,11 +365,11 @@ export const chorusSongs = [
 
 export const otherChorusSongs = [
   {
-    title: { en: "Kellan Nubala Danne Narannan", si: "කෙල්ලන් නුඹලා දන්නෙ නරන්නන්" },
+    title: { en: "Kellani Nubala Danne Natannai", si: "කෙල්ලනි නුඹලා දන්නෙ නටන්නයි" },
     source: { en: "Pahasara Mathakaya", si: "පැහැසර මතකය" },
   },
   {
-    title: { en: "Patan Susum", si: "පටන් සුසුම්" },
+    title: { en: "Pavan Susum", si: "පවන් සුසුම්" },
     source: { en: "Pahasara Mathakaya", si: "පැහැසර මතකය" },
   },
   {
@@ -381,28 +381,28 @@ export const otherChorusSongs = [
     source: { en: "Jathika Rupavahini (Sign-off Song)", si: "ජාතික රූපවාහිනී (අවසන් ගීතය)" },
   },
   {
-    title: { en: "Mal Gasa Dakinnata Enna Obath", si: "මල් ගස දකින්නට එන්න ඔබත්" },
+    title: { en: "Mal yaaya Dakinnata Enna Obath", si: "මල් යාය දකින්නට එන්න ඔබත්" },
     source: { en: "Nanda Malini", si: "නන්දා මාලිනී" },
   },
   {
-    title: { en: "Wadimu Obe Guna Budune", si: "වඳිමු ඔබෙ ගුණ බුදුනේ" },
+    title: { en: "Wadim Obe Guna Mude", si: "වඳිම් ඔබේ ගුණ මුදේ" },
     source: { en: "Swarnavahini", si: "ස්වර්ණවාහිනී" },
   },
   {
-    title: { en: "Ran Wan Ranwan Ran Kendi", si: "රන් වන් රන්වන් රන් කෙඳි" },
+    title: { en: "RanWan Ranwan Ran Kikili", si: "රන්වන් රන්වන් රන් කිකිළි" },
     source: { en: "Amaradeva (Public Library)", si: "අමරදේව (මහජන පුස්තකාලය)" },
   },
   {
-    title: { en: "Adhyathmayen Netha Pohosath Netha", si: "අධ්‍යාත්මයෙන් නැත පොහොසත් නැත" },
-    source: { en: "Sunanda Alwis", si: "සුනන්දා අල්විස්" },
+    title: { en: "Ahaseth natha poleweth natha", si: "අහසෙත් නැත පොළවෙත් නැත" },
+    source: { en: "Krishantha Erandaka", si: "ක්‍රිෂ්නාන්ත එරන්දක" },
   },
   {
-    title: { en: "Kithirili Kithirili", si: "කිතිරිලි කිතිරිලි" },
-    source: { en: "DSI Kithirili Sri Lanka", si: "DSI කිතිරිලි ශ්‍රී ලංකා" },
+    title: { en: "Sithiwili Sithuwili", si: "සිතිවිලි සිතුවිලි" },
+    source: { en: "DSI Sithuwili Sri Lanka", si: "DSI සිතුවිලි ශ්‍රී ලංකා" },
   },
   {
-    title: { en: "Anagathe Puthunuwani", si: "අනාගතේ පුතුනුවනි" },
-    source: { en: "DSI Kithirili Sri Lanka", si: "DSI කිතිරිලි ශ්‍රී ලංකා" },
+    title: { en: "Anagathe Puthanuba", si: "අනාගතේ පුතනුඹ" },
+    source: { en: "DSI Sithuwili Sri Lanka", si: "DSI සිතුවිලි ශ්‍රී ලංකා" },
   },
   {
     title: { en: "Sumathi Awards Theme Song", si: "සුමති සම්මාන තේමා ගීතය" },
@@ -413,59 +413,59 @@ export const otherChorusSongs = [
     source: { en: "Amaradeva", si: "අමරදේව" },
   },
   {
-    title: { en: "Aja Aja Ajaraya", si: "අජ අජ අජරාය" },
-    source: { en: "Kinkini Ka Mal (Ronnie Leitch / Corrine)", si: "කිංකිණිකා මල් (රොනී ලීච් / කොරින්)" },
+    title: { en: "Api Api Apimai", si: "අපි අපි අපිමයි" },
+    source: { en: "Kinihiriya Mal (Ronnie Leitch / Corrine)", si: "කිණිහිරියා මල් (රොනී ලීච් / කොරින්)" },
   },
   {
-    title: { en: "Samaradhanayayi Uthum Obe", si: "සමාරාධනයයි උතුම් ඔබෙ" },
-    source: { en: "Priyan Baig (ITN Aththikka)", si: "ප්‍රියාන් බේග් (ITN අත්තික්කා)" },
+    title: { en: "Ema Vita Pawasanu Muvin Obe", si: "එමවිට පවසනු මුවින් ඔබේ" },
+    source: { en: "ishaq beg  (ITN Bakthigee)", si: "ඉෂක් බේග් (ITN බැති ගී)" },
   },
   {
-    title: { en: "Adarayaye Bol Pini", si: "ආදරයේ බොල් පිණි" },
+    title: { en: "Arichchi Borichchi", si: "ආරිච්චි බෝරිච්චි" },
     source: { en: "Nanda Malini (University of Colombo)", si: "නන්දා මාලිනී (කොළඹ විශ්වවිද්‍යාලය)" },
   },
   {
-    title: { en: "Sigiri Geethaya", si: "සීගිර ගීතය" },
-    source: { en: "Sigiri Landun (Merlin Jayasinghe)", si: "සීගිරි ළඳුන් (මර්ලින් ජයසිංහ)" },
+    title: { en: "Deevara Geethaya", si: "දීවර ගීතය" },
+    source: { en: "Deevara amathi (Mahinda Rajapaksa)", si: "දීවර ඇමති (මහින්ද රාජපක්ෂ)" },
   },
   {
-    title: { en: "Thailand Welcome Song", si: "තායිලන්තයේ පිළිගැනීමේ ගීතය" },
+    title: { en: "Prince Charles Welcome Song", si: "චාල්ස් කුමාරයා පිළිගැනීමේ ගීතය" },
     source: { en: "BMICH", si: "බණ්ඩාරනායක සම්මන්ත්‍රණ ශාලාව" },
   },
   {
-    title: { en: "Kiri Seda Dana Kampande", si: "කිරිසෙද දන කම්පන්දේ" },
-    source: { en: "Amaradeva", si: "අමරදේව" },
+    title: { en: "Kiri Suwadai", si: "කිරි සුවඳයි" },
+    source: { en: "Nawarathna Gamage", si: "නවරත්න ගම්මෙ" },
   },
   {
     title: { en: "Danno Budunge", si: "දන්නෝ බුදුන්ගේ" },
     source: { en: "Sadhu Nada (Swarnavahini - Gangaramaya)", si: "සාධු නාද (ස්වර්ණවාහිනී - ගංගාරාමය)" },
   },
   {
-    title: { en: "Mura Banda Kara Udayakantha", si: "මුර බඳ කර උදයකාන්ත" },
-    source: { en: "Derana Kanthimal Drama", si: "දෙරණ කාන්තිමල් නාට්‍ය" },
+    title: { en: "ira hada tharu ", si: "ඉර හඳ තරු" },
+    source: { en: "Edward Jayakodi- Deiyo Sakki Drama", si: "එඩ්වඩ් ජයකොඩි- දෙයියෝ සක්කි නාට්‍ය" },
   },
   {
-    title: { en: "People's Bank Theme Song", si: "මහජන බැංකු තේමා ගීතය" },
-    source: { en: "People's Bank", si: "මහජන බැංකුව" },
+    title: { en: "Mahaasaara Mahajana Hitha", si: "මහාසාර මහාජන හිත" },
+    source: { en: "People's Bank Theme Song", si: "මහජන බැංකු තේමා ගීතය" },
   },
   {
     title: { en: "Weli Thala Athare", si: "වැලි තල අතරේ" },
     source: { en: "Swarnavahini", si: "ස්වර්ණවාහිනී" },
   },
   {
-    title: { en: "Wadimu Suwanda Shakyasingha", si: "වඳිමු සුවඳ ශාක්‍යසිංහ" },
+    title: { en: "Wandimu Sugatha Shakya Singha", si: "වඳිමු සුගත ශාක්‍යසිංහ" },
     source: { en: "Swarnavahini", si: "ස්වර්ණවාහිනී" },
   },
   {
-    title: { en: "Dena Ganeema Me Avakasha Gauravaya", si: "දැනගැනීම මේ අවකාශ ගෞරවය" },
-    source: { en: "Swarnavahini Independence Festival", si: "ස්වර්ණවාහිනී නිදහස් උළෙල" },
+    title: { en: "Dana Ganiv Me Avasaana Hoorawai", si: "දැනගනීව් මේ අවසන හොරවය" },
+    source: { en: "Swarna Jayanthi Nidahas Ulela", si: "ස්වර්ණ ජයන්ති නිදහස් උළෙල" },
   },
   {
-    title: { en: "Vijaya Grahi Senapathi Song", si: "විජයග්‍රාහී සේනාපති ගීතය" },
+    title: { en: "Janapathi Podujana Song", si: "ජනපති පොදුජන ගීතය" },
     source: { en: "Vocal Recording", si: "ගායනය" },
   },
   {
-    title: { en: "Tikiri Geethaya", si: "ටිකිරි ගීතය" },
-    source: { en: "Kontharaya (1999)", si: "කෝන්තරය (1999)" },
+    title: { en: "Cricket Geethaya", si: "ක්‍රිකට් ගීතය" },
+    source: { en: "Kekkaraama (1999)", si: "කෙක්කාරාම (1999)" },
   },
 ];

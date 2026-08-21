@@ -426,7 +426,7 @@ export const copy = {
       play: "වාදනය කරන්න",
       songsTitle: "තෝරාගත් ගීත",
       chorusTitle: "ගායනයේ",
-      chorusBody: "ගායනය සහ පසුබිම් ගායනය. නිෂ්පාදන ලේඛනගත වන විට මෙහි ලැයිස්තුගත වේ.",
+      chorusBody: "ගායනය සහ පසුබිම් ගායනයන් මෙහි ලැයිස්තුගත වේ.",
       kalabhumiKicker: "සහයෝගීතාව",
       kalabhumiTitle: "කලාභූමි",
       kalabhumiBody:
