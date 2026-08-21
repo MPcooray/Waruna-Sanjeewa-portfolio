@@ -425,23 +425,43 @@ export const otherChorusSongs = [
     source: { en: "Nanda Malini (University of Colombo)", si: "නන්දා මාලිනී (කොළඹ විශ්වවිද්‍යාලය)" },
   },
   {
-    title: { en: "Deevara Geethaya", si: "දීවර ගීතය" },
-    source: { en: "Deevara amathi (Mahinda Rajapaksa)", si: "දීවර ඇමති (මහින්ද රාජපක්ෂ)" },
+    title: { en: "Dheevara Geethaya", si: "ධීවර ගීතය" },
+    source: { en: "Dheevara amathi (Mahinda Rajapaksa)", si: "ධීවර ඇමති (මහින්ද රාජපක්ෂ)" },
   },
   {
     title: { en: "Prince Charles Welcome Song", si: "චාල්ස් කුමාරයා පිළිගැනීමේ ගීතය" },
     source: { en: "BMICH", si: "බණ්ඩාරනායක සම්මන්ත්‍රණ ශාලාව" },
   },
   {
+    title: { en: "Siri Dalada Saminde", si: "සිරි දළදා සමින්දේ" },
+    source: { en: "W D Amaradewa", si: "ඩබ්. ඩී. අමරදේව" },
+  },
+  {
     title: { en: "Kiri Suwadai", si: "කිරි සුවඳයි" },
     source: { en: "Nawarathna Gamage", si: "නවරත්න ගම්මෙ" },
+  },
+  {
+    title: { en: "Mage deshaya", si: "මගේ දේශය" },
+    source: { en: "Nanda Malini (Swarnavahini)", si: "නන්දා මාලිනී (ස්වර්ණවාහිනී)" },
   },
   {
     title: { en: "Danno Budunge", si: "දන්නෝ බුදුන්ගේ" },
     source: { en: "Sadhu Nada (Swarnavahini - Gangaramaya)", si: "සාධු නාද (ස්වර්ණවාහිනී - ගංගාරාමය)" },
   },
   {
-    title: { en: "ira hada tharu ", si: "ඉර හඳ තරු" },
+    title: { en: "Api ekama rane kurullo ", si: "අපි එකම රෑනේ කුරුල්ලෝ" },
+    source: { en: "wijesundara weragoda (jathika rupavahini)", si: "විජේසුන්දර වේරගොඩ (ජාතික රූපවාහිනිය)" },
+  },
+  {
+    title: { en: "Ruwan nidana hela bimai", si: "රුවන් නිධාන හෙළ බිමයි" },
+    source: { en: "Victor rathnayake (jathika rupavahini)", si: "වික්ටර් රත්නායක (ජාතික රූපවාහිනිය)" },
+  },
+  {
+    title: { en: "Nan suran bathiyen ", si: "නන් සුරන් බැතියෙන්" },
+    source: { en: "Bandara athavuda (jathika rupavahini)", si: "බණ්ඩාර අතාවුද (ජාතික රූපවාහිනිය)" },
+  },
+  {
+    title: { en: "ira hada tharu", si: "ඉර හඳ තරු" },
     source: { en: "Edward Jayakodi- Deiyo Sakki Drama", si: "එඩ්වඩ් ජයකොඩි- දෙයියෝ සක්කි නාට්‍ය" },
   },
   {
