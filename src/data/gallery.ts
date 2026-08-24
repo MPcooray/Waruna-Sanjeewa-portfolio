@@ -124,7 +124,7 @@ export const galleryPhotos = [
     },
     caption: {
       en: "Book publication in Lankadeepa newspaper",
-      si: "ලන්කාදීප පුවත්පත ග්‍රන්ථ ප්‍රකාශනය",
+      si: "ලන්කාදීප පුවත්පතෙහි ප්‍රචාරණය",
     },
     kicker: { en: "Newspaper", si: "පුවත්පත" },
     className: "aspect-[4/3] md:col-span-6",
@@ -137,7 +137,7 @@ export const galleryPhotos = [
     },
     caption: {
       en: "Book publication in Sathi Aga Aruna newspaper",
-      si: "සති ආග අරුණ පුවත්පත ප්‍රකාශනය",
+      si: "සති ආග අරුණ පුවත්පතෙහි ප්‍රචාරණය",
     },
     kicker: { en: "Newspaper", si: "පුවත්පත" },
     className: "aspect-[4/3] md:col-span-6",
@@ -150,7 +150,7 @@ export const galleryPhotos = [
     },
     caption: {
       en: "Book publication in Mawbima newspaper",
-      si: "මව්බිම පුවත්පත ග්‍රන්ථ ප්‍රකාශනය",
+      si: "මව්බිම පුවත්පතෙහි ප්‍රචාරණය",
     },
     kicker: { en: "Newspaper", si: "පුවත්පත" },
     className: "aspect-[4/3] md:col-span-6",
@@ -163,7 +163,7 @@ export const galleryPhotos = [
     },
     caption: {
       en: "Book publication in Dinamina newspaper",
-      si: "දිනමින පුවත්පත ග්‍රන්ථ ප්‍රකාශනය",
+      si: "දිනමින පුවත්පතෙහි ප්‍රචාරණය",
     },
     kicker: { en: "Newspaper", si: "පුවත්පත" },
     className: "aspect-[4/3] md:col-span-6",

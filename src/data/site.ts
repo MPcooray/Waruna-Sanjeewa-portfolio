@@ -220,7 +220,7 @@ export const investigations = [
     kicker: { en: "Practice · Print & broadcast", si: "භාවිතය · මුද්‍රිත සහ විද්‍යුත්" },
     title: {
       en: "Reporting beneath the surface",
-      si: "පෘෂ්ඨයට එහා වාර්තාකරණය",
+      si: "මතුපිටට එහා වාර්තාකරණය",
     },
     summary: {
       en: "Across newspapers and television, his work has included investigative reporting — searching for facts that sit outside ordinary public attention.",

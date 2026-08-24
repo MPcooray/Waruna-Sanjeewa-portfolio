@@ -56,7 +56,11 @@ export default function JournalismPage() {
         <PhotoArchive group="Publication" bgClass="bg-deep" hideHeader />
         <PhotoArchive
           group="Newspaper"
-          heading="Publishing the Book in Newspapers"
+          heading={
+            locale === "si"
+              ? "පුවත්පත් ප්‍රචාරණය"
+              : "Publishing the Book in Newspapers"
+          }
           bgClass="bg-deep"
           hideHeader
         />
